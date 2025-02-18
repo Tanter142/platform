@@ -144,7 +144,7 @@
 			>
 				<BookOpen class="size-10 mx-auto stroke-1 text-gray-500" />
 				<div class="text-xl font-medium">
-					{{ __('No courses found') }}
+					{{ __('Курс не найден') }}
 				</div>
 				<div class="leading-5">
 					{{
