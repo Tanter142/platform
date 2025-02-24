@@ -83,7 +83,6 @@ const props = defineProps({
 })
 
 console.log(props.link)
-// const sidebarLabels = ['Курсы', 'Партии', 'Сертифицированные участники', 'Работы',  'Статистика', 'Свернуть']
 
 function handleClick() {
 	if (router.hasRoute(props.link.to)) {

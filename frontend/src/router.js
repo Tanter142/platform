@@ -3,7 +3,7 @@ import { usersStore } from './stores/user'
 import { sessionStore } from './stores/session'
 import { useSettings } from './stores/settings'
 
-let defaultRoute = '/courses'
+let defaultRoute = '/курсы'
 const routes = [
 	{
 		path: '/',
@@ -12,58 +12,58 @@ const routes = [
 		},
 	},
 	{
-		path: '/courses',
+		path: '/курсы',
 		name: 'Courses',
 		component: () => import('@/pages/Courses.vue'),
 	},
 	{
-		path: '/courses/:courseName',
+		path: '/курсы/:courseName',
 		name: 'CourseDetail',
 		component: () => import('@/pages/CourseDetail.vue'),
 		props: true,
 	},
 	{
-		path: '/courses/:courseName/learn/:chapterNumber-:lessonNumber',
+		path: '/курсы/:courseName/изучение/:chapterNumber-:lessonNumber',
 		name: 'Lesson',
 		component: () => import('@/pages/Lesson.vue'),
 		props: true,
 	},
 	{
-		path: '/courses/:courseName/learn/:chapterName',
+		path: '/курсы/:courseName/изучение/:chapterName',
 		name: 'SCORMChapter',
 		component: () => import('@/pages/SCORMChapter.vue'),
 		props: true,
 	},
 	{
-		path: '/batches',
+		path: '/группы',
 		name: 'Batches',
 		component: () => import('@/pages/Batches.vue'),
 	},
 	{
-		path: '/batches/details/:batchName',
+		path: '/группы/детали/:batchName',
 		name: 'BatchDetail',
 		component: () => import('@/pages/BatchDetail.vue'),
 		props: true,
 	},
 	{
-		path: '/batches/:batchName',
+		path: '/группы/:batchName',
 		name: 'Batch',
 		component: () => import('@/pages/Batch.vue'),
 		props: true,
 	},
 	{
-		path: '/billing/:type/:name',
+		path: '/оплата/:type/:name',
 		name: 'Billing',
 		component: () => import('@/pages/Billing.vue'),
 		props: true,
 	},
 	{
-		path: '/statistics',
+		path: '/статистика',
 		name: 'Statistics',
 		component: () => import('@/pages/Statistics.vue'),
 	},
 	{
-		path: '/user/:username',
+		path: '/пользователь/:username',
 		name: 'Profile',
 		component: () => import('@/pages/Profile.vue'),
 		props: true,
@@ -76,137 +76,137 @@ const routes = [
 			},
 			{
 				name: 'ProfileCertificates',
-				path: 'certificates',
+				path: 'сертификаты',
 				component: () => import('@/pages/ProfileCertificates.vue'),
 			},
 			{
 				name: 'ProfileRoles',
-				path: 'roles',
+				path: 'роли',
 				component: () => import('@/pages/ProfileRoles.vue'),
 			},
 			{
 				name: 'ProfileEvaluator',
-				path: 'slots',
+				path: 'слоты',
 				component: () => import('@/pages/ProfileEvaluator.vue'),
 			},
 			{
 				name: 'ProfileEvaluationSchedule',
-				path: 'schedule',
+				path: 'расписание',
 				component: () =>
 					import('@/pages/ProfileEvaluationSchedule.vue'),
 			},
 		],
 	},
 	{
-		path: '/job-openings',
+		path: '/вакансии',
 		name: 'Jobs',
 		component: () => import('@/pages/Jobs.vue'),
 	},
 	{
-		path: '/job-openings/:job',
+		path: '/вакансии/:job',
 		name: 'JobDetail',
 		component: () => import('@/pages/JobDetail.vue'),
 		props: true,
 	},
 	{
-		path: '/courses/:courseName/edit',
+		path: '/курсы/:courseName/редактировать',
 		name: 'CourseForm',
 		component: () => import('@/pages/CourseForm.vue'),
 		props: true,
 	},
 	{
-		path: '/courses/:courseName/learn/:chapterNumber-:lessonNumber/edit',
+		path: '/курсы/:courseName/изучение/:chapterNumber-:lessonNumber/редактировать',
 		name: 'LessonForm',
 		component: () => import('@/pages/LessonForm.vue'),
 		props: true,
 	},
 	{
-		path: '/batches/:batchName/edit',
+		path: '/группы/:batchName/редактировать',
 		name: 'BatchForm',
 		component: () => import('@/pages/BatchForm.vue'),
 		props: true,
 	},
 	{
-		path: '/job-opening/:jobName/edit',
+		path: '/вакансия/:jobName/редактировать',
 		name: 'JobCreation',
 		component: () => import('@/pages/JobCreation.vue'),
 		props: true,
 	},
 	{
-		path: '/certified-participants',
+		path: '/сертифицированные-участники',
 		name: 'CertifiedParticipants',
 		component: () => import('@/pages/CertifiedParticipants.vue'),
 	},
 	{
-		path: '/notifications',
+		path: '/уведомления',
 		name: 'Notifications',
 		component: () => import('@/pages/Notifications.vue'),
 	},
 	{
-		path: '/badges/:badgeName/:email',
+		path: '/значки/:badgeName/:email',
 		name: 'Badge',
 		component: () => import('@/pages/Badge.vue'),
 		props: true,
 	},
 	{
-		path: '/quizzes',
+		path: '/викторины',
 		name: 'Quizzes',
 		component: () => import('@/pages/Quizzes.vue'),
 	},
 	{
-		path: '/quizzes/:quizID',
+		path: '/викторины/:quizID',
 		name: 'QuizForm',
 		component: () => import('@/pages/QuizForm.vue'),
 		props: true,
 	},
 	{
-		path: '/quiz/:quizID',
+		path: '/викторина/:quizID',
 		name: 'QuizPage',
 		component: () => import('@/pages/QuizPage.vue'),
 		props: true,
 	},
 	{
-		path: '/quiz-submissions/:quizID',
+		path: '/викторина-подтверждения/:quizID',
 		name: 'QuizSubmissionList',
 		component: () => import('@/pages/QuizSubmissionList.vue'),
 		props: true,
 	},
 	{
-		path: '/quiz-submission/:submission',
+		path: '/викторина-подтверждение/:submission',
 		name: 'QuizSubmission',
 		component: () => import('@/pages/QuizSubmission.vue'),
 		props: true,
 	},
 	{
-		path: '/programs/:programName',
+		path: '/программы/:programName',
 		name: 'ProgramForm',
 		component: () => import('@/pages/ProgramForm.vue'),
 		props: true,
 	},
 	{
-		path: '/programs',
+		path: '/программы',
 		name: 'Programs',
 		component: () => import('@/pages/Programs.vue'),
 	},
 	{
-		path: '/assignments',
+		path: '/задания',
 		name: 'Assignments',
 		component: () => import('@/pages/Assignments.vue'),
 	},
 	{
-		path: '/assignments/:assignmentID',
+		path: '/задания/:assignmentID',
 		name: 'AssignmentForm',
 		component: () => import('@/pages/AssignmentForm.vue'),
 		props: true,
 	},
 	{
-		path: '/assignment-submission/:assignmentID/:submissionName',
+		path: '/задание-подтверждение/:assignmentID/:submissionName',
 		name: 'AssignmentSubmission',
 		component: () => import('@/pages/AssignmentSubmission.vue'),
 		props: true,
 	},
 	{
-		path: '/assignment-submissions',
+		path: '/задание-подтверждения',
 		name: 'AssignmentSubmissionList',
 		component: () => import('@/pages/AssignmentSubmissionList.vue'),
 	},
@@ -241,3 +241,4 @@ router.beforeEach(async (to, from, next) => {
 })
 
 export default router
+
