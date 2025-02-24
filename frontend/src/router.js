@@ -36,7 +36,7 @@ const routes = [
 	},
 	{
 		path: '/группы',
-		name: 'Batches',
+		name: 'Группы',
 		component: () => import('@/pages/Batches.vue'),
 	},
 	{
