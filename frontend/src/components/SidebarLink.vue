@@ -27,7 +27,7 @@
 						: 'ml-2 w-auto opacity-100'
 				"
 			>
-				{{ tabs[tabIndex].label }}
+				{{ link.label }}
 			</span>
 			<span
 				v-if="link.count"
@@ -65,7 +65,7 @@ import { useRouter } from 'vue-router'
 import * as icons from 'lucide-vue-next'
 import Batches from '../pages/Batches.vue'
 import Courses from '../pages/Courses.vue'
-
+import AppSidebar from './AppSidebar.vue'
 const router = useRouter()
 const emit = defineEmits(['openModal', 'deletePage'])
 
@@ -84,31 +84,6 @@ const props = defineProps({
 	},
 })
 
-const labels = [
-	{
-		name: 'Группы',
-		component: Batches,
-	},
-	{
-		name: 'Курсы',
-		component: Courses,
-	},
-]
-
-function getCourses(label) {
-	return labels.find((l) => l.name === label)
-}
-
-const tabs = []
-
-labels.forEach((label) => {
-	tabs.push({
-		label: label.name,
-		courses: computed(() => getCourses(label.name)),
-	})
-})
-
-console.log(tabs)
 
 function handleClick() {
 	if (router.hasRoute(props.link.to)) {
@@ -118,10 +93,7 @@ function handleClick() {
 	}
 }
 
-const tabIndex = computed(() => {
-	return tabs.findIndex((tab) => tab.label === props.link.label)
-})
-
+console.log(link.label)
 
 const isActive = computed(() => {
 	return props.link?.activeFor?.includes(router.currentRoute.value.name)
