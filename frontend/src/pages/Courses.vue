@@ -4,7 +4,7 @@
 			class="sticky top-0 z-10 flex items-center justify-between border-b bg-white px-3 py-2.5 sm:px-5"
 		>
 			<Breadcrumbs
-				class="h-7"
+				class="h-10"
 				:items="[{ label: __('Courses'), route: { name: 'Courses' } }]"
 			/>
 			<div class="flex space-x-2 justify-end">
@@ -14,13 +14,13 @@
 						type="select"
 						v-model="currentCategory"
 						:options="categories.data"
-						:placeholder="__('Category')"
+						:placeholder="__('Категории')"
 					/>
 				</div>
 				<div class="w-28 md:w-36">
 					<FormControl
 						type="text"
-						placeholder="Search"
+						placeholder="Поиск"
 						v-model="searchQuery"
 						@input="courses.reload()"
 					>
