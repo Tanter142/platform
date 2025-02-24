@@ -13,7 +13,7 @@ const routes = [
 	},
 	{
 		path: '/курсы',
-		name: 'Courses',
+		name: 'Курсы',
 		component: () => import('@/pages/Courses.vue'),
 	},
 	{
