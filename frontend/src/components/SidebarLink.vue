@@ -27,7 +27,7 @@
 						: 'ml-2 w-auto opacity-100'
 				"
 			>
-				{{ sidebarLabels[0] }}
+				{{ sidebarLabels }}
 			</span>
 			<span
 				v-if="link.count"
