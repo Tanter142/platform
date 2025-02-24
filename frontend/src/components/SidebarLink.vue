@@ -27,7 +27,7 @@
 						: 'ml-2 w-auto opacity-100'
 				"
 			>
-				{{ sidebarLabels.join(', ') }}
+				{{ link.label }}
 			</span>
 			<span
 				v-if="link.count"
@@ -82,7 +82,8 @@ const props = defineProps({
 	},
 })
 
-const sidebarLabels = ['Курсы', 'Партии', 'Сертифицированные участники', 'Работы',  'Статистика', 'Свернуть']
+console.log(props.link)
+// const sidebarLabels = ['Курсы', 'Партии', 'Сертифицированные участники', 'Работы',  'Статистика', 'Свернуть']
 
 function handleClick() {
 	if (router.hasRoute(props.link.to)) {
