@@ -65,7 +65,6 @@ import { useRouter } from 'vue-router'
 import * as icons from 'lucide-vue-next'
 import Batches from '../pages/Batches.vue'
 import Courses from '../pages/Courses.vue'
-import AppSidebar from './AppSidebar.vue'
 const router = useRouter()
 const emit = defineEmits(['openModal', 'deletePage'])
 
@@ -93,7 +92,6 @@ function handleClick() {
 	}
 }
 
-console.log(link.label)
 
 const isActive = computed(() => {
 	return props.link?.activeFor?.includes(router.currentRoute.value.name)
