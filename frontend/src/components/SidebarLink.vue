@@ -84,7 +84,6 @@ const props = defineProps({
 	},
 })
 
-console.log(props.link)
 
 function handleClick() {
 	if (router.hasRoute(props.link.to)) {
@@ -98,13 +97,7 @@ const tabNames = computed(() => {
 	return props.link?.tabs?.map(tab => tab.name) || []
 })
 
-const translate = (name) => {
-	const translations = {
-		Batches: 'Пакеты',
-		Courses: 'Курсы',
-	}
-	return translations[name] || name
-}
+console.log(tabNames)
 
 
 const isActive = computed(() => {
