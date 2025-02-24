@@ -5,7 +5,7 @@
 		>
 			<Breadcrumbs
 				class="h-7"
-				:items="[{ label: __('Курсы'), route: { name: 'Courses' } }]"
+				:items="[{ label: __('Курсы'), route: { name: 'Курсы' } }]"
 			/>
 			<div class="flex space-x-2 justify-end">
 				<div class="w-40 md:w-44">
