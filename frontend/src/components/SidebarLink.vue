@@ -90,7 +90,7 @@ const labels = [
 		component: Batches,
 	},
 	{
-		name: 'Courses',
+		name: 'Курсы',
 		component: Courses,
 	},
 ]
