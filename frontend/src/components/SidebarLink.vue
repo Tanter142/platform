@@ -27,7 +27,7 @@
 						: 'ml-2 w-auto opacity-100'
 				"
 			>
-				{{ link.label }}
+				{{ link.translatedLabel }}
 			</span>
 			<span
 				v-if="link.count"
@@ -63,6 +63,8 @@ import { Tooltip, Button } from 'frappe-ui'
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import * as icons from 'lucide-vue-next'
+import Batches from '../pages/Batches.vue'
+import Courses from '../pages/Courses.vue'
 
 const router = useRouter()
 const emit = defineEmits(['openModal', 'deletePage'])
@@ -91,6 +93,19 @@ function handleClick() {
 		window.location.href = `/${props.link.to}`
 	}
 }
+
+const tabNames = computed(() => {
+	return props.link?.tabs?.map(tab => tab.name) || []
+})
+
+const translate = (name) => {
+	const translations = {
+		Batches: 'Пакеты',
+		Courses: 'Курсы',
+	}
+	return translations[name] || name
+}
+
 
 const isActive = computed(() => {
 	return props.link?.activeFor?.includes(router.currentRoute.value.name)
