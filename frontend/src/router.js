@@ -13,7 +13,7 @@ const routes = [
 	},
 	{
 		path: '/курсы',
-		name: 'Courses',
+		name: 'Курсы',
 		component: () => import('@/pages/Courses.vue'),
 	},
 	{
@@ -36,7 +36,7 @@ const routes = [
 	},
 	{
 		path: '/группы',
-		name: 'Batches',
+		name: 'Группы',
 		component: () => import('@/pages/Batches.vue'),
 	},
 	{
@@ -59,7 +59,7 @@ const routes = [
 	},
 	{
 		path: '/статистика',
-		name: 'Statistics',
+		name: 'Статистика',
 		component: () => import('@/pages/Statistics.vue'),
 	},
 	{
@@ -99,7 +99,7 @@ const routes = [
 	},
 	{
 		path: '/вакансии',
-		name: 'Jobs',
+		name: 'Вакансии',
 		component: () => import('@/pages/Jobs.vue'),
 	},
 	{
@@ -134,7 +134,7 @@ const routes = [
 	},
 	{
 		path: '/сертифицированные-участники',
-		name: 'CertifiedParticipants',
+		name: 'Сертифицированные-участники',
 		component: () => import('@/pages/CertifiedParticipants.vue'),
 	},
 	{
@@ -241,4 +241,5 @@ router.beforeEach(async (to, from, next) => {
 })
 
 export default router
+
 
