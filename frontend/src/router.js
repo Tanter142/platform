@@ -8,12 +8,12 @@ const routes = [
 	{
 		path: '/',
 		redirect: {
-			name: 'Курсы',
+			name: 'Courses',
 		},
 	},
 	{
 		path: '/courses',
-		name: 'Courses',
+		name: 'Курсы',
 		component: () => import('@/pages/Courses.vue'),
 	},
 	{
@@ -36,7 +36,7 @@ const routes = [
 	},
 	{
 		path: '/batches',
-		name: 'Batches',
+		name: 'Партии',
 		component: () => import('@/pages/Batches.vue'),
 	},
 	{
