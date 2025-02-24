@@ -144,12 +144,12 @@
 			>
 				<BookOpen class="size-10 mx-auto stroke-1 text-gray-500" />
 				<div class="text-xl font-medium">
-					{{ __('Курс не найден') }}
+					{{ __('Курсы не найдены') }}
 				</div>
 				<div class="leading-5">
 					{{
 						__(
-							'There are no courses available at the moment. Keep an eye out, fresh learning experiences are on the way soon!'
+							'В данный момент нет доступных курсов. Следите за новостями, новые возможности для обучения будут доступны в ближайшее время!'
 						)
 					}}
 				</div>
