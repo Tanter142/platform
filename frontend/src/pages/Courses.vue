@@ -42,7 +42,7 @@
 						<template #prefix>
 							<Plus class="h-4 w-4" />
 						</template>
-						{{ __('New') }}
+						{{ __('Новый курс') }}
 					</Button>
 				</router-link>
 			</div>
