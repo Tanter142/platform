@@ -27,7 +27,9 @@
 						: 'ml-2 w-auto opacity-100'
 				"
 			>
-				{{ link.translatedLabel }}
+				<span v-for="(label, index) in link.labels" :key="index">
+					{{ label }}
+				</span>
 			</span>
 			<span
 				v-if="link.count"
@@ -92,16 +94,6 @@ function handleClick() {
 		window.location.href = `/${props.link.to}`
 	}
 }
-
-const tabNames = computed(() => {
-	return props.link?.tabs?.map(tab => tab.name) || []
-})
-
-const isTabActive = (tabName) => {
-	return tabNames.value.includes(router.currentRoute.value.name)
-}
-
-console.log(isTabActive(Batches))
 
 
 const isActive = computed(() => {
