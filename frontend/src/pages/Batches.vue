@@ -282,7 +282,7 @@ const batchTabs = computed(() => {
 
 const breadcrumbs = computed(() => [
 	{
-		label: __('Batches'),
+		label: __('Группы'),
 		route: { name: 'Batches' },
 	},
 ])
