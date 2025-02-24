@@ -27,7 +27,7 @@
 						: 'ml-2 w-auto opacity-100'
 				"
 			>
-				{{ sidebarLabels }}
+				{{ getNextLabel() }}
 			</span>
 			<span
 				v-if="link.count"
@@ -82,7 +82,14 @@ const props = defineProps({
 	},
 })
 
-const sidebarLabels = ['Курсы', 'Партии', 'Сертифицированные участники', 'Работы',  'Статистика']
+const sidebarLabels = ['Курсы', 'Партии', 'Сертифицированные участники', 'Работы',  'Статистика', 'Свернуть']
+let currentIndex = ref(0)
+
+function getNextLabel() {
+    const label = sidebarLabels[currentIndex.value]
+    currentIndex.value = (currentIndex.value + 1) % sidebarLabels.length
+    return label
+}
 
 
 function handleClick() {
