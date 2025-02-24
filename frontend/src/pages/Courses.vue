@@ -32,7 +32,7 @@
 				<router-link
 					v-if="user.data?.is_moderator || user.data?.is_instructor"
 					:to="{
-						name: 'CourseForm',
+						name: 'Форма курса',
 						params: {
 							courseName: 'new',
 						},
@@ -78,7 +78,7 @@
 							:to="
 								course.membership && course.current_lesson
 									? {
-											name: 'Lesson',
+											name: 'Уроки',
 											params: {
 												courseName: course.name,
 												chapterNumber: course.current_lesson.split('-')[0],
@@ -87,7 +87,7 @@
 									  }
 									: course.membership
 									? {
-											name: 'Lesson',
+											name: 'Уроки',
 											params: {
 												courseName: course.name,
 												chapterNumber: 1,
@@ -95,7 +95,7 @@
 											},
 									  }
 									: {
-											name: 'CourseDetail',
+											name: 'Детали курса',
 											params: { courseName: course.name },
 									  }
 							"
@@ -117,7 +117,7 @@
 			>
 				<router-link
 					:to="{
-						name: 'CourseForm',
+						name: 'Форма курса',
 						params: {
 							courseName: 'new',
 						},
@@ -305,7 +305,7 @@ watch(
 
 const pageMeta = computed(() => {
 	return {
-		title: 'Courses',
+		title: 'Курсы',
 		description: 'All Courses divided by categories',
 	}
 })

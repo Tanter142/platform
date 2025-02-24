@@ -18,13 +18,13 @@ const routes = [
 	},
 	{
 		path: '/курсы/:courseName',
-		name: 'CourseDetail',
+		name: 'Детали курса',
 		component: () => import('@/pages/CourseDetail.vue'),
 		props: true,
 	},
 	{
 		path: '/курсы/:courseName/изучение/:chapterNumber-:lessonNumber',
-		name: 'Lesson',
+		name: 'Уроки',
 		component: () => import('@/pages/Lesson.vue'),
 		props: true,
 	},
@@ -110,7 +110,7 @@ const routes = [
 	},
 	{
 		path: '/курсы/:courseName/редактировать',
-		name: 'CourseForm',
+		name: 'Форма курса',
 		component: () => import('@/pages/CourseForm.vue'),
 		props: true,
 	},
