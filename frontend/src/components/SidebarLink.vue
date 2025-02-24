@@ -27,7 +27,7 @@
 						: 'ml-2 w-auto opacity-100'
 				"
 			>
-				{{ link.label }}
+				{{ tabs[tabIndex].label }}
 			</span>
 			<span
 				v-if="link.count"
@@ -86,7 +86,7 @@ const props = defineProps({
 
 const labels = [
 	{
-		name: 'Batches',
+		name: 'Группы',
 		component: Batches,
 	},
 	{
@@ -117,6 +117,10 @@ function handleClick() {
 		window.location.href = `/${props.link.to}`
 	}
 }
+
+const tabIndex = computed(() => {
+	return tabs.findIndex((tab) => tab.label === props.link.label)
+})
 
 
 const isActive = computed(() => {
