@@ -8,7 +8,7 @@ const routes = [
 	{
 		path: '/',
 		redirect: {
-			name: 'Courses',
+			name: 'Курсы',
 		},
 	},
 	{
