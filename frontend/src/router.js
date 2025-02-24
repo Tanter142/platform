@@ -13,7 +13,7 @@ const routes = [
 	},
 	{
 		path: '/courses',
-		name: 'Курсы',
+		name: 'Courses',
 		component: () => import('@/pages/Courses.vue'),
 	},
 	{
@@ -36,7 +36,7 @@ const routes = [
 	},
 	{
 		path: '/batches',
-		name: 'Партии',
+		name: 'Batches',
 		component: () => import('@/pages/Batches.vue'),
 	},
 	{
