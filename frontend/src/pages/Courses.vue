@@ -305,7 +305,7 @@ watch(
 
 const pageMeta = computed(() => {
 	return {
-		title: 'Courses',
+		title: 'Курсы',
 		description: 'All Courses divided by categories',
 	}
 })
