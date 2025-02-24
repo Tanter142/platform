@@ -27,9 +27,7 @@
 						: 'ml-2 w-auto opacity-100'
 				"
 			>
-				<span v-for="(label, index) in link.labels" :key="index">
-					{{ label }}
-				</span>
+				{{ link.label }}
 			</span>
 			<span
 				v-if="link.count"
@@ -86,6 +84,31 @@ const props = defineProps({
 	},
 })
 
+const labels = [
+	{
+		name: 'Batches',
+		component: Batches,
+	},
+	{
+		name: 'Courses',
+		component: Courses,
+	},
+]
+
+function getCourses(label) {
+	return labels.find((l) => l.name === label)
+}
+
+const tabs = []
+
+labels.forEach((label) => {
+	tabs.push({
+		label: label.name,
+		courses: computed(() => getCourses(label.name)),
+	})
+})
+
+console.log(tabs)
 
 function handleClick() {
 	if (router.hasRoute(props.link.to)) {
