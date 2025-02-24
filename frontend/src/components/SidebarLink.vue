@@ -92,6 +92,7 @@ function handleClick() {
 	}
 }
 
+console.log(props.link)
 
 const isActive = computed(() => {
 	return props.link?.activeFor?.includes(router.currentRoute.value.name)
