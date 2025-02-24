@@ -97,7 +97,11 @@ const tabNames = computed(() => {
 	return props.link?.tabs?.map(tab => tab.name) || []
 })
 
-console.log(tabNames)
+const isTabActive = (tabName) => {
+	return tabNames.value.includes(router.currentRoute.value.name)
+}
+
+console.log(isTabActive(Batches))
 
 
 const isActive = computed(() => {
