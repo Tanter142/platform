@@ -13,7 +13,7 @@ const routes = [
 	},
 	{
 		path: '/курсы',
-		name: 'Курсы',
+		name: 'Courses',
 		component: () => import('@/pages/Courses.vue'),
 	},
 	{
@@ -36,7 +36,7 @@ const routes = [
 	},
 	{
 		path: '/группы',
-		name: 'Группы',
+		name: 'Batches',
 		component: () => import('@/pages/Batches.vue'),
 	},
 	{
@@ -59,7 +59,7 @@ const routes = [
 	},
 	{
 		path: '/статистика',
-		name: 'Статистика',
+		name: 'Statistics',
 		component: () => import('@/pages/Statistics.vue'),
 	},
 	{
@@ -99,7 +99,7 @@ const routes = [
 	},
 	{
 		path: '/вакансии',
-		name: 'Вакансии',
+		name: 'Jobs',
 		component: () => import('@/pages/Jobs.vue'),
 	},
 	{
@@ -134,7 +134,7 @@ const routes = [
 	},
 	{
 		path: '/сертифицированные-участники',
-		name: 'Сертифицированные-участники',
+		name: 'CertifiedParticipants',
 		component: () => import('@/pages/CertifiedParticipants.vue'),
 	},
 	{
