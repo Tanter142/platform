@@ -5,7 +5,7 @@
 		>
 			<Breadcrumbs
 				class="h-7"
-				:items="[{ label: __('Курсы'), route: { name: 'Курсы' } }]"
+				:items="[{ label: __('Курсы'), route: { name: 'Courses' } }]"
 			/>
 			<div class="flex space-x-2 justify-end">
 				<div class="w-40 md:w-44">
@@ -32,7 +32,7 @@
 				<router-link
 					v-if="user.data?.is_moderator || user.data?.is_instructor"
 					:to="{
-						name: 'Форма курса',
+						name: 'CourseForm',
 						params: {
 							courseName: 'new',
 						},
@@ -78,7 +78,7 @@
 							:to="
 								course.membership && course.current_lesson
 									? {
-											name: 'Уроки',
+											name: 'Lesson',
 											params: {
 												courseName: course.name,
 												chapterNumber: course.current_lesson.split('-')[0],
@@ -87,7 +87,7 @@
 									  }
 									: course.membership
 									? {
-											name: 'Уроки',
+											name: 'Lesson',
 											params: {
 												courseName: course.name,
 												chapterNumber: 1,
@@ -95,7 +95,7 @@
 											},
 									  }
 									: {
-											name: 'Детали курса',
+											name: 'CourseDetail',
 											params: { courseName: course.name },
 									  }
 							"
@@ -117,7 +117,7 @@
 			>
 				<router-link
 					:to="{
-						name: 'Форма курса',
+						name: 'CourseForm',
 						params: {
 							courseName: 'new',
 						},
@@ -305,7 +305,7 @@ watch(
 
 const pageMeta = computed(() => {
 	return {
-		title: 'Курсы',
+		title: 'Courses',
 		description: 'All Courses divided by categories',
 	}
 })
