@@ -105,12 +105,12 @@ const addOtherLinks = () => {
 			icon: 'UserRound',
 		})
 		otherLinks.value.push({
-			label: 'Log out',
+			label: 'Выйти',
 			icon: 'LogOut',
 		})
 	} else {
 		otherLinks.value.push({
-			label: 'Log in',
+			label: 'Войти',
 			icon: 'LogIn',
 		})
 	}

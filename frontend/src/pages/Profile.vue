@@ -65,7 +65,7 @@
 					<template #prefix>
 						<Edit class="w-4 h-4 stroke-1.5 text-gray-700" />
 					</template>
-					{{ __('Edit Profile') }}
+					{{ __('Редактировать профиль') }}
 				</Button>
 			</div>
 
@@ -200,7 +200,7 @@ const getTabButtons = () => {
 const breadcrumbs = computed(() => {
 	let crumbs = [
 		{
-			label: 'People',
+			label: 'Люди',
 		},
 		{
 			label: profile.data?.full_name,

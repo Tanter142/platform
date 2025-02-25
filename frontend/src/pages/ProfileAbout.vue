@@ -1,7 +1,7 @@
 <template>
 	<div class="mt-7 mb-10">
 		<h2 class="mb-3 text-lg font-semibold text-gray-900">
-			{{ __('О сбе') }}
+			{{ __('О сeбе') }}
 		</h2>
 		<div
 			v-if="profile.data.bio"
