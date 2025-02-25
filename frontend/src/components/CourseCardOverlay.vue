@@ -142,8 +142,8 @@ const video_link = computed(() => {
 function enrollStudent() {
 	if (!user.data) {
 		showToast(
-			__('Please Login'),
-			__('You need to login first to enroll for this course'),
+			__('Пожалуйста, авторизуйтесь'),
+			__('Для записи на курс сначала авторизуйтесь'),
 			'alert-circle'
 		)
 		setTimeout(() => {

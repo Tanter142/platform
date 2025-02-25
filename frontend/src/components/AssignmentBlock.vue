@@ -6,11 +6,11 @@
 	/>
 	<div v-else class="border rounded-md text-center py-20">
 		<div>
-			{{ __('Please login to access the assignment.') }}
+			{{ __('Пожалуйста, авторизуйтесь, чтобы получить доступ к заданию.') }}
 		</div>
 		<Button @click="redirectToLogin()" class="mt-2">
 			<span>
-				{{ __('Login') }}
+				{{ __('Авторизоваться') }}
 			</span>
 		</Button>
 	</div>
