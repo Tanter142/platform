@@ -5,7 +5,7 @@
 			size: 'xl',
 			actions: [
 				{
-					label: 'Save',
+					label: 'Cохранить',
 					variant: 'solid',
 					onClick: (close) => saveProfile(close),
 				},
