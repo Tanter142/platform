@@ -152,7 +152,7 @@ const setActiveTab = () => {
 			activeTab.value = convertToTitleCase(section)
 		}
 	})
-	if (!activeTab.value) activeTab.value = 'О себе'
+	if (!activeTab.value) activeTab.value = 'About'
 }
 
 watchEffect(() => {
