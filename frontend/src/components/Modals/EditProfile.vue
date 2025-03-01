@@ -76,7 +76,7 @@
 					</div>
 					<TextEditor
 						:fixedMenu="true"
-						@change="(val) => (profile.bio = val)"
+						@change="(val) => (profile.bio = val ? val : '')"
 						:content="profile.bio"
 						editorClass="prose-sm py-2 px-2 min-h-[200px] border-gray-300 hover:border-gray-400 rounded-md bg-gray-200"
 					/>
@@ -139,7 +139,7 @@ const updateProfile = createResource({
 				first_name: profile.first_name,
 				last_name: profile.last_name,
 				headline: profile.headline,
-				bio: profile.bio || 'информация отсутствует',
+				bio: profile.bio ? escapeHTML(profile.bio) : '',
 			},
 		}
 	},
@@ -191,3 +191,4 @@ watch(
 	}
 )
 </script>
+
