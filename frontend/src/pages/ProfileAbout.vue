@@ -112,8 +112,6 @@ const props = defineProps({
 	},
 })
 
-console.log(profile.data.bio)
-
 const badges = createResource({
 	url: 'frappe.client.get_list',
 	params: {
