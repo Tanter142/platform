@@ -152,7 +152,7 @@ const setActiveTab = () => {
 			activeTab.value = convertToTitleCase(section)
 		}
 	})
-	if (!activeTab.value) activeTab.value = 'About'
+	if (!activeTab.value) activeTab.value = 'О себе'
 }
 
 watchEffect(() => {
@@ -184,7 +184,7 @@ const isSessionUser = () => {
 }
 
 const getTabButtons = () => {
-	let buttons = [{ label: 'About' }, { label: 'Certificates' }]
+	let buttons = [{ label: 'About' }, { label: 'Сертификаты' }]
 	if ($user.data?.is_moderator) buttons.push({ label: 'Roles' })
 	if (
 		isSessionUser() &&
@@ -200,7 +200,7 @@ const getTabButtons = () => {
 const breadcrumbs = computed(() => {
 	let crumbs = [
 		{
-			label: 'Люди',
+			label: 'Профиль',
 		},
 		{
 			label: profile.data?.full_name,

@@ -210,6 +210,7 @@ const routes = [
 		name: 'AssignmentSubmissionList',
 		component: () => import('@/pages/AssignmentSubmissionList.vue'),
 	},
+	
 ]
 
 let router = createRouter({
