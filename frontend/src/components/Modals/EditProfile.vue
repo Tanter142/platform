@@ -114,7 +114,7 @@ const profile = reactive({
 	bio: '',
 	image: '',
 })
-
+console.log(props.profile.data)
 const imageResource = createResource({
 	url: 'lms.lms.api.get_file_info',
 	makeParams(values) {
