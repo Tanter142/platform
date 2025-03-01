@@ -1,7 +1,7 @@
 <template>
 	<div class="mt-7 mb-10">
 		<h2 class="mb-3 text-lg font-semibold text-gray-900">
-			{{ __('Certificates') }}
+			{{ __('Сертификаты') }}
 		</h2>
 		<div class="grid grod-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 			<div
