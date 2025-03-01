@@ -76,7 +76,7 @@
 					</div>
 					<TextEditor
 						:fixedMenu="true"
-						@change="(val) => (profile.bio = val ? val : '')"
+						@change="(val) => (profile.bio = val)"
 						:content="profile.bio"
 						editorClass="prose-sm py-2 px-2 min-h-[200px] border-gray-300 hover:border-gray-400 rounded-md bg-gray-200"
 					/>
@@ -127,7 +127,7 @@ const imageResource = createResource({
 		profile.image = data
 	},
 })
-
+console.log(props.profile.data)
 const updateProfile = createResource({
 	url: 'frappe.client.set_value',
 	makeParams() {
@@ -139,7 +139,7 @@ const updateProfile = createResource({
 				first_name: profile.first_name,
 				last_name: profile.last_name,
 				headline: profile.headline,
-				bio: profile.bio ? escapeHTML(profile.bio) : '',
+				bio: profile.bio,
 			},
 		}
 	},
