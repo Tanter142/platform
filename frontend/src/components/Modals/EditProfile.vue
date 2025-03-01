@@ -127,7 +127,7 @@ const imageResource = createResource({
 		profile.image = data
 	},
 })
-console.log(props.profile.data)
+
 const updateProfile = createResource({
 	url: 'frappe.client.set_value',
 	makeParams() {
@@ -147,7 +147,7 @@ const updateProfile = createResource({
 		props.profile.data = data
 	},
 })
-
+console.log(props.profile.data)
 const saveProfile = (close) => {
 	updateProfile.submit(
 		{},
