@@ -28,7 +28,7 @@
 							>
 								<div class="">
 									<Button @click="openFileSelector" :loading="uploading">
-										{{ uploading ? `Uploading ${progress}%` : 'Upload Image' }}
+										{{ uploading ? `Загрузка ${progress}%` : 'Загрузить изображение' }}
 									</Button>
 								</div>
 							</template>
