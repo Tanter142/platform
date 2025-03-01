@@ -147,7 +147,7 @@ const updateProfile = createResource({
 		props.profile.data = data
 	},
 })
-console.log('bio:', props.profile.data.bio)
+
 const saveProfile = (close) => {
 	updateProfile.submit(
 		{},

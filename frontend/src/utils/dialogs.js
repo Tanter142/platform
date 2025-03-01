@@ -33,3 +33,4 @@ export function createDialog(options) {
 	dialogs.value.push(dialog)
 	dialog.show = true
 }
+
