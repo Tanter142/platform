@@ -127,7 +127,7 @@ const userDropdownOptions = [
 	},
 	{
 		icon: LogOut,
-		label: 'Log out',
+		label: 'Выйти',
 		onClick: () => {
 			logout.submit().then(() => {
 				isLoggedIn = false
