@@ -29,7 +29,7 @@
 							<template #prefix>
 								<Edit class="w-4 h-4 stroke-1.5 text-gray-700" />
 							</template>
-							{{ __('Edit') }}
+							{{ __('Редактировать') }}
 						</Button>
 					</template>
 				</EditCoverImage>
