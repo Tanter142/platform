@@ -1,7 +1,7 @@
 <template>
 	<Dialog
 		:options="{
-			title: 'Edit your profile',
+			title: 'Отредактируйте свой профиль',
 			size: 'xl',
 			actions: [
 				{
@@ -25,8 +25,8 @@
 							<Button @click="openFileSelector" :loading="uploading">
 								{{
 									uploading
-										? `Uploading ${progress}%`
-										: 'Upload a profile image'
+										? `Загрузка ${progress}%`
+										: 'Загрузите изображение профиля'
 								}}
 							</Button>
 						</div>
@@ -34,7 +34,7 @@
 				</FileUploader>
 				<div v-else class="mb-4">
 					<div class="text-xs text-gray-600 mb-1">
-						{{ __('Profile Image') }}
+						{{ __('Изображение профиля') }}
 					</div>
 					<div class="flex items-center">
 						<div class="border rounded-md p-2 mr-2">
@@ -56,23 +56,23 @@
 				</div>
 				<FormControl
 					v-model="profile.first_name"
-					:label="__('First Name')"
+					:label="__('Имя')"
 					class="mb-4"
 				/>
 				<FormControl
 					v-model="profile.last_name"
-					:label="__('Last Name')"
+					:label="__('Фамилия')"
 					class="mb-4"
 				/>
 				<FormControl
 					v-model="profile.headline"
-					:label="__('Headline')"
+					:label="__('Сноска')"
 					class="mb-4"
 				/>
 
 				<div class="mb-4">
 					<div class="mb-1.5 text-sm text-gray-600">
-						{{ __('Bio') }}
+						{{ __('Описание') }}
 					</div>
 					<TextEditor
 						:fixedMenu="true"
@@ -155,7 +155,7 @@ const saveProfile = (close) => {
 				reloadProfile.value.reload()
 			},
 			onError(err) {
-				showToast('Error', err.messages?.[0] || err, 'x')
+				showToast('Ошибка', err.messages?.[0] || err, 'x')
 			},
 		}
 	)
@@ -164,7 +164,7 @@ const saveProfile = (close) => {
 const validateFile = (file) => {
 	let extension = file.name.split('.').pop().toLowerCase()
 	if (!['jpg', 'jpeg', 'png'].includes(extension)) {
-		return 'Only image file is allowed.'
+		return 'Разрешены только изображения.'
 	}
 }
 
