@@ -85,7 +85,7 @@ onMounted(() => {
 })
 
 const notifications = computed(() => {
-	return activeTab.value === 'Unread'
+	return activeTab.value === 'Непросмотренные'
 		? unReadNotifications.data
 		: readNotifications.data
 })
