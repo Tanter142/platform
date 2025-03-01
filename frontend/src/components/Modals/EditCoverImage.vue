@@ -13,7 +13,7 @@
 					<div class="flex items-center justify-center space-x-2">
 						<TextInput
 							type="text"
-							placeholder="search by keyword"
+							placeholder="поиск по ключевому слову"
 							v-model="search"
 							:debounce="300"
 							class="flex-1"

@@ -14,7 +14,7 @@
 						<div class="flex-1">
 							<TextInput
 								type="text"
-								placeholder="search by keyword"
+								placeholder="поиск по ключевому слову"
 								v-model="search"
 								:debounce="300"
 							/>
