@@ -73,7 +73,7 @@ import { updateDocumentTitle } from '@/utils'
 
 const user = inject('$user')
 const socket = inject('$socket')
-const activeTab = ref('Unread')
+const activeTab = ref('Непросмотренные')
 const router = useRouter()
 
 onMounted(() => {
