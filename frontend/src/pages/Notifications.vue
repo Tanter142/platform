@@ -51,7 +51,7 @@
 			</div>
 		</div>
 		<div v-else class="text-gray-600">
-			{{ __('Nothing to see here.') }}
+			{{ __('Здесь ничего нет.') }}
 		</div>
 	</div>
 </template>
