@@ -139,7 +139,7 @@ const updateProfile = createResource({
 				first_name: profile.first_name,
 				last_name: profile.last_name,
 				headline: profile.headline,
-				bio: profile.bio,
+				bio: profile.bio || 'информация отсутствует',
 			},
 		}
 	},
