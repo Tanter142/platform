@@ -8,7 +8,7 @@
 			v-html="profile.data.bio"
 			class="ProseMirror prose prose-table:table-fixed prose-td:p-2 prose-th:p-2 prose-td:border prose-th:border prose-td:border-gray-300 prose-th:border-gray-300 prose-td:relative prose-th:relative prose-th:bg-gray-100 prose-sm max-w-none !whitespace-normal"
 		></div>
-		<div v-else-if="profile.data.bio === ''" class="text-gray-700 text-sm italic">
+		<div v-else-if="profile.data.bio === '<p></p>'" class="text-gray-700 text-sm italic">
 			{{ __('Нет информации о себе') }}
 		</div>
 	</div>
