@@ -130,14 +130,16 @@ const imageResource = createResource({
 
 const updateProfile = createResource({
 	url: 'frappe.client.set_value',
-	makeParams(values) {
-		profile.bio = profile.bio
+	makeParams() {
 		return {
 			doctype: 'User',
 			name: props.profile.data.name,
 			fieldname: {
-				user_image: profile.image.file_url,
-				...profile,
+				user_image: profile.image?.file_url,
+				first_name: profile.first_name,
+				last_name: profile.last_name,
+				headline: profile.headline,
+				bio: profile.bio,
 			},
 		}
 	},
