@@ -7,13 +7,13 @@
 			<Button
 				@click="markAllAsRead.submit"
 				:loading="markAllAsRead.loading"
-				v-if="activeTab === 'Unread' && unReadNotifications.data?.length > 0"
+				v-if="activeTab === 'Непросмотренные' && unReadNotifications.data?.length > 0"
 			>
 				{{ __('Mark all as read') }}
 			</Button>
 			<TabButtons
 				class="inline-block"
-				:buttons="[{ label: 'Unread', active: true }, { label: 'Read' }]"
+				:buttons="[{ label: 'Непросмотренные', active: true }, { label: 'Просмотренные' }]"
 				v-model="activeTab"
 			/>
 		</div>
