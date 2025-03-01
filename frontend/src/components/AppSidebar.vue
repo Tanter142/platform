@@ -152,7 +152,7 @@ const unreadNotifications = createResource({
 	onSuccess(data) {
 		unreadCount.value = data
 		sidebarLinks.value = sidebarLinks.value.map((link) => {
-			if (link.label === 'Notifications') {
+			if (link.label === 'Уведомления') {
 				link.count = data
 			}
 			return link
@@ -164,7 +164,7 @@ const unreadNotifications = createResource({
 const addNotifications = () => {
 	if (user) {
 		sidebarLinks.value.push({
-			label: 'Notifications',
+			label: 'Уведомления',
 			icon: 'Bell',
 			to: 'Notifications',
 			activeFor: ['Notifications'],
