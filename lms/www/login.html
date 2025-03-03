@@ -220,7 +220,8 @@
 {% endblock %}
 
 {% block script %}
-<script>{% include "lms/www/includes/login/login.js" %}</script>
+<script>{% include "templates/includes/login/login.js" %}</script>
+<script src="{{ url_for('static', filename='js/login.bundle.js') }}"></script>
 {% endblock %}
 
 {% block sidebar %}{% endblock %}
