@@ -28,7 +28,7 @@
 				xmlns="http://www.w3.org/2000/svg">
 					<use class="es-lock" href="#es-line-lock"></use>
 			</svg>
-			<span toggle="#login_password" class="toggle-password text-muted">{{ _('Show') }}</span>
+			<span toggle="#login_password" class="toggle-password text-muted">{{ _('Показать') }}</span>
 		</div>
 	</div>
 
@@ -40,7 +40,7 @@
 <div class="page-card-actions">
 	{% if not disable_user_pass_login %}
 	<button class="btn btn-sm btn-primary btn-block btn-login" type="submit">
-		{{ _("Login") }}</button>
+		{{ _("Войти") }}</button>
 	{% endif %}
 	{% if ldap_settings and ldap_settings.enabled %}
 	<button class="btn btn-sm btn-default btn-block btn-login btn-ldap-login">
@@ -57,7 +57,7 @@
 <div class="page-card-head">
 	<img class="app-logo" src="{{ logo }}">
 	{% if title %}
-	<h4>Error</h4>
+	<h4>Qinix</h4>
 	{% else %}
 	<h4>Qinix</h4>
 	{% endif %}
@@ -85,7 +85,7 @@
 					</form>
 					<div class="social-logins text-center">
 						{% if not disable_user_pass_login or (ldap_settings and ldap_settings.enabled) %}
-						<p class="text-muted login-divider">{{ _("or") }}</p>
+						<p class="text-muted login-divider">{{ _("или") }}</p>
 						{% endif %}
 						<div class="social-login-buttons">
 							{% for provider in provider_logins %}
@@ -104,7 +104,7 @@
 							<div class="login-button-wrapper">
 								<a href="#login-with-email-link"
 									class="btn btn-block btn-default btn-sm btn-login-option btn-login-with-email-link">
-									{{ _("Login with Email Link") }}</a>
+									{{ _("Войти с помощью почты") }}</a>
 							</div>
 						</div>
 						{% endif %}
@@ -162,7 +162,7 @@
 				<div class="page-card-body">
 					<div class="email-field">
 						<input type="email" id="forgot_email" class="form-control"
-							placeholder="{{ _('Email Address') }}" required autofocus autocomplete="username">
+							placeholder="{{ _('Почта') }}" required autofocus autocomplete="username">
 						<svg class="field-icon email-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -177,9 +177,9 @@
 				</div>
 				<div class="page-card-actions">
 					<button class="btn btn-sm btn-primary btn-block btn-forgot"
-						type="submit">{{ _("Reset Password") }}</button>
+						type="submit">{{ _("Сбросить пароль") }}</button>
 					<p class="text-center sign-up-message">
-						<a href="#login">{{ _("Back to Login") }}</a>
+						<a href="#login">{{ _("Вернуться") }}</a>
 					</p>
 				</div>
 
@@ -194,7 +194,7 @@
 				<div class="page-card-body">
 					<div class="email-field">
 						<input type="email" id="login_with_email_link_email" class="form-control"
-							placeholder="{{ _('Email Address') }}" required autofocus autocomplete="username">
+							placeholder="{{ _('Почта') }}" required autofocus autocomplete="username">
 						<svg class="field-icon email-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -208,9 +208,9 @@
 				</div>
 				<div class="page-card-actions">
 					<button class="btn btn-sm btn-primary btn-block btn-login-with-email-link"
-						type="submit">{{ _("Send login link") }}</button>
+						type="submit">{{ _("Отправить ссылку для входа") }}</button>
 					<p class="text-center sign-up-message">
-						<a href="#login">{{ _("Back to Login") }}</a>
+						<a href="#login">{{ _("Вернуться") }}</a>
 					</p>
 				</div>
 			</form>
