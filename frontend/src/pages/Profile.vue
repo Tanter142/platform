@@ -160,7 +160,7 @@ watchEffect(() => {
 		let route = {
 			'О себе': { name: 'ProfileAbout' },
 			Сертификаты: { name: 'ProfileCertificates' },
-			'Роли': { name: 'ProfileRoles' },
+			Роли: { name: 'ProfileRoles' },
 			Slots: { name: 'ProfileEvaluator' },
 			Schedule: { name: 'ProfileEvaluationSchedule' },
 		}[activeTab.value]
