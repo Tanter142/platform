@@ -160,7 +160,7 @@ watchEffect(() => {
 		let route = {
 			'О себе': { name: 'ProfileAbout' },
 			Сертификаты: { name: 'ProfileCertificates' },
-			Roles: { name: 'ProfileRoles' },
+			'Роли': { name: 'ProfileRoles' },
 			Slots: { name: 'ProfileEvaluator' },
 			Schedule: { name: 'ProfileEvaluationSchedule' },
 		}[activeTab.value]
@@ -184,7 +184,7 @@ const isSessionUser = () => {
 }
 
 const getTabButtons = () => {
-	let buttons = [{ label: 'фвыфвывфы' }, { label: 'Сертификаты' }]
+	let buttons = [{ label: 'О себе' }, { label: 'Сертификаты' }]
 	if ($user.data?.is_moderator) buttons.push({ label: 'Роли' })
 	if (
 		isSessionUser() &&
