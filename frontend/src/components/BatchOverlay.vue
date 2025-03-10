@@ -90,7 +90,7 @@
 		>
 			<Button class="w-full mt-2">
 				<span>
-					{{ __('Edit') }}
+					{{ __('Редактировать') }}
 				</span>
 			</Button>
 		</router-link>

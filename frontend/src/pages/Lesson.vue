@@ -62,7 +62,7 @@
 							}"
 						>
 							<Button class="mr-2">
-								{{ __('Edit') }}
+								{{ __('Редактировать') }}
 							</Button>
 						</router-link>
 						<router-link
@@ -93,7 +93,7 @@
 							}"
 						>
 							<Button>
-								{{ __('Back to Course') }}
+								{{ __('Вернуться к курсу') }}
 							</Button>
 						</router-link>
 					</div>
@@ -171,7 +171,7 @@
 						{{ lesson.data.course_title }}
 					</div>
 					<div v-if="user && lesson.data.membership" class="text-sm mt-3">
-						{{ Math.ceil(lessonProgress) }}% {{ __('completed') }}
+						{{ Math.ceil(lessonProgress) }}% {{ __('Выполнено') }}
 					</div>
 
 					<ProgressBar
