@@ -15,7 +15,7 @@
 				}}
 			</div>
 			<Button class="mt-4">
-				{{ __('Add Chapter') }}
+				{{ __('Добавить главу') }}
 			</Button>
 		</div>
 	</div>

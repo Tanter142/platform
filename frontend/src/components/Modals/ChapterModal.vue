@@ -2,11 +2,11 @@
 	<Dialog
 		v-model="show"
 		:options="{
-			title: chapterDetail ? __('Edit Chapter') : __('Add Chapter'),
+			title: chapterDetail ? __('Редактировать главу') : __('Добавить главу'),
 			size: 'lg',
 			actions: [
 				{
-					label: chapterDetail ? __('Edit') : __('Create'),
+					label: chapterDetail ? __('Редактировать') : __('Создать'),
 					variant: 'solid',
 					onClick: (close) =>
 						chapterDetail ? editChapter(close) : addChapter(close),
@@ -19,10 +19,10 @@
 				<FormControl label="Title" v-model="chapter.title" :required="true" />
 				<Switch
 					size="sm"
-					:label="__('SCORM Package')"
+					:label="__('Пакет SCORM')"
 					:description="
 						__(
-							'Enable this only if you want to upload a SCORM package as a chapter.'
+							'Включите это только в том случае, если вы хотите загрузить пакет SCORM в виде главы.'
 						)
 					"
 					v-model="chapter.is_scorm_package"
@@ -38,7 +38,7 @@
 							<div class="mb-4">
 								<Button @click="openFileSelector" :loading="uploading">
 									{{
-										uploading ? `Uploading ${progress}%` : 'Upload an zip file'
+										uploading ? `Uploading ${progress}%` : 'Загрузить zip-файл'
 									}}
 								</Button>
 							</div>
