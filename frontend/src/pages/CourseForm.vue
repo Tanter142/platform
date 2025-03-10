@@ -133,7 +133,7 @@
 								</div>
 								<FormControl
 									v-model="newTag"
-									:placeholder="__('Добавьте ключевое слово и нажмите Enter')"
+									:placeholder="__('Добавьте ключевое слово')"
 									class="w-72"
 									@keyup.enter="updateTags()"
 									id="tags"
