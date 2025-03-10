@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Button v-if="!singleThread" class="float-right" @click="openTopicModal()">
-			{{ __('New {0}').format(singularize(title)) }}
+			{{ __(' {0}').format(singularize(title)) }}
 		</Button>
 		<div class="text-xl font-semibold">
 			{{ __(title) }}
