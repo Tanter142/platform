@@ -141,7 +141,7 @@ describe("Course Creation", () => {
 				"text",
 				"This is a test discussion. This will check if the UI is working properly."
 			);
-			cy.button("Post").click();
+			cy.button("Отправить").click();
 		});
 
 		// View Discussion
