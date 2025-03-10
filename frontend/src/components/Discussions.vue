@@ -17,7 +17,7 @@
 				<UserAvatar :user="topic.user" size="2xl" class="mr-4" />
 				<div>
 					<div class="text-lg font-semibold mb-1">
-						{{ topic.title}}
+						{{ topic.title }}
 					</div>
 					<div class="flex items-center">
 						<span>
