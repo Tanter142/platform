@@ -60,7 +60,7 @@
 				size="md"
 			>
 				<span>
-					{{ __('Start Learning') }}
+					{{ __('Начать обучение') }}
 				</span>
 			</Button>
 			<Button
@@ -83,25 +83,25 @@
 			>
 				<Button variant="subtle" class="w-full mt-2" size="md">
 					<span>
-						{{ __('Edit') }}
+						{{ __('Редактировать') }}
 					</span>
 				</Button>
 			</router-link>
 			<div class="space-y-4">
 				<div class="mt-8 font-medium">
-					{{ __('This course has:') }}
+					{{ __('У этого курса:') }}
 				</div>
 				<div class="flex items-center">
 					<BookOpen class="h-4 w-4 stroke-1.5 text-gray-600" />
 					<span class="ml-2">
-						{{ course.data.lessons }} {{ __('Lessons') }}
+						{{ course.data.lessons }} {{ __('Занятий') }}
 					</span>
 				</div>
 				<div class="flex items-center">
 					<Users class="h-4 w-4 stroke-1.5 text-gray-600" />
 					<span class="ml-2">
 						{{ formatAmount(course.data.enrollments) }}
-						{{ __('Enrolled Students') }}
+						{{ __('Записавшихся студентов') }}
 					</span>
 				</div>
 				<div v-if="parseInt(course.data.rating) > 0" class="flex items-center">
