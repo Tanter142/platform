@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Button v-if="!singleThread" class="float-right" @click="openTopicModal()">
-			{{ __('New {0}').format(singularize(title)) }}
+			{{ __('Новые {0}').format(singularize(title)) }}
 		</Button>
 		<div class="text-xl font-semibold">
 			{{ __(Заголовок) }}
@@ -56,7 +56,7 @@
 	</div>
 	<DiscussionModal
 		v-model="showTopicModal"
-		:title="__('New {0}').format(title)"
+		:title="__('Новые {0}').format(title)"
 		:doctype="props.doctype"
 		:docname="props.docname"
 		v-model:reloadTopics="topics"
