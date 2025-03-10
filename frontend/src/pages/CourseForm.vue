@@ -12,7 +12,7 @@
 								<Trash2 class="w-4 h-4 stroke-1.5" />
 							</template>
 							<span>
-								{{ __('Delete') }}
+								{{ __('Удалить') }}
 							</span>
 						</Button>
 						<Button variant="solid" @click="submitCourse()" class="ml-2">
