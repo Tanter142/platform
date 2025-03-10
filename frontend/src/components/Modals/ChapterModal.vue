@@ -16,7 +16,7 @@
 	>
 		<template #body-content>
 			<div class="space-y-4 text-base">
-				<FormControl label="Title" v-model="chapter.title" :required="true" />
+				<FormControl label="Название" v-model="chapter.title" :required="true" />
 				<Switch
 					size="sm"
 					:label="__('Пакет SCORM')"

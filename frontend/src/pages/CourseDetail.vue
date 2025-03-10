@@ -73,7 +73,7 @@
 					></div>
 					<div class="mt-10">
 						<CourseOutline
-							:title="__('Course Outline')"
+							:title="__('План курса')"
 							:courseName="course.data.name"
 							:showOutline="true"
 						/>

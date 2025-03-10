@@ -121,7 +121,7 @@
 							}"
 						>
 							<Button>
-								{{ __('Add Lesson') }}
+								{{ __('Добавить урок') }}
 							</Button>
 						</router-link>
 					</div>

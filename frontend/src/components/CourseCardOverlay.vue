@@ -26,7 +26,7 @@
 			>
 				<Button variant="solid" size="md" class="w-full">
 					<span>
-						{{ __('Continue Learning') }}
+						{{ __('Продолжить обучение') }}
 					</span>
 				</Button>
 			</router-link>
