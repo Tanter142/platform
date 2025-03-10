@@ -125,7 +125,7 @@
 					class="bg-gray-100 p-3 rounded-md mt-6"
 				>
 					<div class="text-gray-600 font-medium">
-						{{ __('Instructor Notes') }}
+						{{ __('Заметки инструктора') }}
 					</div>
 					<div
 						id="instructor-content"

@@ -11,21 +11,21 @@
 						@click="saveLesson({ showSuccessMessage: true })"
 						class="mt-3 md:mt-0"
 					>
-						{{ __('Save') }}
+						{{ __('Cохранить') }}
 					</Button>
 				</header>
 				<div class="py-5">
 					<div class="w-5/6 mx-auto">
 						<FormControl
 							v-model="lesson.title"
-							label="Title"
+							label="Заголовок"
 							class="mb-4"
 							:required="true"
 						/>
 						<FormControl
 							v-model="lesson.include_in_preview"
 							type="checkbox"
-							label="Include in Preview"
+							label="Включить в предварительный просмотр"
 						/>
 					</div>
 					<div class="border-t mt-4">
@@ -39,7 +39,7 @@
 								"
 							>
 								<label class="block font-medium text-gray-600 mb-1">
-									{{ __('Instructor Notes') }}
+									{{ __('Заметки инструктора') }}
 								</label>
 								<ChevronRight
 									class="stroke-2 h-5 w-5 text-gray-600"
@@ -59,7 +59,7 @@
 					<div class="border-t mt-4">
 						<div class="w-5/6 mx-auto pt-4">
 							<label class="block font-medium text-gray-600 mb-1">
-								{{ __('Content') }}
+								{{ __('Содержание') }}
 							</label>
 							<div
 								id="content"
@@ -481,7 +481,7 @@ const breadcrumbs = computed(() => {
 		})
 	}
 	crumbs.push({
-		label: lessonDetails?.data?.lesson ? 'Edit Lesson' : 'Create Lesson',
+		label: lessonDetails?.data?.lesson ? 'Редактировать урок' : 'Создать урок',
 		route: {
 			name: 'LessonForm',
 			params: {

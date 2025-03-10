@@ -70,7 +70,7 @@ function submitReview(close) {
 	createReview.submit(review, {
 		validate() {
 			if (!review.rating) {
-				return 'Пожалуйста, выберите рейтинг'
+				return 'Пожалуйста, выберите оценку'
 			}
 		},
 		onSuccess() {
