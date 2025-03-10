@@ -4,7 +4,7 @@
 			{{ __(' {0}').format(singularize(title)) }}
 		</Button>
 		<div class="text-xl font-semibold">
-			{{ __(Заголовок) }}
+			{{ __(title) }}
 		</div>
 	</div>
 	<div v-if="topics.data?.length && !singleThread">
@@ -17,7 +17,7 @@
 				<UserAvatar :user="topic.user" size="2xl" class="mr-4" />
 				<div>
 					<div class="text-lg font-semibold mb-1">
-						{{ topic.title }}
+						{{ topic.title}}
 					</div>
 					<div class="flex items-center">
 						<span>
