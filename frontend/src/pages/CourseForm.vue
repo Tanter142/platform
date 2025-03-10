@@ -12,12 +12,12 @@
 								<Trash2 class="w-4 h-4 stroke-1.5" />
 							</template>
 							<span>
-								{{ __('Delete') }}
+								{{ __('Удалить') }}
 							</span>
 						</Button>
 						<Button variant="solid" @click="submitCourse()" class="ml-2">
 							<span>
-								{{ __('Save') }}
+								{{ __('Сохранить') }}
 							</span>
 						</Button>
 					</div>
@@ -25,20 +25,20 @@
 				<div class="mt-5 mb-10">
 					<div class="container mb-5">
 						<div class="text-lg font-semibold mb-4">
-							{{ __('Details') }}
+							{{ __('Детали') }}
 						</div>
 						<FormControl
 							v-model="course.title"
-							:label="__('Title')"
+							:label="__('Название')"
 							class="mb-4"
 							:required="true"
 						/>
 						<FormControl
 							v-model="course.short_introduction"
-							:label="__('Short Introduction')"
+							:label="__('Краткое описание')"
 							:placeholder="
 								__(
-									'A one line introduction to the course that appears on the course card'
+									'Один строчный текст, который будет отображаться на карточке курса'
 								)
 							"
 							class="mb-4"
@@ -46,7 +46,7 @@
 						/>
 						<div class="mb-4">
 							<div class="mb-1.5 text-sm text-gray-600">
-								{{ __('Course Description') }}
+								{{ __('Описание курса') }}
 								<span class="text-red-500">*</span>
 							</div>
 							<TextEditor
@@ -59,7 +59,7 @@
 						</div>
 						<div class="mb-4">
 							<div class="text-xs text-gray-600 mb-2">
-								{{ __('Course Image') }}
+								{{ __('Обложка курса') }}
 								<span class="text-red-500">*</span>
 							</div>
 							<FileUploader
@@ -77,11 +77,11 @@
 										</div>
 										<div class="ml-4">
 											<Button @click="openFileSelector">
-												{{ __('Upload') }}
+												{{ __('Загрузить') }}
 											</Button>
 											<div class="mt-2 text-gray-600 text-sm">
 												{{
-													__('Appears on the course card in the course list')
+													__('Появляется на карточке курса в списке курсов')
 												}}
 											</div>
 										</div>
@@ -107,17 +107,17 @@
 						</div>
 						<FormControl
 							v-model="course.video_link"
-							:label="__('Preview Video')"
+							:label="__('Обложка видео')"
 							:placeholder="
 								__(
-									'Paste the youtube link of a short video introducing the course'
+									'Вставьте ссылку на видео youtube, представляющее курс'
 								)
 							"
 							class="mb-4"
 						/>
 						<div class="mb-4">
 							<div class="mb-1.5 text-xs text-gray-600">
-								{{ __('Tags') }}
+								{{ __('Теги') }}
 							</div>
 							<div class="flex items-center">
 								<div
@@ -133,7 +133,7 @@
 								</div>
 								<FormControl
 									v-model="newTag"
-									:placeholder="__('Add a keyword and then press enter')"
+									:placeholder="__('Добавьте ключевое слово и нажмите Enter')"
 									class="w-72"
 									@keyup.enter="updateTags()"
 									id="tags"
@@ -144,21 +144,21 @@
 							<Link
 								doctype="LMS Category"
 								v-model="course.category"
-								:label="__('Category')"
+								:label="__('Категория')"
 								:onCreate="(value, close) => openSettings(close)"
 							/>
 						</div>
 						<MultiSelect
 							v-model="instructors"
 							doctype="User"
-							:label="__('Instructors')"
+							:label="__('Инструкторы')"
 							:filters="{ ignore_user_type: 1 }"
 							:required="true"
 						/>
 					</div>
 					<div class="container border-t">
 						<div class="text-lg font-semibold mt-5 mb-4">
-							{{ __('Settings') }}
+							{{ __('Настройки') }}
 						</div>
 						<div class="grid grid-cols-3 gap-10 mb-4">
 							<div
@@ -168,11 +168,11 @@
 								<FormControl
 									type="checkbox"
 									v-model="course.published"
-									:label="__('Published')"
+									:label="__('Опубликованный')"
 								/>
 								<FormControl
 									v-model="course.published_on"
-									:label="__('Published On')"
+									:label="__('Опубликовано на')"
 									type="date"
 									class="mb-5"
 								/>
@@ -181,49 +181,49 @@
 								<FormControl
 									type="checkbox"
 									v-model="course.upcoming"
-									:label="__('Upcoming')"
+									:label="__('Предстоящий')"
 								/>
 								<FormControl
 									type="checkbox"
 									v-model="course.featured"
-									:label="__('Featured')"
+									:label="__('Рекомендуемый')"
 								/>
 							</div>
 							<div class="flex flex-col space-y-3">
 								<FormControl
 									type="checkbox"
 									v-model="course.disable_self_learning"
-									:label="__('Disable Self Enrollment')"
+									:label="__('Отключить самостоятельную регистрацию')"
 								/>
 								<FormControl
 									type="checkbox"
 									v-model="course.enable_certification"
-									:label="__('Completion Certificate')"
+									:label="__('Сертификат о прохождении курса')"
 								/>
 							</div>
 						</div>
 					</div>
 					<div class="container border-t">
 						<div class="text-lg font-semibold mt-5 mb-4">
-							{{ __('Pricing') }}
+							{{ __('Цена') }}
 						</div>
 						<div class="mb-4">
 							<FormControl
 								type="checkbox"
 								v-model="course.paid_course"
-								:label="__('Paid Course')"
+								:label="__('Платный курс')"
 							/>
 						</div>
 						<FormControl
 							v-model="course.course_price"
-							:label="__('Course Price')"
+							:label="__('Стоимость курса')"
 							class="mb-4"
 						/>
 						<Link
 							doctype="Currency"
 							v-model="course.currency"
 							:filters="{ enabled: 1 }"
-							:label="__('Currency')"
+							:label="__('Валюта')"
 						/>
 					</div>
 				</div>
@@ -546,7 +546,7 @@ const check_permission = () => {
 const breadcrumbs = computed(() => {
 	let crumbs = [
 		{
-			label: 'Courses',
+			label: 'Курсы',
 			route: { name: 'Courses' },
 		},
 	]
