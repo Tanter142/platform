@@ -133,7 +133,7 @@ describe("Course Creation", () => {
 		);
 
 		// Add Discussion
-		cy.button("Новый вопрос").click();
+		cy.button("New Question").click();
 		cy.wait(500);
 		cy.get("[id^=headlessui-dialog-panel-").within(() => {
 			cy.get("label").contains("Title").type("Test Discussion");
