@@ -4,7 +4,7 @@
 			{{ __(' {0}').format(singularize(title)) }}
 		</Button>
 		<div class="text-xl font-semibold">
-			{{ __(title) }}
+			{{ __(Заголовок) }}
 		</div>
 	</div>
 	<div v-if="topics.data?.length && !singleThread">
