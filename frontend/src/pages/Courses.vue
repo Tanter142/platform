@@ -129,10 +129,10 @@
 								class="size-10 stroke-1 text-gray-800 p-1 rounded-full border bg-white"
 							/>
 							<div class="font-medium">
-								{{ __('Create a Course') }}
+								{{ __('Создать курс') }}
 							</div>
 							<span class="text-gray-700 text-sm leading-4">
-								{{ __('You can add chapters and lessons to it.') }}
+								{{ __('Вы можете добавить главы и уроки.') }}
 							</span>
 						</div>
 					</div>
