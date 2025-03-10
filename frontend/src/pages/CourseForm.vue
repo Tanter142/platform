@@ -12,7 +12,7 @@
 								<Trash2 class="w-4 h-4 stroke-1.5" />
 							</template>
 							<span>
-								{{ __('Удалить') }}
+								{{ __('Delete') }}
 							</span>
 						</Button>
 						<Button variant="solid" @click="submitCourse()" class="ml-2">
@@ -471,7 +471,7 @@ const trashCourse = () => {
 		),
 		actions: [
 			{
-				label: __('Delete'),
+				label: __('Удалить'),
 				theme: 'red',
 				variant: 'solid',
 				onClick(close) {
