@@ -228,7 +228,7 @@ router.beforeEach(async (to, from, next) => {
 			await userResource.promise
 		}
 	} catch (error) {
-		isLoggedIn = true
+		isLoggedIn = false
 	}
 
 	if (!isLoggedIn) {
