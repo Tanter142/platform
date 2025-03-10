@@ -15,7 +15,7 @@
 		<template #body-content>
 			<div class="flex flex-col gap-4">
 				<div>
-					<FormControl v-model="topic.title" :label="__('Title')" type="text" />
+					<FormControl v-model="topic.title" :label="__('Заголовок')" type="text" />
 				</div>
 				<div>
 					<div class="mb-1.5 text-sm text-gray-600">
