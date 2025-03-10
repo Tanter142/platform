@@ -8,7 +8,7 @@
 				{{ __(title) }}
 			</div>
 			<Button size="sm" v-if="allowEdit" @click="openChapterModal()">
-				{{ __('Add Chapter') }}
+				{{ __('Добавить главу') }}
 			</Button>
 			<!-- <span class="font-medium cursor-pointer" @click="expandAllChapters()">
 				{{ expandAll ? __("Collapse all chapters") : __("Expand all chapters") }}
