@@ -4,7 +4,7 @@
 			{{ __(' {0}').format(singularize(title)) }}
 		</Button>
 		<div class="text-xl font-semibold">
-			{{ __(title) }}
+			{{ __(Заголовок) }}
 		</div>
 	</div>
 	<div v-if="topics.data?.length && !singleThread">
@@ -56,7 +56,7 @@
 	</div>
 	<DiscussionModal
 		v-model="showTopicModal"
-		:title="__('New {0}').format(title)"
+		:title="__('{0}').format(title)"
 		:doctype="props.doctype"
 		:docname="props.docname"
 		v-model:reloadTopics="topics"

@@ -5,7 +5,7 @@
 			size: '2xl',
 			actions: [
 				{
-					label: 'Post',
+					label: 'Отправить',
 					variant: 'solid',
 					onClick: (close) => submitTopic(close),
 				},
@@ -19,7 +19,7 @@
 				</div>
 				<div>
 					<div class="mb-1.5 text-sm text-gray-600">
-						{{ __('Details') }}
+						{{ __('Подробности') }}
 					</div>
 					<TextEditor
 						:content="topic.reply"
