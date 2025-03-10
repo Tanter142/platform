@@ -158,7 +158,7 @@
 				<div class="mt-20">
 					<Discussions
 						v-if="allowDiscussions"
-						:title="'Questions'"
+						:title="'Вопросы и ответы'"
 						:doctype="'Course Lesson'"
 						:docname="lesson.data.name"
 						:key="lesson.data.name"

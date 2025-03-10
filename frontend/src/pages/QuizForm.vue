@@ -120,7 +120,7 @@
 							<template #prefix>
 								<Plus class="w-4 h-4" />
 							</template>
-							{{ __('New Question') }}
+							{{ __('Новый вопрос') }}
 						</Button>
 					</div>
 					<ListView
