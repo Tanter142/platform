@@ -46,7 +46,7 @@
 					<Button
 						variant="ghost"
 						class="w-full !justify-start"
-						:label="__('Clear')"
+						:label="__('Очистить')"
 						@click="() => clearValue(close)"
 					>
 						<template #prefix>
