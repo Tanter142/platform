@@ -146,7 +146,7 @@ const coverImage = createResource({
 
 const setActiveTab = () => {
 	let fragments = route.path.split('/')
-	let sections = ['certificates', 'Роли', 'Слоты', 'schedule']
+	let sections = ['certificates', 'Роли', 'Slots', 'schedule']
 	sections.forEach((section) => {
 		if (fragments.includes(section)) {
 			activeTab.value = convertToTitleCase(section)
@@ -161,7 +161,7 @@ watchEffect(() => {
 			'О себе': { name: 'ProfileAbout' },
 			Сертификаты: { name: 'ProfileCertificates' },
 			Роли: { name: 'ProfileRoles' },
-			Слоты: { name: 'ProfileEvaluator' },
+			Slots: { name: 'ProfileEvaluator' },
 			Schedule: { name: 'ProfileEvaluationSchedule' },
 		}[activeTab.value]
 		router.push(route)
@@ -190,7 +190,7 @@ const getTabButtons = () => {
 		isSessionUser() &&
 		($user.data?.is_evaluator || $user.data?.is_moderator)
 	) {
-		buttons.push({ label: 'Слоты' })
+		buttons.push({ label: 'Slots' })
 		buttons.push({ label: 'Schedule' })
 	}
 
