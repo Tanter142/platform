@@ -210,23 +210,23 @@ let tabs
 
 const makeTabs = computed(() => {
 	tabs = []
-	addToTabs('Текущие')
-	addToTabs('Новые')
-	addToTabs('Предстоящие')
+	addToTabs('Live')
+	addToTabs('New')
+	addToTabs('Upcoming')
 
 	if (user.data) {
-		addToTabs('Зарегистрированные')
+		addToTabs('Enrolled')
 
 		if (
 			user.data.is_moderator ||
 			user.data.is_instructor ||
 			courses.data?.created?.length
 		) {
-			addToTabs('Созданные')
+			addToTabs('Created')
 		}
 
 		if (user.data.is_moderator) {
-			addToTabs('На рассмотрении')
+			addToTabs('Under Review')
 		}
 	}
 	return tabs
