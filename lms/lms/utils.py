@@ -1070,7 +1070,7 @@ def get_categorized_courses(courses):
 		live.sort(key=lambda x: x.featured, reverse=True)
 
 	return {
-		"Текущие": live,
+		"текущие": live,
 		"new": new,
 		"upcoming": upcoming,
 		"enrolled": enrolled,
