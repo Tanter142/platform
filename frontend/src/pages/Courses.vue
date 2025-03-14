@@ -20,7 +20,7 @@
 				<div class="w-28 md:w-36">
 					<FormControl
 						type="text"
-						placeholder=" "
+						placeholder="Поиск"
 						v-model="searchQuery"
 						@input="courses.reload()"
 					>
@@ -42,7 +42,7 @@
 						<template #prefix>
 							<Plus class="h-4 w-4" />
 						</template>
-						{{ __(' Новый курс') }}
+						{{ __('Новый курс') }}
 					</Button>
 				</router-link>
 			</div>
@@ -61,7 +61,7 @@
 							:class="{ 'text-gray-900': selected }"
 						>
 							<component v-if="tab.icon" :is="tab.icon" class="h-5" />
-							{{ __('{0}').format(tab.label) }}
+							{{ __(tab.label) }}
 							<Badge theme="gray">
 								{{ tab.count }}
 							</Badge>
@@ -104,12 +104,15 @@
 						</router-link>
 					</div>
 					<div v-else class="p-5 italic text-gray-500">
-						{{ __('{0} ').format(tab.label.toLowerCase()) }}
+						{{ __('No {0} courses').format(tab.label.toLowerCase()) }}
 					</div>
 				</template>
 			</Tabs>
 			<div
-				v-else-if="!courses.loading && (user.data?.is_moderator || user.data?.is_instructor)"
+				v-else-if="
+					!courses.loading &&
+					(user.data?.is_moderator || user.data?.is_instructor)
+				"
 				class="grid grid-cols-3 p-5"
 			>
 				<router-link
@@ -168,8 +171,8 @@ import {
 import CourseCard from '@/components/CourseCard.vue'
 import { BookOpen, Plus, Search } from 'lucide-vue-next'
 import { ref, computed, inject, onMounted, watch } from 'vue'
-import { useRouter } from 'vue-router'
 import { updateDocumentTitle } from '@/utils'
+import { useRouter } from 'vue-router'
 import { useSettings } from '@/stores/settings'
 
 const user = inject('$user')
@@ -207,23 +210,23 @@ let tabs
 
 const makeTabs = computed(() => {
 	tabs = []
-	addToTabs(' ')
-	addToTabs(' ')
-	addToTabs(' ')
+	addToTabs('Live')
+	addToTabs('New')
+	addToTabs('Upcoming')
 
 	if (user.data) {
-		addToTabs(' ')
+		addToTabs('Enrolled')
 
 		if (
 			user.data.is_moderator ||
 			user.data.is_instructor ||
 			courses.data?.created?.length
 		) {
-			addToTabs(' ')
+			addToTabs('Created')
 		}
 
 		if (user.data.is_moderator) {
-			addToTabs(' ')
+			addToTabs('Under Review')
 		}
 	}
 	return tabs
