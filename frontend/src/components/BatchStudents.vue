@@ -29,7 +29,7 @@
 						{{ batch.courses?.length }}
 					</span>
 					<span class="text-gray-700">
-						{{ __('Courses') }}
+						{{ __('Курсы') }}
 					</span>
 				</div>
 			</div>
@@ -67,7 +67,7 @@
 						:style="{ 'background-color': theme.colors.green[600] }"
 					></div>
 					<div>
-						{{ __('Courses') }}
+						{{ __('Курсы') }}
 					</div>
 				</div>
 				<div class="flex items-center space-x-2">

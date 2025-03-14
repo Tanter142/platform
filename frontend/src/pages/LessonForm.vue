@@ -458,7 +458,7 @@ const showToast = (title, text, icon) => {
 const breadcrumbs = computed(() => {
 	let crumbs = [
 		{
-			label: 'Courses',
+			label: 'Курсы',
 			route: { name: 'Courses' },
 		},
 		{
