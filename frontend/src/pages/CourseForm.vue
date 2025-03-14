@@ -557,7 +557,7 @@ const breadcrumbs = computed(() => {
 		})
 	}
 	crumbs.push({
-		label: props.courseName == 'new' ? 'New Course' : 'Edit Course',
+		label: props.courseName == 'new' ? 'Новый курс' : 'Редактировать курс',
 		route: { name: 'CourseForm', params: { courseName: props.courseName } },
 	})
 	return crumbs
@@ -565,7 +565,7 @@ const breadcrumbs = computed(() => {
 
 const pageMeta = computed(() => {
 	return {
-		title: 'Create a Course',
+		title: 'Создать курс',
 		description: 'Create or edit a course for your learning system.',
 	}
 })
