@@ -292,4 +292,20 @@ watch(
 	() => {
 		let queries = new URLSearchParams(location.search)
 		if (currentCategory.value) {
+			queries.set('category', currentCategory.value)
+		} else {
+			queries.delete('category')
+		}
+		history.pushState(null, '', `${location.pathname}?${queries.toString()}`)
+	}
+)
 
+const pageMeta = computed(() => {
+	return {
+		title: 'Курсы',
+		description: 'All Courses divided by categories',
+	}
+})
+
+updateDocumentTitle(pageMeta)
+</script>
