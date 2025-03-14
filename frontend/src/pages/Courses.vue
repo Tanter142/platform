@@ -104,7 +104,7 @@
 						</router-link>
 					</div>
 					<div v-else class="p-5 italic text-gray-500">
-						{{ __('Нет {0} курсов').format(tab.label.toLowerCase()) }}
+						{{ __('Нет курсов') }}
 					</div>
 				</template>
 			</Tabs>
