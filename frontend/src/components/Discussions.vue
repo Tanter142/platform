@@ -97,7 +97,7 @@ const props = defineProps({
 	},
 	emptyStateText: {
 		type: String,
-		default: 'Start a discussion',
+		default: 'Начните обсуждение',
 	},
 	singleThread: {
 		type: Boolean,
