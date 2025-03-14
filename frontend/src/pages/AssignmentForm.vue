@@ -97,7 +97,7 @@ onMounted(() => {
 		!user.data?.is_moderator &&
 		!user.data?.is_instructor
 	) {
-		router.push({ name: 'Courses' })
+		router.push({ name: 'Курсы' })
 	}
 	if (props.assignmentID !== 'new') {
 		assignment.reload()
