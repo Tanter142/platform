@@ -1071,11 +1071,11 @@ def get_categorized_courses(courses):
 
 	return {
 		"текущие": live,
-		"new": new,
-		"upcoming": upcoming,
-		"enrolled": enrolled,
-		"created": created,
-		"under_review": under_review,
+		"новые": new,
+		"предстоящие": upcoming,
+		"в_процессе": enrolled,
+		"созданные": created,
+		"на_рассмотрении": under_review,
 	}
 
 

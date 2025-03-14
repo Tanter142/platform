@@ -211,22 +211,22 @@ let tabs
 const makeTabs = computed(() => {
 	tabs = []
 	addToTabs('Текущие')
-	addToTabs('New')
-	addToTabs('Upcoming')
+	addToTabs('Новые')
+	addToTabs('Предстоящие')
 
 	if (user.data) {
-		addToTabs('Enrolled')
+		addToTabs('В процессе')
 
 		if (
 			user.data.is_moderator ||
 			user.data.is_instructor ||
 			courses.data?.created?.length
 		) {
-			addToTabs('Created')
+			addToTabs('Созданные')
 		}
 
 		if (user.data.is_moderator) {
-			addToTabs('Under Review')
+			addToTabs('На рассмотрении')
 		}
 	}
 	return tabs
