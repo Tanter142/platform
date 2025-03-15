@@ -161,7 +161,7 @@ watchEffect(() => {
 			'О себе': { name: 'ProfileAbout' },
 			Сертификаты: { name: 'ProfileCertificates' },
 			Роли: { name: 'ProfileRoles' },
-			Slots: { name: 'ProfileEvaluator' },
+			Время: { name: 'ProfileEvaluator' },
 			Schedule: { name: 'ProfileEvaluationSchedule' },
 		}[activeTab.value]
 		router.push(route)
