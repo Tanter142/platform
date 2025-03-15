@@ -291,31 +291,31 @@ const authorizeCalendar = createResource({
 const days = computed(() => {
 	return [
 		{
-			label: 'Monday',
+			label: 'Понедельник',
 			value: 'Monday',
 		},
 		{
-			label: 'Tuesday',
+			label: 'Вторник',
 			value: 'Tuesday',
 		},
 		{
-			label: 'Wednesday',
+			label: 'Среда',
 			value: 'Wednesday',
 		},
 		{
-			label: 'Thursday',
+			label: 'Четверг',
 			value: 'Thursday',
 		},
 		{
-			label: 'Friday',
+			label: 'Пятница',
 			value: 'Friday',
 		},
 		{
-			label: 'Saturday',
+			label: 'Суббота',
 			value: 'Saturday',
 		},
 		{
-			label: 'Sunday',
+			label: 'Воскресенье',
 			value: 'Sunday',
 		},
 	]
