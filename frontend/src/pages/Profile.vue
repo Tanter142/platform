@@ -146,7 +146,7 @@ const coverImage = createResource({
 
 const setActiveTab = () => {
 	let fragments = route.path.split('/')
-	let sections = ['certificates', 'Роли', 'Slots', 'schedule']
+	let sections = ['certificates', 'Роли', 'Время', 'schedule']
 	sections.forEach((section) => {
 		if (fragments.includes(section)) {
 			activeTab.value = convertToTitleCase(section)
@@ -190,7 +190,7 @@ const getTabButtons = () => {
 		isSessionUser() &&
 		($user.data?.is_evaluator || $user.data?.is_moderator)
 	) {
-		buttons.push({ label: 'Slots' })
+		buttons.push({ label: 'Время' })
 		buttons.push({ label: 'Schedule' })
 	}
 
