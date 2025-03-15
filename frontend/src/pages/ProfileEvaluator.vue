@@ -1,7 +1,7 @@
 <template>
 	<div class="mt-7 mb-20">
 		<h2 class="mb-4 text-lg font-semibold text-gray-900">
-			{{ __('My availability') }}
+			{{ __('Мое свободное время') }}
 		</h2>
 
 		<div class="">
@@ -9,13 +9,13 @@
 				class="grid grid-cols-3 md:grid-cols-4 gap-4 text-sm text-gray-700 mb-4"
 			>
 				<div>
-					{{ __('Day') }}
+					{{ __('День') }}
 				</div>
 				<div>
-					{{ __('Start Time') }}
+					{{ __('Начало') }}
 				</div>
 				<div>
-					{{ __('End Time') }}
+					{{ __('Конец') }}
 				</div>
 			</div>
 
@@ -72,17 +72,17 @@
 				<template #prefix>
 					<Plus class="w-4 h-4 stroke-1.5 text-gray-700" />
 				</template>
-				{{ __('Add Slot') }}
+				{{ __('Добавить') }}
 			</Button>
 		</div>
 		<div class="my-10">
 			<h2 class="mb-4 text-lg font-semibold text-gray-900">
-				{{ __('I am unavailable') }}
+				{{ __('Я занят') }}
 			</h2>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 				<FormControl
 					type="date"
-					:label="__('From')"
+					:label="__('С')"
 					v-model="from"
 					@blur="
 						() => {
@@ -95,7 +95,7 @@
 				/>
 				<FormControl
 					type="date"
-					:label="__('To')"
+					:label="__('До')"
 					v-model="to"
 					@blur="
 						() => {
@@ -110,7 +110,7 @@
 		</div>
 		<div>
 			<h2 class="mb-4 text-lg font-semibold text-gray-900">
-				{{ __('My calendar') }}
+				{{ __('Мой календарь') }}
 			</h2>
 			<div
 				v-if="evaluator.data?.calendar && evaluator.data?.is_authorized"
@@ -120,7 +120,7 @@
 				{{ __('Your calendar is set.') }}
 			</div>
 			<Button @click="() => authorizeCalendar.submit()">
-				{{ __('Authorize Google Calendar Access') }}
+				{{ __('Авторизация доступа к календарю Google') }}
 			</Button>
 		</div>
 	</div>
