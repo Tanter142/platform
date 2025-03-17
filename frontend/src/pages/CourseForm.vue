@@ -423,10 +423,10 @@ const submitCourse = () => {
 			},
 			{
 				onSuccess() {
-					showToast('Success', 'Course updated successfully', 'check')
+					showToast('', 'Курс успешно обновлен', 'check')
 				},
 				onError(err) {
-					showToast('Error', err.messages?.[0] || err, 'x')
+					showToast('', err.messages?.[0] || err, 'x')
 				},
 			}
 		)
@@ -434,7 +434,7 @@ const submitCourse = () => {
 		courseCreationResource.submit(course, {
 			onSuccess(data) {
 				capture('course_created')
-				showToast('Success', 'Course created successfully', 'check')
+				showToast('', 'Курс создан успешно', 'check')
 				/* if (!settingsStore.onboardingDetails.data?.is_onboarded) {
 					settingsStore.onboardingDetails.reload()
 				} */
@@ -444,7 +444,7 @@ const submitCourse = () => {
 				})
 			},
 			onError(err) {
-				showToast('Error', err.messages?.[0] || err, 'x')
+				showToast('', err.messages?.[0] || err, 'x')
 			},
 		})
 	}
@@ -458,16 +458,16 @@ const deleteCourse = createResource({
 		}
 	},
 	onSuccess() {
-		showToast(__('Success'), __('Course deleted successfully'), 'check')
+		showToast(__(''), __('Курс успешно удален'), 'check')
 		router.push({ name: 'Courses' })
 	},
 })
 
 const trashCourse = () => {
 	$dialog({
-		title: __('Delete Course'),
+		title: __('Удалить курс'),
 		message: __(
-			'Deleting the course will also delete all its chapters and lessons. Are you sure you want to delete this course?'
+			'При удалении курса будут также удалены все его главы и уроки. Вы уверены, что хотите удалить этот курс?'
 		),
 		actions: [
 			{
@@ -495,7 +495,7 @@ watch(
 const validateFile = (file) => {
 	let extension = file.name.split('.').pop().toLowerCase()
 	if (!['jpg', 'jpeg', 'png', 'webp'].includes(extension)) {
-		return __('Only image file is allowed.')
+		return __('Разрешены только изображения.')
 	}
 }
 
@@ -566,7 +566,7 @@ const breadcrumbs = computed(() => {
 const pageMeta = computed(() => {
 	return {
 		title: 'Создать курс',
-		description: 'Create or edit a course for your learning system.',
+		description: 'Создайте или отредактируйте курс для своей системы обучения.',
 	}
 })
 
