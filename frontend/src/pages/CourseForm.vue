@@ -258,7 +258,7 @@ import {
 	watch,
 	getCurrentInstance,
 } from 'vue'
-import { showToast, updateDocumentTitle } from '@/utils'
+import { updateDocumentTitle } from '@/utils'
 import Link from '@/components/Controls/Link.vue'
 import { Image, Trash2, X } from 'lucide-vue-next'
 import { useRouter } from 'vue-router'
@@ -414,6 +414,23 @@ const imageResource = createResource({
 		course.course_image = data
 	},
 })
+
+const showToast = (title, text, icon) => {
+	createToast({
+		title: title,
+		text: `<span class="${
+			icon == 'check' ? 'leading-[1.4]' : 'leading-[1.4]'
+		}">${text}</span>`,
+		icon: icon,
+		iconClasses:
+			icon == 'check'
+				? 'bg-green-600 text-white rounded-md p-1 flex items-center justify-center'
+				: 'bg-red-600 text-white rounded-md p-1 flex items-center justify-center',
+		containerClass: 'flex items-center gap-2 p-3 bg-white shadow-md rounded-lg',
+		position: icon == 'check' ? 'bottom-right' : 'top-center',
+		timeout: icon == 'check' ? 5 : 10,
+	})
+}
 
 const submitCourse = () => {
 	if (courseResource.data) {
