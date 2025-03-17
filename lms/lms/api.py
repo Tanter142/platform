@@ -881,7 +881,7 @@ def delete_course(course):
 		)
 
 		for lesson in lesson_references:
-			frappe.delete_doc("Lesson Reference", lesson)
+			frappe.delete_doc("Lesson Reference", lesson, force=True)
 
 		for lesson in lessons:
 			topics = frappe.get_all(
@@ -907,7 +907,7 @@ def delete_course(course):
 	frappe.db.delete("LMS Quiz", {"course": course})
 	frappe.db.delete("LMS Quiz Submission", {"course": course})
 	frappe.db.delete("LMS Enrollment", {"course": course})
-	frappe.delete_doc("LMS Course", course)
+	frappe.delete_doc("LMS Course", course, force=True)
 
 
 def give_dicussions_permission():
