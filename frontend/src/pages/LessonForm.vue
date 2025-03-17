@@ -454,7 +454,7 @@ const showToast = (title, text, icon) => {
 				: 'bg-red-600 text-white rounded-md p-1 flex items-center justify-center',
 		containerClass: 'flex items-center gap-2 p-3 bg-white shadow-md rounded-lg',
 		position: icon == 'check' ? 'bottom-right' : 'top-center',
-		timeout: icon == 0,
+		timeout: icon == 'check' ? 5 : 10,
 	})
 }
 
