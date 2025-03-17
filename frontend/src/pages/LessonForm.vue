@@ -422,8 +422,8 @@ const editCurrentLesson = () => {
 			},
 			onSuccess() {
 				showSuccessMessage
-					? showToast('', 'Урок обновлен', 'check',)
-					: 'bg-green-500 text-white font-semibold p-2 rounded-lg shadow-md'
+					? showToast('', 'Урок обновлен', 'check')
+					: ''
 			},
 			onError(err) {
 				showToast('', err.message, 'x')
@@ -448,8 +448,9 @@ const showToast = (title, text, icon) => {
 		icon: icon,
 		iconClasses:
 			icon == 'check'
-				? 'bg-green-600 text-white rounded-md p-px'
-				: 'bg-red-600 text-white rounded-md p-px',
+				? 'bg-green-600 text-white rounded-md p-1 flex items-center justify-center'
+				: 'bg-red-600 text-white rounded-md p-1 flex items-center justify-center',
+		containerClass: 'flex items-center gap-2 p-3 bg-white shadow-md rounded-lg',
 		position: icon == 'check' ? 'bottom-right' : 'top-center',
 		timeout: icon == 'check' ? 5 : 10,
 	})
