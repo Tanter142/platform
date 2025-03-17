@@ -448,7 +448,7 @@ const showToast = (title, text, icon) => {
 		icon: icon,
 		iconClasses:
 			icon == 'check'
-				? 'bg-green-600 text-white rounded-md p-px'
+				? 'bg-green-600 text-white rounded-md p-px text-center'
 				: 'bg-red-600 text-white rounded-md p-px text-center',
 		position: icon == 'check' ? 'bottom-right' : 'top-center',
 		timeout: icon == 'check' ? 5 : 10,
