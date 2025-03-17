@@ -20,12 +20,12 @@ class CourseEvaluator(Document):
 			and self.unavailable_to
 			and getdate(self.unavailable_from) >= getdate(self.unavailable_to)
 		):
-			frappe.throw(_("Unavailable From Date cannot be greater than Unavailable To Date"))
+			frappe.throw(_("Дата начала не может быть больше даты окончания"))
 
 	def validate_time_slots(self):
 		for schedule in self.schedule:
 			if get_time(schedule.start_time) >= get_time(schedule.end_time):
-				frappe.throw(_("Start Time cannot be greater than End Time"))
+				frappe.throw(_("Время начала не может быть больше времени окончания"))
 
 			self.validate_overlaps(schedule)
 
