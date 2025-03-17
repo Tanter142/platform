@@ -187,6 +187,7 @@ watch(
 			profile.headline = newVal.headline
 			profile.bio = newVal.bio
 			if (newVal.user_image) imageResource.submit({ image: newVal.user_image })
+			console.log(newVal)
 		}
 	}
 )
