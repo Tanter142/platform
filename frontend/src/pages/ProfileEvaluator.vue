@@ -190,7 +190,7 @@ const createSlot = createResource({
 		newSlot.end_time = ''
 	},
 	onError(err) {
-		showToast('Error', err.messages?.[0] || err, 'x')
+		showToast('', err.messages?.[0] || err, 'x')
 	},
 })
 
@@ -208,7 +208,7 @@ const updateSlot = createResource({
 		showToast('', 'Данные обновлены', 'check')
 	},
 	onError(err) {
-		showToast('Error', err.messages?.[0] || err, 'x')
+		showToast('', err.messages?.[0] || err, 'x')
 	},
 })
 
@@ -221,11 +221,11 @@ const deleteSlot = createResource({
 		}
 	},
 	onSuccess() {
-		showToast('', 'Slot deleted successfully', 'check')
+		showToast('', 'День удален', 'check')
 		evaluator.reload()
 	},
 	onError(err) {
-		showToast('Error', err.messages?.[0] || err, 'x')
+		showToast('', err.messages?.[0] || err, 'x')
 	},
 })
 
@@ -240,10 +240,10 @@ const updateUnavailability = createResource({
 		}
 	},
 	onSuccess() {
-		showToast('Success', 'Unavailability updated successfully', 'check')
+		showToast('', 'Данные обновлены', 'check')
 	},
 	onError(err) {
-		showToast('Error', err.messages?.[0] || err, 'x')
+		showToast('', err.messages?.[0] || err, 'x')
 	},
 })
 
