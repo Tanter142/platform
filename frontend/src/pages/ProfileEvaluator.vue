@@ -182,7 +182,7 @@ const createSlot = createResource({
 		}
 	},
 	onSuccess() {
-		showToast('Success', 'День добавлен', 'check')
+		showToast('', 'День добавлен', 'check')
 		evaluator.reload()
 		showSlotsTemplate.value = 0
 		newSlot.day = ''
