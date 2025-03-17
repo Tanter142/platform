@@ -444,19 +444,17 @@ const validateLesson = () => {
 const showToast = (title, text, icon) => {
 	createToast({
 		title: title,
-		text: text,
+		text: `<span class="${
+			icon == 'check' ? 'leading-none' : 'leading-none'
+		}">${text}</span>`,
 		icon: icon,
 		iconClasses:
 			icon == 'check'
 				? 'bg-green-600 text-white rounded-md p-1 flex items-center justify-center'
 				: 'bg-red-600 text-white rounded-md p-1 flex items-center justify-center',
-		textClasses:
-			icon == 'check'
-				? 'text-green-600 font-medium'
-				: 'text-red-600 font-medium',
 		containerClass: 'flex items-center gap-2 p-3 bg-white shadow-md rounded-lg',
 		position: icon == 'check' ? 'bottom-right' : 'top-center',
-		timeout: 0, // Отключаем таймер
+		timeout: icon == 0,
 	})
 }
 
