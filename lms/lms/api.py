@@ -907,10 +907,10 @@ def delete_course(course):
 		frappe.delete_doc("Course Chapter", chapter)
 
 	frappe.db.delete("LMS Course Progress", {"course": course})
-	frappe.db.delete("LMS Quiz", {"course": course}, force=True)
-	frappe.db.delete("LMS Quiz Submission", {"course": course}, force=True)
-	frappe.db.delete("LMS Enrollment", {"course": course}, force=True)
-	frappe.delete_doc("LMS Course", course, force=True)
+	frappe.db.delete("LMS Quiz", {"course": course})
+	frappe.db.delete("LMS Quiz Submission", {"course": course})
+	frappe.db.delete("LMS Enrollment", {"course": course})
+	frappe.delete_doc("LMS Course")
 
 
 def give_dicussions_permission():
