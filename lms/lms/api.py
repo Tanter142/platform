@@ -906,7 +906,7 @@ def delete_course(course):
 	for chapter in chapters:
 		frappe.delete_doc("Course Chapter", chapter)
 
-	frappe.db.delete("LMS Course Progress", {"course": course}, force=True)
+	frappe.db.delete("LMS Course Progress", {"course": course})
 	frappe.db.delete("LMS Quiz", {"course": course}, force=True)
 	frappe.db.delete("LMS Quiz Submission", {"course": course}, force=True)
 	frappe.db.delete("LMS Enrollment", {"course": course}, force=True)
