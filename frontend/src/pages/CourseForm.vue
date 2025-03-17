@@ -458,11 +458,13 @@ const deleteCourse = createResource({
 		}
 	},
 	onSuccess() {
-		showToast(__(''), __('Курс успешно удален'), 'check', {
-			timeout: 0,
-		})
-		router.push({ name: 'Courses' })
-	},
+	showToast(
+		__(''), 
+		`<span class="leading-[1.4]">Курс успешно удален</span>`, 
+		'check'
+	)
+	router.push({ name: 'Courses' })
+},
 })
 
 const trashCourse = () => {
