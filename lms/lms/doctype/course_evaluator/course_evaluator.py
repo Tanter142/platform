@@ -54,7 +54,7 @@ class CourseEvaluator(Document):
 				overlap = True
 
 			if overlap:
-				frappe.throw(_("Slot Times are overlapping for some schedules."))
+				frappe.throw(_("Данный интервал времени пересекается с другим"))
 
 
 @frappe.whitelist()

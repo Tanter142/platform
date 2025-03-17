@@ -182,7 +182,7 @@ const createSlot = createResource({
 		}
 	},
 	onSuccess() {
-		showToast('Успешно', 'День добавлен', 'check')
+		showToast('Success', 'День добавлен', 'check')
 		evaluator.reload()
 		showSlotsTemplate.value = 0
 		newSlot.day = ''
@@ -205,7 +205,7 @@ const updateSlot = createResource({
 		}
 	},
 	onSuccess() {
-		showToast('Успешно', 'Данные обновлены', 'check')
+		showToast('', 'Данные обновлены', 'check')
 	},
 	onError(err) {
 		showToast('Error', err.messages?.[0] || err, 'x')
@@ -221,7 +221,7 @@ const deleteSlot = createResource({
 		}
 	},
 	onSuccess() {
-		showToast('Success', 'Slot deleted successfully', 'check')
+		showToast('', 'Slot deleted successfully', 'check')
 		evaluator.reload()
 	},
 	onError(err) {

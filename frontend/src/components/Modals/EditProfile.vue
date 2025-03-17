@@ -157,7 +157,7 @@ const saveProfile = (close) => {
 				reloadProfile.value.reload()
 			},
 			onError(err) {
-				showToast('Ошибка', err.messages?.[0] || err, 'x')
+				showToast('Error', err.messages?.[0] || err, 'x')
 			},
 		}
 	)

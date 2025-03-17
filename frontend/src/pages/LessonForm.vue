@@ -395,7 +395,7 @@ const createNewLesson = () => {
 					{
 						onSuccess() {
 							capture('lesson_created')
-							showToast('Успешно', 'Урок создан', 'check')
+							showToast('Success', 'Урок создан', 'check')
 							/* if (!settingsStore.onboardingDetails.data?.is_onboarded) {
 								settingsStore.onboardingDetails.reload()
 							} */
@@ -405,7 +405,7 @@ const createNewLesson = () => {
 				)
 			},
 			onError(err) {
-				showToast('Ошибка', err.message, 'x')
+				showToast('Error', err.message, 'x')
 			},
 		}
 	)
@@ -422,11 +422,11 @@ const editCurrentLesson = () => {
 			},
 			onSuccess() {
 				showSuccessMessage
-					? showToast('Успешно', 'Урок обновлен', 'check')
+					? showToast('Success', 'Урок обновлен', 'check')
 					: ''
 			},
 			onError(err) {
-				showToast('Ошибка', err.message, 'x')
+				showToast('Error', err.message, 'x')
 			},
 		}
 	)
