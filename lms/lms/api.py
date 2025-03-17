@@ -545,12 +545,12 @@ def delete_lesson(lesson, chapter):
 	chapter.save()
 
 	# Delete progress
-	frappe.db.delete("LMS Course Progress", {"lesson": lesson}, force=True)
+	frappe.db.delete("LMS Course Progress", {"lesson": lesson})
 
 	# Delete Lesson
-	frappe.db.delete("Course Lesson", lesson, force=True)
+	frappe.db.delete("Course Lesson", lesson,)
  
-	frappe.delete_doc("LMS Course", course, force=True)
+
 
 
 @frappe.whitelist()
