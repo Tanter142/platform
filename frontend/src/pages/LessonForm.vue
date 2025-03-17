@@ -395,7 +395,7 @@ const createNewLesson = () => {
 					{
 						onSuccess() {
 							capture('lesson_created')
-							showToast('Success', 'Lesson created successfully', 'check')
+							showToast('Успешно', 'Урок создан', 'check')
 							/* if (!settingsStore.onboardingDetails.data?.is_onboarded) {
 								settingsStore.onboardingDetails.reload()
 							} */
@@ -405,7 +405,7 @@ const createNewLesson = () => {
 				)
 			},
 			onError(err) {
-				showToast('Error', err.message, 'x')
+				showToast('Ошибка', err.message, 'x')
 			},
 		}
 	)
@@ -426,7 +426,7 @@ const editCurrentLesson = () => {
 					: ''
 			},
 			onError(err) {
-				showToast('Error', err.message, 'x')
+				showToast('Ошибка', err.message, 'x')
 			},
 		}
 	)
@@ -434,10 +434,10 @@ const editCurrentLesson = () => {
 
 const validateLesson = () => {
 	if (!lesson.title) {
-		return 'Title is required'
+		return 'Требуется название урока'
 	}
 	if (!lesson.content) {
-		return 'Content is required'
+		return 'Требуется содержание'
 	}
 }
 
@@ -496,8 +496,8 @@ const breadcrumbs = computed(() => {
 
 const pageMeta = computed(() => {
 	return {
-		title: 'Lesson Editor',
-		description: 'Create and edit lessons for your course',
+		title: 'Редактор уроков',
+		description: 'Создавайте и редактируйте уроки для своего курса',
 	}
 })
 
