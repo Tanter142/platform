@@ -871,10 +871,11 @@ def get_announcements(batch):
 def delete_course(course):
 
 	chapters = frappe.get_all("Course Chapter", {"course": course}, pluck="name")
-
+	linked_reviews = frappe.get_all("LMS Course Review", {"course": course}, pluck="name")
 	chapter_references = frappe.get_all(
 		"Chapter Reference", {"parent": course}, pluck="name"
 	)
+ 
 
 	for chapter in chapters:
 		lessons = frappe.get_all("Course Lesson", {"chapter": chapter}, pluck="name")
@@ -882,7 +883,7 @@ def delete_course(course):
 		lesson_references = frappe.get_all(
 			"Lesson Reference", {"parent": chapter}, pluck="name"
 		)
-
+  
 		for lesson in lesson_references:
 			frappe.delete_doc("Lesson Reference", lesson)
 
@@ -905,7 +906,11 @@ def delete_course(course):
 
 	for chapter in chapters:
 		frappe.delete_doc("Course Chapter", chapter)
-
+	
+	for review in linked_reviews:
+		frappe.delete_doc("LMS Course Review", review)
+  
+  
 	frappe.db.delete("LMS Course Progress", {"course": course})
 	frappe.db.delete("LMS Quiz", {"course": course})
 	frappe.db.delete("LMS Quiz Submission", {"course": course})
