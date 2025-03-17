@@ -910,7 +910,7 @@ def delete_course(course):
 	frappe.db.delete("LMS Quiz", {"course": course})
 	frappe.db.delete("LMS Quiz Submission", {"course": course})
 	frappe.db.delete("LMS Enrollment", {"course": course})
-	frappe.delete_doc("LMS Course")
+	frappe.delete_doc("LMS Course", course)
 
 
 def give_dicussions_permission():
