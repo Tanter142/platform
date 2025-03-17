@@ -258,7 +258,7 @@ import {
 	watch,
 	getCurrentInstance,
 } from 'vue'
-import { updateDocumentTitle } from '@/utils'
+import { updateDocumentTitle, createToast } from '@/utils'
 import Link from '@/components/Controls/Link.vue'
 import { Image, Trash2, X } from 'lucide-vue-next'
 import { useRouter } from 'vue-router'
