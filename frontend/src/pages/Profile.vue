@@ -191,7 +191,7 @@ const getTabButtons = () => {
 		($user.data?.is_evaluator || $user.data?.is_moderator)
 	) {
 		buttons.push({ label: 'Расписание' })
-		buttons.push({ label: 'Schedule' })
+		buttons.push({ label: 'График' })
 	}
 
 	return buttons
