@@ -150,20 +150,20 @@ const addChapter = async (close) => {
 							} */
 							outline.value.reload()
 							showToast(
-								__('Success'),
-								__('Chapter added successfully'),
+								__(''),
+								__('Глава добавлена успешно'),
 								'check'
 							)
 						},
 						onError(err) {
-							showToast(__('Error'), err.messages?.[0] || err, 'x')
+							showToast(__(''), err.messages?.[0] || err, 'x')
 						},
 					}
 				)
 				close()
 			},
 			onError(err) {
-				showToast(__('Error'), err.messages?.[0] || err, 'x')
+				showToast(__(''), err.messages?.[0] || err, 'x')
 			},
 		}
 	)
@@ -171,10 +171,10 @@ const addChapter = async (close) => {
 
 const validateChapter = () => {
 	if (!chapter.title) {
-		return __('Title is required')
+		return __('Название обязательно')
 	}
 	if (chapter.is_scorm_package && !chapter.scorm_package) {
-		return __('Please upload a SCORM package')
+		return __('Пожалуйста, загрузите пакет SCORM')
 	}
 }
 
@@ -190,16 +190,16 @@ const editChapter = (close) => {
 		{
 			validate() {
 				if (!chapter.title) {
-					return 'Title is required'
+					return 'Название обязательно'
 				}
 			},
 			onSuccess() {
 				outline.value.reload()
-				showToast(__('Success'), __('Chapter updated successfully'), 'check')
+				showToast(__(''), __('Глава успешно обновлена'), 'check')
 				close()
 			},
 			onError(err) {
-				showToast(__('Error'), err.messages?.[0] || err, 'x')
+				showToast(__(''), err.messages?.[0] || err, 'x')
 			},
 		}
 	)
@@ -217,7 +217,7 @@ watch(
 const validateFile = (file) => {
 	let extension = file.name.split('.').pop().toLowerCase()
 	if (extension !== 'zip') {
-		return __('Only zip files are allowed')
+		return __('Разрешено использовать только zip-файлы')
 	}
 }
 </script>
