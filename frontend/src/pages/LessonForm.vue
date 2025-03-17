@@ -445,7 +445,7 @@ const showToast = (title, text, icon) => {
 	createToast({
 		title: title,
 		text: `<span class="${
-			icon == 'check' ? 'leading-none' : 'leading-none'
+			icon == 'check' ? 'leading-[1.4]' : 'leading-[1.4]'
 		}">${text}</span>`,
 		icon: icon,
 		iconClasses:
