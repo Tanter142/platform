@@ -422,7 +422,7 @@ const editCurrentLesson = () => {
 			},
 			onSuccess() {
 				showSuccessMessage
-					? showToast('Успех!', 'Урок успешно обновлен', 'check')
+					? showToast('Успешно', 'Урок обновлен', 'check')
 					: ''
 			},
 			onError(err) {

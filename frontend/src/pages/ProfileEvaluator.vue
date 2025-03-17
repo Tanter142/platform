@@ -205,7 +205,7 @@ const updateSlot = createResource({
 		}
 	},
 	onSuccess() {
-		showToast('Success', 'Availability updated successfully', 'check')
+		showToast('Успешно', 'Данные обновлены', 'check')
 	},
 	onError(err) {
 		showToast('Error', err.messages?.[0] || err, 'x')
