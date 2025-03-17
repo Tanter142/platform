@@ -540,6 +540,7 @@ def delete_sidebar_item(webpage):
 def delete_lesson(lesson, chapter):
 	# Delete Reference
 	chapter = frappe.get_doc("Course Chapter", chapter)
+	course = frappe.get_doc("LMS Course", chapter.course)
 	chapter.lessons = [row for row in chapter.lessons if row.lesson != lesson]
 	chapter.save()
 
@@ -548,6 +549,8 @@ def delete_lesson(lesson, chapter):
 
 	# Delete Lesson
 	frappe.db.delete("Course Lesson", lesson, force=True)
+ 
+	frappe.delete_doc("LMS Course", course, force=True)
 
 
 @frappe.whitelist()
