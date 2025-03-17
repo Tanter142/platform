@@ -574,7 +574,7 @@ def update_source_chapter(lesson, chapter, idx, hasMoved=False):
 
 	lessons.remove(lesson)
 	if not hasMoved:
-		frappe.db.delete("Lesson Reference", {"parent": chapter, "lesson": lesson})
+		frappe.db.delete("Lesson Reference", {"parent": chapter, "lesson": lesson}, force=True)
 	else:
 		lessons.insert(idx, lesson)
 
@@ -907,9 +907,9 @@ def delete_course(course):
 		frappe.delete_doc("Course Chapter", chapter)
 
 	frappe.db.delete("LMS Course Progress", {"course": course}, force=True)
-	frappe.db.delete("LMS Quiz", {"course": course})
-	frappe.db.delete("LMS Quiz Submission", {"course": course})
-	frappe.db.delete("LMS Enrollment", {"course": course})
+	frappe.db.delete("LMS Quiz", {"course": course}, force=True)
+	frappe.db.delete("LMS Quiz Submission", {"course": course}, force=True)
+	frappe.db.delete("LMS Enrollment", {"course": course}, force=True)
 	frappe.delete_doc("LMS Course", course, force=True)
 
 
@@ -1066,10 +1066,10 @@ def delete_chapter(chapter):
 	if chapterInfo.is_scorm_package:
 		delete_scorm_package(chapterInfo.scorm_package_path)
 
-	frappe.db.delete("Chapter Reference", {"chapter": chapter})
-	frappe.db.delete("Lesson Reference", {"parent": chapter})
-	frappe.db.delete("Course Lesson", {"chapter": chapter})
-	frappe.db.delete("Course Chapter", chapter)
+	frappe.db.delete("Chapter Reference", {"chapter": chapter}, force=True)
+	frappe.db.delete("Lesson Reference", {"parent": chapter}, force=True)
+	frappe.db.delete("Course Lesson", {"chapter": chapter}, force=True)
+	frappe.db.delete("Course Chapter", chapter, force=True)
 
 
 def delete_scorm_package(scorm_package_path):
