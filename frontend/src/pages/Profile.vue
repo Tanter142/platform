@@ -146,7 +146,7 @@ const coverImage = createResource({
 
 const setActiveTab = () => {
 	let fragments = route.path.split('/')
-	let sections = ['certificates', 'Роли', 'Расписание', 'schedule']
+	let sections = ['Сертификаты', 'Роли', 'Расписание', 'График']
 	sections.forEach((section) => {
 		if (fragments.includes(section)) {
 			activeTab.value = convertToTitleCase(section)
@@ -162,7 +162,7 @@ watchEffect(() => {
 			Сертификаты: { name: 'ProfileCertificates' },
 			Роли: { name: 'ProfileRoles' },
 			Расписание: { name: 'ProfileEvaluator' },
-			Schedule: { name: 'ProfileEvaluationSchedule' },
+			График: { name: 'ProfileEvaluationSchedule' },
 		}[activeTab.value]
 		router.push(route)
 	}
