@@ -422,8 +422,8 @@ const editCurrentLesson = () => {
 			},
 			onSuccess() {
 				showSuccessMessage
-					? showToast('', 'Урок обновлен', 'check', 'aboba')
-					: 'aboba2'
+					? showToast('', 'Урок обновлен', 'check')
+					: ''
 			},
 			onError(err) {
 				showToast('', err.message, 'x')
@@ -450,9 +450,13 @@ const showToast = (title, text, icon) => {
 			icon == 'check'
 				? 'bg-green-600 text-white rounded-md p-1 flex items-center justify-center'
 				: 'bg-red-600 text-white rounded-md p-1 flex items-center justify-center',
+		textClasses:
+			icon == 'check'
+				? 'text-green-600 font-medium'
+				: 'text-red-600 font-medium',
 		containerClass: 'flex items-center gap-2 p-3 bg-white shadow-md rounded-lg',
 		position: icon == 'check' ? 'bottom-right' : 'top-center',
-		timeout: icon == 0,
+		timeout: 0, // Отключаем таймер
 	})
 }
 
