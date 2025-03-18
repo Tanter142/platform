@@ -269,11 +269,11 @@ const remove = (selections, unselectAll, doctype) => {
 		{
 			onSuccess(data) {
 				unselectAll()
-				showToast(__('Success'), __('Items removed successfully'), 'check')
+				showToast(__(''), __('Предметы удалены успешно'), 'check')
 				program.reload()
 			},
 			onError(err) {
-				showToast('Error', err.messages?.[0] || err, 'x')
+				showToast('', err.messages?.[0] || err, 'x')
 			},
 		}
 	)
@@ -295,11 +295,11 @@ const updateOrder = (e) => {
 		},
 		{
 			onSuccess(data) {
-				showToast(__('Success'), __('Course moved successfully'), 'check')
+				showToast(__(''), __('Курс успешно перенесен'), 'check')
 				program.reload()
 			},
 			onError(err) {
-				showToast('Error', err.messages?.[0] || err, 'x')
+				showToast('', err.messages?.[0] || err, 'x')
 			},
 		}
 	)
@@ -333,19 +333,19 @@ const courseColumns = computed(() => {
 const memberColumns = computed(() => {
 	return [
 		{
-			label: 'Member',
+			label: 'Участник',
 			key: 'member',
 			width: 3,
 			align: 'left',
 		},
 		{
-			label: 'Full Name',
+			label: 'Полное имя',
 			key: 'full_name',
 			width: 3,
 			align: 'left',
 		},
 		{
-			label: 'Progress (%)',
+			label: 'Прогресс (%)',
 			key: 'progress',
 			width: 3,
 			align: 'right',
