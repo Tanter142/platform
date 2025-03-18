@@ -46,7 +46,7 @@
 									<ChevronLeft class="w-4 h-4 stroke-1" />
 								</template>
 								<span>
-									{{ __('Previous') }}
+									{{ __('Назад') }}
 								</span>
 							</Button>
 						</router-link>
@@ -81,7 +81,7 @@
 									<ChevronRight class="w-4 h-4 stroke-1" />
 								</template>
 								<span>
-									{{ __('Next') }}
+									{{ __('Вперед') }}
 								</span>
 							</Button>
 						</router-link>

@@ -96,10 +96,10 @@
 									/>
 									<div class="ml-4">
 										<Button @click="removeImage()">
-											{{ __('Remove') }}
+											{{ __('Удалить') }}
 										</Button>
 										<div class="mt-2 text-gray-600 text-sm">
-											{{ __('Appears on the course card in the course list') }}
+											{{ __('Отображается на карточке курса в списке курсов') }}
 										</div>
 									</div>
 								</div>
