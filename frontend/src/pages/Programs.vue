@@ -11,7 +11,7 @@
 			<template #prefix>
 				<Plus class="h-4 w-4 stroke-1.5" />
 			</template>
-			{{ __('New') }}
+			{{ __('Добавить') }}
 		</Button>
 	</header>
 	<div v-if="programs.data?.length" class="pt-5 px-5">
@@ -88,12 +88,12 @@
 	>
 		<BookOpen class="size-10 mx-auto stroke-1 text-gray-500" />
 		<div class="text-xl font-medium">
-			{{ __('No programs found') }}
+			{{ __('Программы не найдены') }}
 		</div>
 		<div class="leading-5">
 			{{
 				__(
-					'There are no programs available at the moment. Keep an eye out, fresh learning experiences are on the way soon!'
+					'На данный момент нет доступных программ. Следите за новостями, скоро появятся новые возможности для обучения!'
 				)
 			}}
 		</div>
@@ -102,10 +102,10 @@
 	<Dialog
 		v-model="showDialog"
 		:options="{
-			title: __('New Program'),
+			title: __('Новая программа'),
 			actions: [
 				{
-					label: __('Create'),
+					label: __('Создать'),
 					variant: 'solid',
 					onClick: () => createProgram(close),
 				},
@@ -113,7 +113,7 @@
 		}"
 	>
 		<template #body-content>
-			<FormControl :label="__('Title')" v-model="title" />
+			<FormControl :label="__('Заголовок')" v-model="title" />
 		</template>
 	</Dialog>
 </template>
