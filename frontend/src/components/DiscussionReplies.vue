@@ -76,7 +76,7 @@
 			:content="newReply"
 			:mentions="mentionUsers"
 			@change="(val) => (newReply = val)"
-			placeholder="Type your reply here..."
+			placeholder="Напечатайте свой ответ здесь..."
 			:fixedMenu="true"
 			editorClass="ProseMirror prose prose-table:table-fixed prose-td:p-2 prose-th:p-2 prose-td:border prose-th:border prose-td:border-gray-300 prose-th:border-gray-300 prose-td:relative prose-th:relative prose-th:bg-gray-100 prose-sm max-w-none border border-gray-300 rounded-b-md min-h-[7rem] py-1 px-2"
 		/>
@@ -84,7 +84,7 @@
 			<span> </span>
 			<Button @click="postReply()">
 				<span>
-					{{ __('Post') }}
+					{{ __('Отправить') }}
 				</span>
 			</Button>
 		</div>
