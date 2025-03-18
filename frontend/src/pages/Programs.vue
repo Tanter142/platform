@@ -28,7 +28,7 @@
 						size="lg"
 					>
 						{{ program.members }}
-						{{ program.members == 1 ? __('member') : __('members') }}
+						{{ program.members == 1 ? __('Участник') : __('Участников') }}
 					</Badge>
 					<Badge
 						v-if="program.progress"
@@ -50,7 +50,7 @@
 							<template #prefix>
 								<Edit class="h-4 w-4 stroke-1.5" />
 							</template>
-							{{ __('Edit') }}
+							{{ __('Редактировать') }}
 						</Button>
 					</router-link>
 				</div>
@@ -78,7 +78,7 @@
 				</div>
 			</div>
 			<div v-else class="text-sm italic text-gray-600 mt-4">
-				{{ __('No courses in this program') }}
+				{{ __('Нет курсов в этой программе') }}
 			</div>
 		</div>
 	</div>
