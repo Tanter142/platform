@@ -868,51 +868,38 @@ def get_announcements(batch):
 
 
 @frappe.whitelist()
-def delete_course(course):
+def delete_course(course):    
+    # Удаление связанного прогресса
 	course_progress_list = frappe.get_all("LMS Course Progress", {"course": course}, pluck="name")
-	chapters = frappe.get_all("Course Chapter", {"course": course}, pluck="name")
-	linked_reviews = frappe.get_all("LMS Course Review", {"course": course}, pluck="name")
-	chapter_references = frappe.get_all("Chapter Reference", {"parent": course}, pluck="name")
- 
-	for chapter in chapters:
-		frappe.delete_doc("Course Chapter", chapter)
-    
 	for progress in course_progress_list:
-		frappe.delete_doc("LMS Course Progress", progress)
-
-	for chapter in chapters:
-		lessons = frappe.get_all("Course Lesson", {"chapter": chapter}, pluck="name")
-
-		lesson_references = frappe.get_all(
-			"Lesson Reference", {"parent": chapter}, pluck="name"
-		)
-  
-		for lesson in lesson_references:
-			frappe.delete_doc("Lesson Reference", lesson)
-   
-		for lesson in lessons:
-			topics = frappe.get_all(
-				"Discussion Topic",
-				{"reference_doctype": "Course Lesson", "reference_docname": lesson},
-				pluck="name",
-			)
-
-			for topic in topics:
-				frappe.db.delete("Discussion Reply", {"topic": topic})
-
-				frappe.db.delete("Discussion Topic", topic)
-    
-			frappe.delete_doc("Course Lesson", lesson)
-
-	for chapter in chapter_references:
-		frappe.delete_doc("Chapter Reference", chapter)
-
-
+		frappe.delete_doc("LMS Course Progress", progress, force=True)
 	
-	for review in linked_reviews:
-		frappe.delete_doc("LMS Course Review", review)
+	# Удаление глав (сначала убираем ссылки)
+	chapters = frappe.get_all("Course Chapter", {"course": course}, pluck="name")
+	for chapter in chapters:
+		# Удаляем ссылки на уроки
+		lesson_references = frappe.get_all("Lesson Reference", {"parent": chapter}, pluck="name")
+		for lesson in lesson_references:
+			frappe.delete_doc("Lesson Reference", lesson, force=True)
+   
+   
+		# Удаляем уроки
+		lessons = frappe.get_all("Course Lesson", {"chapter": chapter}, pluck="name")
+		for lesson in lessons:
+			frappe.delete_doc("Course Lesson", lesson, force=True)
+   
+        # Теперь удаляем главу
+		frappe.delete_doc("Course Chapter", chapter, force=True)
   
-
+      	# Удаление оставшихся ссылок на главу
+		chapter_references = frappe.get_all("Chapter Reference", {"parent": course}, pluck="name")
+		for chapter in chapter_references:
+			frappe.delete_doc("Chapter Reference", chapter, force=True)
+   
+       # Удаление отзывов
+		linked_reviews = frappe.get_all("LMS Course Review", {"course": course}, pluck="name")
+		for review in linked_reviews:
+			frappe.delete_doc("LMS Course Review", review, force=True)
   
   
 	frappe.db.delete("LMS Course Progress", {"course": course})
