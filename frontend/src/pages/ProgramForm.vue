@@ -8,7 +8,7 @@
 		</Button>
 	</header>
 	<div v-if="program.doc" class="pt-5 px-5 w-3/4 mx-auto space-y-10">
-		<FormControl v-model="program.doc.title" :label="__('Title')" />
+		<FormControl v-model="program.doc.title" :label="__('Заголовок')" />
 
 		<!-- Courses -->
 		<div>
@@ -193,6 +193,7 @@ import Link from '@/components/Controls/Link.vue'
 import { showToast } from '@/utils/'
 import Draggable from 'vuedraggable'
 import { useRouter } from 'vue-router'
+
 
 const showDialog = ref(false)
 const currentForm = ref(null)

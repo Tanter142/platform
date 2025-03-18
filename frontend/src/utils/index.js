@@ -104,7 +104,9 @@ export function showToast(title, text, icon, iconClasses = null) {
 	}
 	createToast({
 		title: title,
-		text: htmlToText(text),
+		text: `<span class="${
+			icon == 'check' ? 'leading-[1.4]' : 'leading-[1.4]'
+		}">${text}</span>`,
 		icon: icon,
 		iconClasses: iconClasses,
 		position: icon == 'check' ? 'bottom-right' : 'top-center',
