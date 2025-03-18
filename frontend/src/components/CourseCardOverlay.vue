@@ -162,8 +162,8 @@ function enrollStudent() {
 					course: props.course.data.name,
 				})
 				showToast(
-					__('Success'),
-					__('You have been enrolled in this course'),
+					__(''),
+					__('Вы записались на этот курс'),
 					'check'
 				)
 				setTimeout(() => {
