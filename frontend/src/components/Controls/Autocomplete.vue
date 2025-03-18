@@ -41,7 +41,7 @@
 								"
 								:value="query"
 								autocomplete="off"
-								placeholder="Search"
+								placeholder="Поиск"
 							/>
 							<button
 								class="absolute right-1.5 inline-flex h-7 w-7 items-center justify-center"
