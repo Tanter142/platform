@@ -885,7 +885,10 @@ def delete_course(course):
   
 		for lesson in lesson_references:
 			frappe.delete_doc("Lesson Reference", lesson)
-
+   
+		for progress in course_progress_list:
+			frappe.delete_doc("LMS Course Progress", progress)
+   
 		for lesson in lessons:
 			topics = frappe.get_all(
 				"Discussion Topic",
@@ -897,7 +900,7 @@ def delete_course(course):
 				frappe.db.delete("Discussion Reply", {"topic": topic})
 
 				frappe.db.delete("Discussion Topic", topic)
-
+    
 			frappe.delete_doc("Course Lesson", lesson)
 
 	for chapter in chapter_references:
@@ -909,8 +912,7 @@ def delete_course(course):
 	for review in linked_reviews:
 		frappe.delete_doc("LMS Course Review", review)
   
-	for progress in course_progress_list:
-		frappe.delete_doc("LMS Course Progress", progress)
+
   
   
 	frappe.db.delete("LMS Course Progress", {"course": course})
