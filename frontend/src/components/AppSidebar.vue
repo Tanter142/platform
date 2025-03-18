@@ -218,7 +218,7 @@ const addPrograms = () => {
 
 	if (canAddProgram) {
 		sidebarLinks.value.splice(index, 0, {
-			label: 'Programs',
+			label: 'Программы',
 			icon: 'Route',
 			to: 'Programs',
 			activeFor: activeFor,
