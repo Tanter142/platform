@@ -873,6 +873,9 @@ def delete_course(course):
 	chapters = frappe.get_all("Course Chapter", {"course": course}, pluck="name")
 	linked_reviews = frappe.get_all("LMS Course Review", {"course": course}, pluck="name")
 	chapter_references = frappe.get_all("Chapter Reference", {"parent": course}, pluck="name")
+ 
+	for chapter in chapters:
+		frappe.delete_doc("Course Chapter", chapter)
     
 	for progress in course_progress_list:
 		frappe.delete_doc("LMS Course Progress", progress)
@@ -904,8 +907,7 @@ def delete_course(course):
 	for chapter in chapter_references:
 		frappe.delete_doc("Chapter Reference", chapter)
 
-	for chapter in chapters:
-		frappe.delete_doc("Course Chapter", chapter)
+
 	
 	for review in linked_reviews:
 		frappe.delete_doc("LMS Course Review", review)
