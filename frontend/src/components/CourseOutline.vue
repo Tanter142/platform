@@ -42,14 +42,14 @@
 						{{ chapter.title }}
 					</div>
 					<div class="flex ml-auto space-x-4">
-						<Tooltip :text="__('Edit Chapter')" placement="bottom">
+						<Tooltip :text="__('Редактировать')" placement="bottom">
 							<FilePenLine
 								v-if="allowEdit"
 								@click.prevent="openChapterModal(chapter)"
 								class="h-4 w-4 text-gray-900 invisible group-hover:visible"
 							/>
 						</Tooltip>
-						<Tooltip :text="__('Delete Chapter')" placement="bottom">
+						<Tooltip :text="__('Удалить')" placement="bottom">
 							<Trash2
 								v-if="allowEdit"
 								@click.prevent="trashChapter(chapter.name)"
@@ -205,7 +205,7 @@ const deleteLesson = createResource({
 	},
 	onSuccess() {
 		outline.reload()
-		showToast('Success', 'Lesson deleted successfully', 'check')
+		showToast('', 'Урок успешно удален', 'check')
 	},
 })
 
@@ -220,19 +220,19 @@ const updateLessonIndex = createResource({
 		}
 	},
 	onSuccess() {
-		showToast('Success', 'Lesson moved successfully', 'check')
+		showToast('', 'Урок успешно перенесен', 'check')
 	},
 })
 
 const trashLesson = (lessonName, chapterName) => {
 	$dialog({
-		title: __('Delete this lesson?'),
+		title: __('Удалить этот урок?'),
 		message: __(
-			'Deleting this lesson will permanently remove it from the course. This action cannot be undone. Are you sure you want to continue?'
+			'Удаление этого урока приведет к его окончательному удалению из курса. Это действие нельзя отменить. Вы уверены, что хотите продолжить?'
 		),
 		actions: [
 			{
-				label: __('Delete'),
+				label: __('Удалить'),
 				theme: 'red',
 				variant: 'solid',
 				onClick(close) {
@@ -278,19 +278,19 @@ const deleteChapter = createResource({
 	},
 	onSuccess() {
 		outline.reload()
-		showToast('Success', 'Chapter deleted successfully', 'check')
+		showToast('', 'Глава удалена успешно', 'check')
 	},
 })
 
 const trashChapter = (chapterName) => {
 	$dialog({
-		title: __('Delete this chapter?'),
+		title: __('Удалить эту главу?'),
 		message: __(
-			'Deleting this chapter will also delete all its lessons and permanently remove it from the course. This action cannot be undone. Are you sure you want to continue?'
+			'При удалении этой главы также будут удалены все ее уроки, и она будет навсегда удалена из курса. Это действие нельзя отменить. Вы уверены, что хотите продолжить?'
 		),
 		actions: [
 			{
-				label: __('Delete'),
+				label: __('Удалить'),
 				theme: 'red',
 				variant: 'solid',
 				onClick(close) {
@@ -308,8 +308,8 @@ const redirectToChapter = (chapter) => {
 	if (props.allowEdit) return
 	if (!user.data) {
 		showToast(
-			__('You are not enrolled'),
-			__('Please enroll for this course to view this lesson'),
+			__('Вы не записаны'),
+			__('Чтобы посмотреть этот урок, запишитесь на этот курс'),
 			'alert-circle'
 		)
 		return
