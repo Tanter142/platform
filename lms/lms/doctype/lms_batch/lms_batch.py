@@ -50,7 +50,7 @@ class LMSBatch(Document):
 		duplicates = {student for student in students if students.count(student) > 1}
 		if len(duplicates):
 			frappe.throw(
-				_("Student {0} has already been added to this batch.").format(
+				_("Студент {0} уже добавлен.").format(
 					frappe.bold(next(iter(duplicates)))
 				)
 			)
@@ -61,18 +61,18 @@ class LMSBatch(Document):
 		if len(duplicates):
 			title = frappe.db.get_value("LMS Course", next(iter(duplicates)), "title")
 			frappe.throw(
-				_("Course {0} has already been added to this batch.").format(frappe.bold(title))
+				_("Курс {0} уже добавлен в").format(frappe.bold(title))
 			)
 
 	def validate_payments_app(self):
 		if self.paid_batch:
 			installed_apps = frappe.get_installed_apps()
 			if "payments" not in installed_apps:
-				frappe.throw(_("Please install the Payments app to create a paid batches."))
+				frappe.throw(_("Пожалуйста, установите приложение «Payments App», чтобы создавать оплачиваемые партии."))
 
 	def validate_amount_and_currency(self):
 		if self.paid_batch and (not self.amount or not self.currency):
-			frappe.throw(_("Amount and currency are required for paid batches."))
+			frappe.throw(_("Сумма и валюта необходимы для оплаченных партий."))
 
 	def validate_duplicate_assessments(self):
 		assessments = [row.assessment_name for row in self.assessment]
@@ -82,7 +82,7 @@ class LMSBatch(Document):
 					assessment.assessment_type, assessment.assessment_name, "title"
 				)
 				frappe.throw(
-					_("Assessment {0} has already been added to this batch.").format(
+					_("Оценка {0} уже добавлена").format(
 						frappe.bold(title)
 					)
 				)

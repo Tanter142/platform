@@ -16,7 +16,7 @@ class LMSProgram(Document):
 		duplicates = {course for course in courses if courses.count(course) > 1}
 		if len(duplicates):
 			frappe.throw(
-				_("Course {0} has already been added to this batch.").format(
+				_("Курс {0} уже добавлен.").format(
 					frappe.bold(next(iter(duplicates)))
 				)
 			)
@@ -26,7 +26,7 @@ class LMSProgram(Document):
 		duplicates = {member for member in members if members.count(member) > 1}
 		if len(duplicates):
 			frappe.throw(
-				_("Member {0} has already been added to this batch.").format(
+				_("Участник {0} уже был добавлен.").format(
 					frappe.bold(next(iter(duplicates)))
 				)
 			)
