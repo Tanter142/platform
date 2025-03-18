@@ -4,7 +4,7 @@
 	>
 		<Breadcrumbs :items="breadbrumbs" />
 		<Button variant="solid" @click="saveProgram()">
-			{{ __('Save') }}
+			{{ __('Сохранить') }}
 		</Button>
 	</header>
 	<div v-if="program.doc" class="pt-5 px-5 w-3/4 mx-auto space-y-10">
@@ -14,7 +14,7 @@
 		<div>
 			<div class="flex items-center justify-between mb-2">
 				<div class="text-lg font-semibold">
-					{{ __('Program Courses') }}
+					{{ __('Курсы по программе') }}
 				</div>
 				<Button
 					@click="
@@ -27,7 +27,7 @@
 					<template #prefix>
 						<Plus class="w-4 h-4" />
 					</template>
-					{{ __('Add') }}
+					{{ __('Добавить') }}
 				</Button>
 			</div>
 
@@ -76,7 +76,7 @@
 		<div>
 			<div class="flex items-center justify-between mb-2">
 				<div class="text-lg font-semibold">
-					{{ __('Program Members') }}
+					{{ __('Участники программы') }}
 				</div>
 				<Button
 					@click="
@@ -89,7 +89,7 @@
 					<template #prefix>
 						<Plus class="w-4 h-4" />
 					</template>
-					{{ __('Add') }}
+					{{ __('Добавить') }}
 				</Button>
 			</div>
 
@@ -130,11 +130,11 @@
 		:options="{
 			title:
 				currentForm == 'course'
-					? __('New Program Course')
-					: __('New Program Member'),
+					? __('Новый программный курс')
+					: __('Новый участник программы'),
 			actions: [
 				{
-					label: __('Add'),
+					label: __('Добавить'),
 					variant: 'solid',
 					onClick: () =>
 						currentForm == 'course'
@@ -152,10 +152,10 @@
 				:filters="{
 					disable_self_learning: 1,
 				}"
-				:label="__('Program Course')"
+				:label="__('Курс по программе')"
 				:description="
 					__(
-						'Only courses for which self learning is disabled can be added to program.'
+						'В программу могут быть добавлены только те курсы, для которых отключено самообучение.'
 					)
 				"
 			/>
@@ -167,7 +167,7 @@
 				:filters="{
 					ignore_user_type: 1,
 				}"
-				:label="__('Program Member')"
+				:label="__('Участник программы')"
 			/>
 		</template>
 	</Dialog>
@@ -226,11 +226,11 @@ const addProgramCourse = () => {
 			onSuccess(data) {
 				showDialog.value = false
 				course.value = null
-				showToast(__('Success'), __('Course added to program'), 'check')
+				showToast(__(''), __('Курс добавлен в программу'), 'check')
 				program.reload()
 			},
 			onError(err) {
-				showToast('Error', err.messages?.[0] || err, 'x')
+				showToast('', err.messages?.[0] || err, 'x')
 			},
 		}
 	)
@@ -248,11 +248,11 @@ const addProgramMember = () => {
 			onSuccess(data) {
 				showDialog.value = false
 				member.value = null
-				showToast(__('Success'), __('Member added to program'), 'check')
+				showToast(__(''), __('Участник добавлен в программу'), 'check')
 				program.reload()
 			},
 			onError(err) {
-				showToast('Error', err.messages?.[0] || err, 'x')
+				showToast('', err.messages?.[0] || err, 'x')
 			},
 		}
 	)
@@ -318,7 +318,7 @@ const saveProgram = () => {
 const courseColumns = computed(() => {
 	return [
 		{
-			label: 'Title',
+			label: 'Заголовок',
 			key: 'course_title',
 			width: 3,
 		},
@@ -356,11 +356,11 @@ const memberColumns = computed(() => {
 const breadbrumbs = computed(() => {
 	return [
 		{
-			label: 'Programs',
+			label: 'Программы',
 			route: { name: 'Programs' },
 		},
 		{
-			label: props.programName === 'new' ? 'New Program' : props.programName,
+			label: props.programName === 'new' ? 'Новая программа' : props.programName,
 		},
 	]
 })
