@@ -869,7 +869,7 @@ def get_announcements(batch):
 
 @frappe.whitelist()
 def delete_course(course):
-	course_progress_list = frappe.get_all("LMS Course Progress", {"course": course} ,fields=["name"])
+	course_progress_list = frappe.get_all("LMS Course Progress", {"course": course}, pluck="name")
 	chapters = frappe.get_all("Course Chapter", {"course": course}, pluck="name")
 	linked_reviews = frappe.get_all("LMS Course Review", {"course": course}, pluck="name")
 	chapter_references = frappe.get_all("Chapter Reference", {"parent": course}, pluck="name")
