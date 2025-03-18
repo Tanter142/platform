@@ -910,7 +910,7 @@ def delete_course(course):
 		frappe.delete_doc("LMS Course Review", review)
   
 	for progress in course_progress_list:
-		frappe.delete_doc("LMS Course Progress", progress.name, force=True)
+		frappe.delete_doc("LMS Course Progress", progress)
   
   
 	frappe.db.delete("LMS Course Progress", {"course": course})
