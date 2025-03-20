@@ -23,7 +23,7 @@
 			class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:items-center justify-between mb-5"
 		>
 			<div class="text-lg font-semibold">
-				{{ __('All Batches') }}
+				{{ __('Все группы') }}
 			</div>
 			<div
 				class="flex flex-col space-y-2 lg:space-y-0 lg:flex-row lg:items-center lg:space-x-2"
@@ -70,12 +70,12 @@
 		>
 			<BookOpen class="size-10 mx-auto stroke-1 text-gray-500" />
 			<div class="text-lg font-medium mb-1">
-				{{ __('No batches found') }}
+				{{ __('Группы не найдены') }}
 			</div>
 			<div class="leading-5 w-2/5 text-center">
 				{{
 					__(
-						'There are no batches matching the criteria. Keep an eye out, fresh learning experiences are on the way soon!'
+						'Нет групп, подходящих по критериям. Следите за новостями, скоро появятся новые уроки!'
 					)
 				}}
 			</div>
