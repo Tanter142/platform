@@ -270,7 +270,7 @@ const remove = (selections, unselectAll, doctype) => {
 		{
 			onSuccess(data) {
 				unselectAll()
-				showToast(__(''), __('Партнер успешно удален'), 'check')
+				showToast(__(''), __('Элементы удалены'), 'check')
 				program.reload()
 			},
 			onError(err) {
