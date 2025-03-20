@@ -14,7 +14,7 @@
 				<template #prefix>
 					<Plus class="h-4 w-4 stroke-1.5" />
 				</template>
-				{{ __('New') }}
+				{{ __('Добавить') }}
 			</Button>
 		</router-link>
 	</header>
@@ -36,7 +36,7 @@
 				<div class="grid grid-cols-2 gap-2">
 					<FormControl
 						v-model="title"
-						:placeholder="__('Search by Title')"
+						:placeholder="__('Поиск по названию')"
 						type="text"
 						class="min-w-40 lg:min-w-0 lg:w-32 xl:w-40"
 						@input="updateBatches()"
@@ -46,7 +46,7 @@
 							v-if="categories.length"
 							v-model="currentCategory"
 							:options="categories"
-							:placeholder="__('Category')"
+							:placeholder="__('Категории')"
 							@change="updateBatches()"
 						/>
 					</div>
@@ -267,11 +267,11 @@ const batchType = computed(() => {
 const batchTabs = computed(() => {
 	let tabs = [
 		{
-			label: __('All'),
+			label: __('Все'),
 		},
 	]
 	if (user.data?.is_student) {
-		tabs.push({ label: __('Enrolled') })
+		tabs.push({ label: __('Зачисленные') })
 	} else {
 		tabs.push({ label: __('Upcoming') })
 		tabs.push({ label: __('Archived') })
