@@ -124,7 +124,7 @@ const submitResume = (close) => {
 			onError(err) {
 				createToast({
 					title: '',
-					text: err.messages?.[0] || 'Ошибка',
+					text: err.messages?.[0] || messages,
 					icon: 'x',
 					iconClasses: 'bg-red-600 text-white rounded-md p-px',
 					position: 'top-center',
