@@ -137,15 +137,15 @@ const updateFilters = () => {
 		orFilters.value = {}
 	}
 }
-
-const jobTypes = computed(() => {
-
 const translations = {
 	  "Полная занятость": "Полная занятость",
 	  "Частичная занятость": "Part Time",
 	  "Фриланс": "Freelance",
 	  "Контракт": "Contract"
 }
+const jobTypes = computed(() => {
+
+
 
 return [
 	'',
