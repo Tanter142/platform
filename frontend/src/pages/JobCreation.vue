@@ -11,7 +11,7 @@
 		<div class="py-5">
 			<div class="container border-b mb-4 pb-4">
 				<div class="text-lg font-semibold mb-4">
-					{{ __('Job Details') }}
+					{{ __('Подробности о вакансии') }}
 				</div>
 				<div class="grid grid-cols-2 gap-4">
 					<div>
