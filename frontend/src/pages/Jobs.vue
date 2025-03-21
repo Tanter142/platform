@@ -142,9 +142,9 @@ const jobTypes = computed(() => {
 	return [
 		'',
 		{ label: __('Полная занятость'), value: 'Полная занятость' },
-		{ label: __('Частичная занятость'), value: 'Part Time' },
-		{ label: __('Контракт'), value: 'Contract' },
-		{ label: __('Фриланс'), value: 'Freelance' },
+		{ label: __('Частичная занятость'), value: 'Частичная занятость' },
+		{ label: __('Контракт'), value: 'Контракт' },
+		{ label: __('Фриланс'), value: 'Фриланс' },
 	]
 })
 const pageMeta = computed(() => {
