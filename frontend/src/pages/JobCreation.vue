@@ -250,7 +250,7 @@ const createNewJob = () => {
 				})
 			},
 			onError(err) {
-				showToast('Error', err.messages?.[0] || err, 'x')
+				showToast('', err.messages?.[0] || err, 'x')
 			},
 		}
 	)
@@ -269,7 +269,7 @@ const editJobDetails = () => {
 				})
 			},
 			onError(err) {
-				showToast('Error', err.messages?.[0] || err, 'x')
+				showToast('', err.messages?.[0] || err, 'x')
 			},
 		}
 	)
@@ -286,24 +286,17 @@ const removeImage = () => {
 const validateFile = (file) => {
 	let extension = file.name.split('.').pop().toLowerCase()
 	if (!['jpg', 'jpeg', 'png'].includes(extension)) {
-		return 'Only image file is allowed.'
+		return 'Разрешен только файл изображения.'
 	}
 }
 
 const jobTypes = computed(() => {
-	const translations = {
-	    "Full Time": "Полная занятость",
-	    "Part Time": "Частичная занятость",
-	    "Freelance": "Фриланс",
-	    "Contract": "Контракт"
-	}
 
 	return [
-		'',
-		{ label: 'Полная занятость', value: translations["Full Time"] },
-		{ label: 'Частичная занятость', value: translations["Part Time"] },
-		{ label: 'Контракт', value: translations["Freelance"] },
-		{ label: 'Фриланс', value: translations["Contract"] },
+		{ label: 'Полная занятость', value: 'Full Time' },
+		{ label: 'Частичная занятость', value: 'Part Time' },
+		{ label: 'Контракт', value: 'Contract' },
+		{ label: 'Фриланс', value: 'Freelance' },
 	]
 })
 
