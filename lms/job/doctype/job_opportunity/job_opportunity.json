@@ -48,7 +48,7 @@
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Type",
-   "options": "Full Time\nPart Time\nFreelance\nContract",
+   "options": "Полная занятость\nЧастичная занятость\nФриланс\nКонтракт",
    "reqd": 1
   },
   {

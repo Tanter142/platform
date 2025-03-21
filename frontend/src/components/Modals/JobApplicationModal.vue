@@ -114,7 +114,7 @@ const submitResume = (close) => {
 			onSuccess() {
 				createToast({
 					title: '',
-					text: 'Ваше заявление подано',
+					text: '<span class="leading-[1.4]">Заявка успешно отправлена</span>',
 					icon: 'check',
 					iconClasses: 'bg-green-600 text-white rounded-md p-px',
 				})
