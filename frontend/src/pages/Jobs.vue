@@ -122,7 +122,7 @@ const updateFilters = () => {
 	filters.value.disabled = 0
 
 	if (jobType.value) {
-		filters.value.type = jobType.value
+		filters.value.type = translations[jobType.value]
 	} else {
 		delete filters.value.type
 	}
@@ -139,13 +139,21 @@ const updateFilters = () => {
 }
 
 const jobTypes = computed(() => {
-	return [
-		'',
-		{ label: 'Полная занятость', value: 'Полная занятость' },
-		{ label: 'Частичная занятость', value: 'Частичная занятость' },
-		{ label: 'Контракт', value: 'Контракт' },
-		{ label: 'Фриланс', value: 'Фриланс' },
-	]
+
+const translations = {
+	  "Полная занятость": "Full Time",
+	  "Частичная занятость": "Part Time",
+	  "Фриланс": "Freelance",
+	  "Контракт": "Contract"
+}
+
+return [
+	'',
+	{ label: 'Полная занятость', value: translations['Полная занятость'] },
+	{ label: 'Частичная занятость', value: translations['Частичная занятость'] },
+	{ label: 'Контракт', value: translations['Контракт'] },
+	{ label: 'Фриланс', value: translations['Фриланс'] },
+]
 })
 const pageMeta = computed(() => {
 	return {
