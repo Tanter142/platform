@@ -271,7 +271,7 @@ const tabsStructure = computed(() => {
 							type: 'Column Break',
 						},
 						{
-							label: 'Jobs',
+							label: 'Вакансии',
 							name: 'jobs',
 							type: 'checkbox',
 						},

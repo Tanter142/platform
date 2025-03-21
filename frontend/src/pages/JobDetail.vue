@@ -7,7 +7,7 @@
 				class="h-7"
 				:items="[
 					{
-						label: __('Jobs'),
+						label: __('Вакансии'),
 						route: { name: 'Jobs' },
 					},
 					{
@@ -28,7 +28,7 @@
 						<template #prefix>
 							<Pencil class="h-4 w-4 stroke-1.5" />
 						</template>
-						{{ __('Edit') }}
+						{{ __('Редактировать') }}
 					</Button>
 				</router-link>
 				<Button
@@ -39,7 +39,7 @@
 					<template #prefix>
 						<SendHorizonal class="h-4 w-4" />
 					</template>
-					{{ __('Apply') }}
+					{{ __('Сохранить') }}
 				</Button>
 			</div>
 			<div v-else>
@@ -73,7 +73,7 @@
 								</span>
 								<div class="flex flex-col space-y-2">
 									<span class="text-xs text-gray-600 font-medium uppercase">
-										{{ __('Organisation') }}
+										{{ __('Организация') }}
 									</span>
 									<span class="text-sm font-semibold">
 										{{ job.data.company_name }}
@@ -86,7 +86,7 @@
 								</span>
 								<div class="flex flex-col space-y-2">
 									<span class="text-xs text-gray-600 font-medium uppercase">
-										{{ __('Location') }}
+										{{ __('Расположение') }}
 									</span>
 									<span class="text-sm font-semibold">
 										{{ job.data.location }}
@@ -99,7 +99,7 @@
 								</span>
 								<div class="flex flex-col space-y-2">
 									<span class="text-xs font-medium text-gray-600 uppercase">
-										{{ __('Category') }}
+										{{ __('Категория') }}
 									</span>
 									<span class="text-sm font-semibold">
 										{{ job.data.type }}
@@ -112,7 +112,7 @@
 								</span>
 								<div class="flex flex-col space-y-2">
 									<span class="text-xs text-gray-600 font-medium uppercase">
-										{{ __('Posted on') }}
+										{{ __('Опубликовано') }}
 									</span>
 									<span class="text-sm font-semibold">
 										{{ dayjs(job.data.creation).format('DD MMM YYYY') }}
