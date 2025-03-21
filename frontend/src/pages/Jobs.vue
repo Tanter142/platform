@@ -116,7 +116,7 @@ const updateJobs = () => {
 	})
 	jobs.reload()
 }
-
+console.log(jobs)
 const updateFilters = () => {
 	filters.value.status = 'Open'
 	filters.value.disabled = 0
