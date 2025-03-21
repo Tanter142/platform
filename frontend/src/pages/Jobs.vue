@@ -141,7 +141,7 @@ const updateFilters = () => {
 const jobTypes = computed(() => {
 	return [
 		'',
-		{ label: __('Полный рабочий день'), value: 'Full Time' },
+		{ label: __('Полная занятость'), value: 'Full Time' },
 		{ label: __('Частичная занятость'), value: 'Part Time' },
 		{ label: __('Контракт'), value: 'Contract' },
 		{ label: __('Фриланс'), value: 'Freelance' },

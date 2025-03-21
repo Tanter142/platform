@@ -292,10 +292,10 @@ const validateFile = (file) => {
 
 const jobTypes = computed(() => {
 	return [
-		{ label: 'Full Time', value: 'Full Time' },
-		{ label: 'Part Time', value: 'Part Time' },
-		{ label: 'Contract', value: 'Contract' },
-		{ label: 'Freelance', value: 'Freelance' },
+		{ label: 'Полная занятость', value: 'Full Time' },
+		{ label: 'Частичная занятость', value: 'Part Time' },
+		{ label: 'Контракт', value: 'Contract' },
+		{ label: 'Фриланс', value: 'Freelance' },
 	]
 })
 
