@@ -39,7 +39,7 @@
 					<template #prefix>
 						<SendHorizonal class="h-4 w-4" />
 					</template>
-					{{ __('Сохранить') }}
+					{{ __('Применить') }}
 				</Button>
 			</div>
 			<div v-else>

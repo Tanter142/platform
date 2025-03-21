@@ -3,7 +3,7 @@
 		v-model="show"
 		class="text-base"
 		:options="{
-			title: __('Apply for this job'),
+			title: __('Подать заявку'),
 			size: 'lg',
 			actions: [
 				{
@@ -21,7 +21,7 @@
 				<p>
 					{{
 						__(
-							'Submit your resume to proceed with your application for this position. Upon submission, it will be shared with the job poster.'
+							'Отправьте свое резюме, чтобы продолжить рассмотрение заявки на эту должность. После отправки резюме оно будет размещено в объявлении о вакансии.'
 						)
 					}}
 				</p>
@@ -39,7 +39,7 @@
 							<div class="">
 								<Button @click="openFileSelector" :loading="uploading">
 									{{
-										uploading ? `Uploading ${progress}%` : 'Upload your resume'
+										uploading ? `Загрузка ${progress}%` : 'Загрузите свое резюме'
 									}}
 								</Button>
 							</div>
@@ -84,7 +84,7 @@ const props = defineProps({
 const validateFile = (file) => {
 	let extension = file.name.split('.').pop().toLowerCase()
 	if (extension != 'pdf') {
-		return 'Only PDF file is allowed'
+		return 'Разрешен только PDF-файл'
 	}
 }
 
@@ -108,13 +108,13 @@ const submitResume = (close) => {
 		{
 			validate() {
 				if (!resume.value) {
-					return 'Please upload your resume'
+					return 'Пожалуйста, загрузите ваше резюме'
 				}
 			},
 			onSuccess() {
 				createToast({
-					title: 'Success',
-					text: 'Your application has been submitted',
+					title: '',
+					text: 'Ваше заявление подано',
 					icon: 'check',
 					iconClasses: 'bg-green-600 text-white rounded-md p-px',
 				})
@@ -123,7 +123,7 @@ const submitResume = (close) => {
 			},
 			onError(err) {
 				createToast({
-					title: 'Error',
+					title: '',
 					text: err.messages?.[0] || err,
 					icon: 'x',
 					iconClasses: 'bg-red-600 text-white rounded-md p-px',
