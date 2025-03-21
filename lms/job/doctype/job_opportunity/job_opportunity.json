@@ -43,14 +43,7 @@
    "fieldname": "column_break_5",
    "fieldtype": "Column Break"
   },
-  {
-   "default": "Полная занятость",
-   "fieldname": "Тип",
-   "fieldtype": "Select",
-   "label": "Type",
-   "options": "Полная занятость\nЧастичная занятость\nФриланс\nКонтракт",
-   "reqd": 1
-  },
+
   {
    "default": "Open",
    "fieldname": "status",
