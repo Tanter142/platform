@@ -62,7 +62,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "default": "Полная занятость",
-   "fieldname": "type",
+   "fieldname": "Тип",
    "fieldtype": "Select",
    "hidden": 0,
    "label": "Type",

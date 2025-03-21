@@ -45,7 +45,7 @@
   },
   {
    "default": "Полная занятость",
-   "fieldname": "type",
+   "fieldname": "Тип",
    "fieldtype": "Select",
    "label": "Type",
    "options": "Полная занятость\nЧастичная занятость\nФриланс\nКонтракт",
