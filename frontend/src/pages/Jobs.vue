@@ -139,12 +139,19 @@ const updateFilters = () => {
 }
 
 const jobTypes = computed(() => {
+	const translations = {
+	    "Полная занятость": "Full Time",
+	    "Частичная занятость": "Part Time",
+	    "Фриланс": "Freelance",
+	    "Контракт": "Contract"
+	}
+
 	return [
 		'',
-		{ label: __('Полная занятость'), value: 'Полная занятость' },
-		{ label: __('Частичная занятость'), value: 'Частичная занятость' },
-		{ label: __('Контракт'), value: 'Контракт' },
-		{ label: __('Фриланс'), value: 'Фриланс' },
+		{ label: 'Полная занятость', value: translations["Полная занятость"] },
+		{ label: 'Частичная занятость', value: translations["Частичная занятость"] },
+		{ label: 'Контракт', value: translations["Контракт"] },
+		{ label: 'Фриланс', value: translations["Фриланс"] },
 	]
 })
 const pageMeta = computed(() => {

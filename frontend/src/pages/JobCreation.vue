@@ -291,11 +291,18 @@ const validateFile = (file) => {
 }
 
 const jobTypes = computed(() => {
+	const translations = {
+	    "Полная занятость": "Full Time",
+	    "Частичная занятость": "Part Time",
+	    "Фриланс": "Freelance",
+	    "Контракт": "Contract"
+	}
+
 	return [
-		{ label: 'Полная занятость', value: 'Полная занятость' },
-		{ label: 'Частичная занятость', value: 'Частичная занятость' },
-		{ label: 'Контракт', value: 'Контракт' },
-		{ label: 'Фриланс', value: 'Фриланс' },
+		{ label: 'Полная занятость', value: translations["Полная занятость"] },
+		{ label: 'Частичная занятость', value: translations["Частичная занятость"] },
+		{ label: 'Контракт', value: translations["Контракт"] },
+		{ label: 'Фриланс', value: translations["Фриланс"] },
 	]
 })
 
