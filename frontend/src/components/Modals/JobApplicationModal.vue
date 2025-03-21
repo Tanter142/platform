@@ -7,7 +7,7 @@
 			size: 'lg',
 			actions: [
 				{
-					label: 'Submit',
+					label: 'Отправить',
 					variant: 'solid',
 					onClick: (close) => {
 						submitResume(close)
@@ -123,8 +123,8 @@ const submitResume = (close) => {
 			},
 			onError(err) {
 				createToast({
-					title: 'asd',
-					text: err.messages?.[0] || err,
+					title: '',
+					text: messages?.[0] || 'Ошибка',
 					icon: 'x',
 					iconClasses: 'bg-red-600 text-white rounded-md p-px',
 					position: 'top-center',
