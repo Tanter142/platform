@@ -122,6 +122,7 @@ const submitResume = (close) => {
 				close()
 			},
 			onError(err) {
+				const errorMessage = err instanceof Error ? err.message : (err.messages?.[0] || err);
 				createToast({
 					title: '',
 					text: errorMessage || 'Ошибка',
