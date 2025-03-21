@@ -17,20 +17,20 @@
 					<div>
 						<FormControl
 							v-model="job.job_title"
-							:label="__('Title')"
+							:label="__('Заголовок')"
 							class="mb-4"
 							:required="true"
 						/>
 						<FormControl
 							v-model="job.location"
-							:label="__('Location')"
+							:label="__('Местоположение')"
 							:required="true"
 						/>
 					</div>
 					<div>
 						<FormControl
 							v-model="job.type"
-							:label="__('Type')"
+							:label="__('Тип')"
 							type="select"
 							:options="jobTypes"
 							class="mb-4"
@@ -38,7 +38,7 @@
 						/>
 						<FormControl
 							v-model="job.status"
-							:label="__('Status')"
+							:label="__('Статус')"
 							type="select"
 							:options="jobStatuses"
 							:required="true"
@@ -47,7 +47,7 @@
 				</div>
 				<div class="mt-4">
 					<label class="block text-gray-600 text-xs mb-1">
-						{{ __('Description') }}
+						{{ __('Описание') }}
 						<span class="text-red-500">*</span>
 					</label>
 					<TextEditor
@@ -61,31 +61,31 @@
 			</div>
 			<div class="container mb-4 pb-4">
 				<div class="text-lg font-semibold mb-4">
-					{{ __('Company Details') }}
+					{{ __('Сведения о компании') }}
 				</div>
 				<div class="grid grid-cols-2 gap-4">
 					<div>
 						<FormControl
 							v-model="job.company_name"
-							:label="__('Company Name')"
+							:label="__('Название компании')"
 							class="mb-4"
 							:required="true"
 						/>
 						<FormControl
 							v-model="job.company_website"
-							:label="__('Company Website')"
+							:label="__('Сайт компании')"
 							:required="true"
 						/>
 					</div>
 					<div>
 						<FormControl
 							v-model="job.company_email_address"
-							:label="__('Company Email Address')"
+							:label="__('Электронный адрес компании')"
 							class="mb-4"
 							:required="true"
 						/>
 						<label class="block text-gray-600 text-xs mb-1 mt-4">
-							{{ __('Company Logo') }}
+							{{ __('Логотип компании') }}
 							<span class="text-red-500">*</span>
 						</label>
 						<FileUploader
@@ -100,7 +100,7 @@
 								<div class="mb-4">
 									<Button @click="openFileSelector" :loading="uploading">
 										{{
-											uploading ? `Uploading ${progress}%` : 'Upload an image'
+											uploading ? `Загрузка ${progress}%` : 'Загрузить изображение'
 										}}
 									</Button>
 								</div>
@@ -301,19 +301,19 @@ const jobTypes = computed(() => {
 
 const jobStatuses = computed(() => {
 	return [
-		{ label: 'Open', value: 'Open' },
-		{ label: 'Closed', value: 'Closed' },
+		{ label: 'Открыта', value: 'Open' },
+		{ label: 'Закрыта', value: 'Closed' },
 	]
 })
 
 const breadcrumbs = computed(() => {
 	let crumbs = [
 		{
-			label: 'Jobs',
+			label: 'Вакансии',
 			route: { name: 'Jobs' },
 		},
 		{
-			label: props.jobName == 'new' ? 'New Job' : 'Edit Job',
+			label: props.jobName == 'new' ? 'Новая вакансия' : 'Редактирование вакансии',
 			route: { name: 'JobCreation' },
 		},
 	]
