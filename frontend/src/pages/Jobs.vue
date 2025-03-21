@@ -5,7 +5,7 @@
 		>
 			<Breadcrumbs
 				class="h-7"
-				:items="[{ label: __('Jobs'), route: { name: 'Jobs' } }]"
+				:items="[{ label: __('Вакансии'), route: { name: 'Jobs' } }]"
 			/>
 			<router-link
 				v-if="user.data?.name"
@@ -20,7 +20,7 @@
 					<template #prefix>
 						<Plus class="h-4 w-4" />
 					</template>
-					{{ __('New Job') }}
+					{{ __('Добавить вакансию') }}
 				</Button>
 			</router-link>
 		</header>
@@ -30,12 +30,12 @@
 					class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:items-center justify-between mb-5"
 				>
 					<div class="text-xl font-semibold">
-						{{ __('Find the perfect job for you') }}
+						{{ __('Найдите идеальную работу для себя') }}
 					</div>
 					<div class="grid grid-cols-2 gap-2">
 						<FormControl
 							type="text"
-							:placeholder="__('Search')"
+							:placeholder="__('Поиск')"
 							v-model="searchQuery"
 							class="min-w-40 lg:min-w-0 lg:w-32 xl:w-40"
 							@input="updateJobs"
@@ -52,7 +52,7 @@
 							type="select"
 							:options="jobTypes"
 							class="min-w-40 lg:min-w-0 lg:w-32 xl:w-40"
-							:placeholder="__('Type')"
+							:placeholder="__('Тип')"
 							@change="updateJobs"
 						/>
 					</div>
@@ -74,7 +74,7 @@
 					</router-link>
 				</div>
 				<div v-else class="text-gray-700 italic p-5 w-fit mx-auto">
-					{{ __('No jobs posted') }}
+					{{ __('Нет вакансий') }}
 				</div>
 			</div>
 		</div>
@@ -141,16 +141,16 @@ const updateFilters = () => {
 const jobTypes = computed(() => {
 	return [
 		'',
-		{ label: __('Full Time'), value: 'Full Time' },
-		{ label: __('Part Time'), value: 'Part Time' },
-		{ label: __('Contract'), value: 'Contract' },
-		{ label: __('Freelance'), value: 'Freelance' },
+		{ label: __('Полный рабочий день'), value: 'Full Time' },
+		{ label: __('Частичная занятость'), value: 'Part Time' },
+		{ label: __('Контракт'), value: 'Contract' },
+		{ label: __('Фриланс'), value: 'Freelance' },
 	]
 })
 const pageMeta = computed(() => {
 	return {
-		title: 'Jobs',
-		description: 'An open job board for the community',
+		title: 'Вакансии',
+		description: 'Открытая доска объявлений для сообщества',
 	}
 })
 
