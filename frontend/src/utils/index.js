@@ -106,8 +106,6 @@ export function showToast(title, text, icon, iconClasses = null) {
 		title: title,
 		text: `<span class="${
 			icon == 'check' ? 'leading-[1.4]' : 'leading-[1.4]'
-		}">${text}</span>` || `<span class="${
-			icon == 'alert-circle' ? 'leading-[1.4]' : 'leading-[1.4]'
 		}">${text}</span>`,
 		icon: icon,
 		iconClasses: iconClasses,

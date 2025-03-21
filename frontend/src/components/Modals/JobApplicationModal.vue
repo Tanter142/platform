@@ -125,7 +125,9 @@ const submitResume = (close) => {
 				const errorMessage = err instanceof Error ? err.message : (err.messages?.[0] || err);
 				createToast({
 					title: '',
-					text: errorMessage || 'Ошибка',
+					text: `<span class="${
+			icon == 'check' ? 'leading-[1.4]' : 'leading-[1.4]'
+		}">${errorMessage}</span>` || 'Ошибка',
 					icon: 'x',
 					iconClasses: 'bg-red-600 text-white rounded-md p-px',
 					position: 'top-center',
