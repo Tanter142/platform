@@ -123,7 +123,7 @@ const submitResume = (close) => {
 			},
 			onError(err) {
 				createToast({
-					title: '',
+					title: 'asd',
 					text: err.messages?.[0] || err,
 					icon: 'x',
 					iconClasses: 'bg-red-600 text-white rounded-md p-px',
