@@ -293,7 +293,7 @@ const validateFile = (file) => {
 const jobTypes = computed(() => {
 
 	const translations = {
-  		"Полная занятость": "Full Time",
+  		"Full Time": "Полная занятость",
   		"Частичная занятость": "Part Time",
   		"Фриланс": "Freelance",
   		"Контракт": "Contract"
