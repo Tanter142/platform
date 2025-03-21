@@ -44,7 +44,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Full Time",
+   "default": "Полная занятость",
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Type",
