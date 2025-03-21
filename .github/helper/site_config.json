@@ -16,6 +16,5 @@
     "host_name": "http://lms.test:8000",
     "monitor": 1,
     "server_script_enabled": true,
-    "mute_emails": true,
-    "ignore_csrf": 1
+    "mute_emails": true
 }
