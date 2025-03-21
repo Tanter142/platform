@@ -9,12 +9,12 @@
 			class="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 justify-between mb-5"
 		>
 			<div class="text-lg font-semibold">
-				{{ __('All Certified Participants') }}
+				{{ __('Все сертифицированные участники') }}
 			</div>
 			<div class="grid grid-cols-2 gap-2">
 				<FormControl
 					v-model="nameFilter"
-					:placeholder="__('Search by Name')"
+					:placeholder="__('Поиск по имени')"
 					type="text"
 					class="min-w-40 lg:min-w-0 lg:w-32 xl:w-40"
 					@input="updateParticipants()"
@@ -26,7 +26,7 @@
 					<Select
 						v-model="currentCategory"
 						:options="categories.data"
-						:placeholder="__('Category')"
+						:placeholder="__('Категории')"
 						@change="updateParticipants()"
 					/>
 				</div>
@@ -78,10 +78,10 @@
 		>
 			<BookOpen class="size-10 mx-auto stroke-1 text-gray-500" />
 			<div class="text-lg font-medium mb-1">
-				{{ __('No participants found') }}
+				{{ __('Участников не найдено') }}
 			</div>
 			<div class="leading-5 w-2/5 text-center">
-				{{ __('There are no participants matching this criteria.') }}
+				{{ __('Участников, подходящих под этот критерий, нет.') }}
 			</div>
 		</div>
 	</div>
@@ -150,15 +150,15 @@ const updateFilters = () => {
 
 const breadcrumbs = computed(() => [
 	{
-		label: __('Certified Participants'),
+		label: __('Сертифицированные участники'),
 		route: { name: 'CertifiedParticipants' },
 	},
 ])
 
 const pageMeta = computed(() => {
 	return {
-		title: 'Certified Participants',
-		description: 'All participants that have been certified.',
+		title: 'Сертифицированные участники',
+		description: 'Все участники, прошедшие сертификацию.',
 	}
 })
 updateDocumentTitle(pageMeta)

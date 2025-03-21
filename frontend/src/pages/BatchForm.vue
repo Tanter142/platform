@@ -412,7 +412,7 @@ const createNewBatch = () => {
 				})
 			},
 			onError(err) {
-				showToast('Error', err.messages?.[0] || err, 'x')
+				showToast('', err.messages?.[0] || err, 'x')
 			},
 		}
 	)
@@ -431,7 +431,7 @@ const editBatchDetails = () => {
 				})
 			},
 			onError(err) {
-				showToast('Error', err.messages?.[0] || err, 'x')
+				showToast('', err.messages?.[0] || err, 'x')
 			},
 		}
 	)
