@@ -68,7 +68,7 @@
    "label": "Type",
    "max_length": 0,
    "max_value": 0,
-   "options": "Full Time\nPart Time\nFreelance\nContract",
+   "options": "Полная занятость\nЧастичная занятость\nФриланс\nКонтракт",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
