@@ -105,7 +105,7 @@ export function showToast(title, text, icon, iconClasses = null) {
 	createToast({
 		title: title,
 		text: `<span class="${
-			icon == 'check' || icon == 'alert-circle' ? 'leading-[1.4]' : 'leading-[1.4]'
+			icon == 'check' || icon == 'x' ? 'leading-[1.4]' : 'leading-[1.4]'
 		}">${text}</span>`,
 		icon: icon,
 		iconClasses: iconClasses,
