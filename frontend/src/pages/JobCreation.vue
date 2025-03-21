@@ -5,7 +5,7 @@
 		>
 			<Breadcrumbs :items="breadcrumbs" />
 			<Button variant="solid" @click="saveJob()">
-				{{ __('Save') }}
+				{{ __('Сохранить') }}
 			</Button>
 		</header>
 		<div class="py-5">
