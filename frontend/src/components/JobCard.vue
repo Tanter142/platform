@@ -45,5 +45,5 @@ const props = defineProps({
 	},
 })
 
-console.log(props.job)
+console.log(props.job.type)
 </script>
