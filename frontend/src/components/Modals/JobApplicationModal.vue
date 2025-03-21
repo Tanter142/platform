@@ -130,7 +130,6 @@ const submitResume = (close) => {
 					iconClasses: 'bg-red-600 text-white rounded-md p-px',
 					position: 'top-center',
 					timeout: 10,
-					style: 'line-height: 1.5;',
 				})
 			},
 		}
