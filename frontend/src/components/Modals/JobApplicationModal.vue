@@ -108,7 +108,7 @@ const submitResume = (close) => {
 		{
 			validate() {
 				if (!resume.value) {
-					return 'Пожалуйста, загрузите ваше резюме'
+					throw new Error('Пожалуйста, загрузите свое резюме')
 				}
 			},
 			onSuccess() {
@@ -124,7 +124,7 @@ const submitResume = (close) => {
 			onError(err) {
 				createToast({
 					title: '',
-					text: err.messages?.[0] || messages?.[0],
+					text: errorMessage || 'Ошибка',
 					icon: 'x',
 					iconClasses: 'bg-red-600 text-white rounded-md p-px',
 					position: 'top-center',
