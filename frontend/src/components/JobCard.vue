@@ -37,6 +37,15 @@ import { Building2, Calendar, MapPin, Shapes } from 'lucide-vue-next'
 import { inject, computed } from 'vue'
 import { Avatar } from 'frappe-ui'
 
+
+
+const dayjs = inject('$dayjs')
+const props = defineProps({
+	job: {
+		type: Object,
+		default: null,
+	},
+})
 const translations = {
   "Full Time": "Полная занятость",
   "Part Time": "Частичная занятость",
@@ -47,13 +56,5 @@ const translations = {
 const translatedJobType = computed(() => {
   return translations[job.type] || job.type; // Если нет перевода, отображается оригинальное значение
 });
-
-const dayjs = inject('$dayjs')
-const props = defineProps({
-	job: {
-		type: Object,
-		default: null,
-	},
-})
 console.log(props.job)
 </script>
