@@ -22,7 +22,7 @@
 			<div class="flex items-center space-x-2">
 				<Shapes class="w-4 h-4 stroke-1.5 text-gray-600" />
 				<span>
-					{{ job.type }}
+					{{ translatedJobType }}
 				</span>
 			</div>
 			<div class="flex items-center space-x-2">
@@ -37,6 +37,16 @@ import { Building2, Calendar, MapPin, Shapes } from 'lucide-vue-next'
 import { inject } from 'vue'
 import { Avatar } from 'frappe-ui'
 
+const translations = {
+  "Full Time": "Полная занятость",
+  "Part Time": "Частичная занятость",
+  "Freelance": "Фриланс",
+  "Contract": "Контракт"
+};
+
+const translatedJobType = computed(() => {
+  return translations[job.type] || job.type; // Если нет перевода, отображается оригинальное значение
+});
 
 const dayjs = inject('$dayjs')
 const props = defineProps({
