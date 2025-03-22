@@ -37,6 +37,7 @@ import { Building2, Calendar, MapPin, Shapes } from 'lucide-vue-next'
 import { inject } from 'vue'
 import { Avatar } from 'frappe-ui'
 
+
 const dayjs = inject('$dayjs')
 const props = defineProps({
 	job: {

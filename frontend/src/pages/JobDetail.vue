@@ -204,7 +204,7 @@ const jobApplication = createResource({
 		}
 	},
 })
-
+console.log(job.data.type)
 const applicationCount = createResource({
 	url: 'frappe.client.get_count',
 	makeParams(values) {
