@@ -137,7 +137,7 @@ const updateFilters = () => {
 		orFilters.value = {}
 	}
 }
-console.log(filters)
+console.log(jobType.value)
 const jobTypes = computed(() => {
 
 return [
