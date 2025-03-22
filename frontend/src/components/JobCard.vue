@@ -27,7 +27,7 @@
 			</div>
 			<div class="flex items-center space-x-2">
 				<Calendar class="w-4 h-4 stroke-1.5 text-gray-600" />
-				<span> {{ __('Опубликовано') }} {{ dayjs(job.creation).locale('ru').fromNow() }} </span>
+				<span> {{ __('Опубликовано') }} {{ dayjs(job.creation).fromNow() }} </span>
 			</div>
 		</div>
 	</div>
@@ -36,10 +36,14 @@
 import { Building2, Calendar, MapPin, Shapes } from 'lucide-vue-next'
 import { inject, computed  } from 'vue'
 import { Avatar } from 'frappe-ui'
+import relativeTime from 'dayjs/plugin/relativeTime';
+
+
+dayjs.extend(relativeTime);
+dayjs.locale('ru');
 
 
 
-const dayjs = inject('$dayjs')
 const props = defineProps({
 	job: {
 		type: Object,
