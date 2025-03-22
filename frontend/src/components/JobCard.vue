@@ -27,7 +27,7 @@
 			</div>
 			<div class="flex items-center space-x-2">
 				<Calendar class="w-4 h-4 stroke-1.5 text-gray-600" />
-				<span> {{ __('posted') }} {{ dayjs(job.creation).fromNow() }} </span>
+				<span> {{ __('Опубликовано') }} {{ dayjs(job.creation).locale('ru').fromNow() }} </span>
 			</div>
 		</div>
 	</div>
