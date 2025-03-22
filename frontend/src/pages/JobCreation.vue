@@ -154,7 +154,7 @@ const props = defineProps({
 		default: 'new',
 	},
 })
-console.log(job.type)
+
 const newJob = createResource({
 	url: 'frappe.client.insert',
 	makeParams(values) {
