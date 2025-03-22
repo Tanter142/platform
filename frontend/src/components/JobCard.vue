@@ -36,6 +36,8 @@
 import { Building2, Calendar, MapPin, Shapes } from 'lucide-vue-next'
 import { inject, computed  } from 'vue'
 import { Avatar } from 'frappe-ui'
+import dayjs from 'dayjs';
+import 'dayjs/locale/ru';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
 
