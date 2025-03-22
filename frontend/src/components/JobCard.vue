@@ -22,7 +22,7 @@
 			<div class="flex items-center space-x-2">
 				<Shapes class="w-4 h-4 stroke-1.5 text-gray-600" />
 				<span>
-					{{ translatedJobType }}
+					{{ translatedJobType  }}
 				</span>
 			</div>
 			<div class="flex items-center space-x-2">
@@ -34,7 +34,7 @@
 </template>
 <script setup>
 import { Building2, Calendar, MapPin, Shapes } from 'lucide-vue-next'
-import { inject, computed } from 'vue'
+import { inject, computed  } from 'vue'
 import { Avatar } from 'frappe-ui'
 
 
@@ -46,6 +46,7 @@ const props = defineProps({
 		default: null,
 	},
 })
+
 const translations = {
   "Full Time": "Полная занятость",
   "Part Time": "Частичная занятость",
@@ -54,7 +55,6 @@ const translations = {
 };
 
 const translatedJobType = computed(() => {
-  return translations[job.type] || job.type; // Если нет перевода, отображается оригинальное значение
+  return translations[props.job?.type] || props.job?.type;
 });
-console.log(props.job)
 </script>
