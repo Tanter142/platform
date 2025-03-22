@@ -34,7 +34,7 @@
 </template>
 <script setup>
 import { Building2, Calendar, MapPin, Shapes } from 'lucide-vue-next'
-import { inject } from 'vue'
+import { inject, computed } from 'vue'
 import { Avatar } from 'frappe-ui'
 
 const translations = {
