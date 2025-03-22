@@ -96,7 +96,7 @@ const orFilters = ref({})
 onMounted(() => {
 	let queries = new URLSearchParams(location.search)
 	if (queries.has('type')) {
-		jobType.value = queries.get('Тип')
+		jobType.value = queries.get('type')
 	}
 	updateJobs()
 })
@@ -137,7 +137,7 @@ const updateFilters = () => {
 		orFilters.value = {}
 	}
 }
-
+console.log(filters)
 const jobTypes = computed(() => {
 
 return [
