@@ -55,5 +55,5 @@ const props = defineProps({
 		default: null,
 	},
 })
-
+console.log(props.job)
 </script>
