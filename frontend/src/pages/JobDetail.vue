@@ -176,7 +176,7 @@ const props = defineProps({
 		required: true,
 	},
 })
-
+console.log(props.job)
 const job = createResource({
 	url: 'lms.lms.api.get_job_details',
 	params: {
@@ -204,7 +204,7 @@ const jobApplication = createResource({
 		}
 	},
 })
-console.log(job.data.type)
+
 const applicationCount = createResource({
 	url: 'frappe.client.get_count',
 	makeParams(values) {
