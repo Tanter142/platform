@@ -102,7 +102,7 @@
 										{{ __('Категория') }}
 									</span>
 									<span class="text-sm font-semibold">
-										{{ job.data.type }}
+										{{ translatedJobType }}
 									</span>
 								</div>
 							</div>
@@ -176,7 +176,18 @@ const props = defineProps({
 		required: true,
 	},
 })
-console.log(props.job)
+
+const translations = {
+  "Full Time": "Полная занятость",
+  "Part Time": "Частичная занятость",
+  "Freelance": "Фриланс",
+  "Contract": "Контракт"
+};
+
+const translatedJobType = computed(() => {
+  return translations[job.data.type] || job.data.type; // Если нет перевода, отображается оригинальное значение
+});
+
 const job = createResource({
 	url: 'lms.lms.api.get_job_details',
 	params: {
