@@ -54,7 +54,7 @@
 						:label="__('Тип')"
 						v-model="question.type"
 						type="select"
-						:options="[options]"
+						:options="[Choices, UserInput, OpenEnded]"
 						class="pb-2"
 						:required="true"
 					/>
