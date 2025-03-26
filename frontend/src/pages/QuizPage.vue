@@ -44,13 +44,13 @@ const title = createResource({
 })
 
 const breadcrumbs = computed(() => {
-	return [{ label: __('Quiz Submission') }, { label: title.data?.title }]
+	return [{ label: __('Представление теста') }, { label: title.data?.title }]
 })
 
 const pageMeta = computed(() => {
 	return {
 		title: title.data?.title,
-		description: __('Quiz Submission'),
+		description: __('Представление теста'),
 	}
 })
 

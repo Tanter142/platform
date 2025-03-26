@@ -5,27 +5,27 @@
 		>
 			<div class="leading-5">
 				{{
-					__('This quiz consists of {0} questions.').format(questions.length)
+					__('Этот тест состоит из {0} вопросов.').format(questions.length)
 				}}
 			</div>
 			<div v-if="quiz.data?.duration" class="leading-5">
 				{{
 					__(
-						'Please ensure that you complete all the questions in {0} minutes.'
+						'Пожалуйста, убедитесь, что вы выполнили все вопросы за {0} минут.'
 					).format(quiz.data.duration)
 				}}
 			</div>
 			<div v-if="quiz.data?.duration" class="leading-5">
 				{{
 					__(
-						'If you fail to do so, the quiz will be automatically submitted when the timer ends.'
+						'Если вы этого не сделаете, тест будет сдан автоматически по окончании таймера.'
 					)
 				}}
 			</div>
 			<div v-if="quiz.data.passing_percentage" class="leading-relaxed">
 				{{
 					__(
-						'You will have to get {0}% correct answers in order to pass the quiz.'
+						'Чтобы пройти тест, вам нужно получить {0}% правильных ответов.'
 					).format(quiz.data.passing_percentage)
 				}}
 			</div>
@@ -42,7 +42,7 @@
 
 		<div v-if="quiz.data.duration" class="flex flex-col space-x-1 my-4">
 			<div class="mb-2">
-				<span class=""> {{ __('Time') }}: </span>
+				<span class=""> {{ __('Время') }}: </span>
 				<span class="font-semibold">
 					{{ formatTimer(timer) }}
 				</span>
@@ -64,7 +64,7 @@
 					class="mt-2"
 				>
 					<span>
-						{{ __('Start') }}
+						{{ __('Начать') }}
 					</span>
 				</Button>
 				<div v-else>
@@ -224,7 +224,7 @@
 		</div>
 		<div v-else class="border rounded-md p-20 text-center space-y-4">
 			<div class="text-lg font-semibold">
-				{{ __('Quiz Summary') }}
+				{{ __('Итоги') }}
 			</div>
 			<div v-if="quizSubmission.data.is_open_ended">
 				{{
@@ -236,7 +236,7 @@
 			<div v-else>
 				{{
 					__(
-						'You got {0}% correct answers with a score of {1} out of {2}'
+						'Вы получили {0}% правильных ответов, набрав {1} баллов из {2}.'
 					).format(
 						Math.ceil(quizSubmission.data.percentage),
 						quizSubmission.data.score,
@@ -253,7 +253,7 @@
 				"
 			>
 				<span>
-					{{ __('Try Again') }}
+					{{ __('Попробовать снова') }}
 				</span>
 			</Button>
 		</div>
