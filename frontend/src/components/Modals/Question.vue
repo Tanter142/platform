@@ -54,11 +54,11 @@
 						:label="__('Тип')"
 						v-model="question.type"
 						type="select"
-						:options="['Choices', 'User Input', 'Open Ended']"
+						:options="[options[0], options[1], options[2]]"
 						class="pb-2"
 						:required="true"
 					/>
-					<div v-if="question.type == 'Choices'" class="divide-y border-t">
+					<div v-if="question.type == 'Варианты ответа'" class="divide-y border-t">
 						<div v-for="n in 4" class="space-y-4 py-2">
 							<FormControl
 								:label="__('Вариант ответа') + ' ' + n"
@@ -77,7 +77,7 @@
 						</div>
 					</div>
 					<div
-						v-else-if="question.type == 'User Input'"
+						v-else-if="question.type == 'Ввод ответа пользователем'"
 						v-for="n in 4"
 						class="space-y-2"
 					>
