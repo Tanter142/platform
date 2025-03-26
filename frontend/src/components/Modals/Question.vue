@@ -15,7 +15,7 @@
 							class="w-3 h-3 cursor-pointer"
 						/>
 						<label for="existing" class="cursor-pointer">
-							{{ __('Add an existing question') }}
+							{{ __('Добавить существующий вопрос') }}
 						</label>
 					</div>
 
@@ -28,14 +28,14 @@
 							class="w-3 h-3 cursor-pointer"
 						/>
 						<label for="new" class="cursor-pointer">
-							{{ __('Create a new question') }}
+							{{ __('Создайте новый вопрос') }}
 						</label>
 					</div>
 				</div>
 				<div v-if="questionType == 'new' || editMode" class="space-y-2">
 					<div>
 						<label class="block text-xs text-gray-600 mb-1">
-							{{ __('Question') }}
+							{{ __('Вопрос') }}
 						</label>
 						<TextEditor
 							:content="question.question"
@@ -47,37 +47,37 @@
 					</div>
 					<FormControl
 						v-model="question.marks"
-						:label="__('Marks')"
+						:label="__('Баллы')"
 						type="number"
 					/>
 					<FormControl
-						:label="__('Type')"
+						:label="__('Тип')"
 						v-model="question.type"
 						type="select"
-						:options="['Choices', 'User Input', 'Open Ended']"
+						:options="['Варианты ответа', 'Ввод ответа пользователем', 'Открытый вопрос']"
 						class="pb-2"
 						:required="true"
 					/>
-					<div v-if="question.type == 'Choices'" class="divide-y border-t">
+					<div v-if="question.type == 'Варианты ответа'" class="divide-y border-t">
 						<div v-for="n in 4" class="space-y-4 py-2">
 							<FormControl
-								:label="__('Option') + ' ' + n"
+								:label="__('Вариант ответа') + ' ' + n"
 								v-model="question[`option_${n}`]"
 								:required="n <= 2 ? true : false"
 							/>
 							<FormControl
-								:label="__('Explanation')"
+								:label="__('Пояснение')"
 								v-model="question[`explanation_${n}`]"
 							/>
 							<FormControl
-								:label="__('Correct Answer')"
+								:label="__('Правильный ответ')"
 								v-model="question[`is_correct_${n}`]"
 								type="checkbox"
 							/>
 						</div>
 					</div>
 					<div
-						v-else-if="question.type == 'User Input'"
+						v-else-if="question.type == 'Ввод ответа пользователем'"
 						v-for="n in 4"
 						class="space-y-2"
 					>
@@ -335,7 +335,7 @@ const dialogOptions = computed(() => {
 		size: 'xl',
 		actions: [
 			{
-				label: __('Submit'),
+				label: __('Сохранить'),
 				variant: 'solid',
 				onClick: (close) => {
 					submitQuestion(close)

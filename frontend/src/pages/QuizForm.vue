@@ -179,8 +179,8 @@
 		v-model:quiz="quizDetails"
 		:title="
 			currentQuestion.question
-				? __('Edit the question')
-				: __('Add a new question')
+				? __('Редактировать вопрос')
+				: __('Добавить новый вопрос')
 		"
 	/>
 </template>
