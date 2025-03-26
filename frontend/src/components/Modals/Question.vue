@@ -257,7 +257,7 @@ const addQuestion = (close) => {
 					)
 				},
 				onError(err) {
-					showToast(__('Error'), __(err.messages?.[0] || err), 'x')
+					showToast(__(''), __(err.messages?.[0] || err), 'x')
 				},
 			}
 		)
@@ -272,12 +272,12 @@ const addQuestionRow = (question, close) => {
 		{
 			onSuccess() {
 				show.value = false
-				showToast(__('Success'), __('Question added successfully'), 'check')
+				showToast(__(''), __('Вопрос успешно добавлен'), 'check')
 				quiz.value.reload()
 				close()
 			},
 			onError(err) {
-				showToast(__('Error'), __(err.messages?.[0] || err), 'x')
+				showToast(__(''), __(err.messages?.[0] || err), 'x')
 				close()
 			},
 		}
@@ -323,8 +323,8 @@ const updateQuestion = (close) => {
 						onSuccess() {
 							show.value = false
 							showToast(
-								__('Success'),
-								__('Question updated successfully'),
+								__(''),
+								__('Вопрос успешно обновлен'),
 								'check'
 							)
 							quiz.value.reload()
@@ -334,7 +334,7 @@ const updateQuestion = (close) => {
 				)
 			},
 			onError(err) {
-				showToast(__('Error'), __(err.messages?.[0] || err), 'x')
+				showToast(__(''), __(err.messages?.[0] || err), 'x')
 			},
 		}
 	)
