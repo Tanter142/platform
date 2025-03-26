@@ -31,7 +31,7 @@
 				</Button>
 			</router-link>
 			<Button variant="solid" @click="submitQuiz()">
-				{{ __('Save') }}
+				{{ __('Cохранить') }}
 			</Button>
 		</div>
 	</header>
@@ -45,7 +45,7 @@
 				v-model="quiz.title"
 				:label="
 					quizDetails.data?.name
-						? __('Title')
+						? __('Название теста')
 						: __('Введите название и сохраните тест, чтобы продолжить')
 				"
 				:required="true"
@@ -55,57 +55,57 @@
 					<FormControl
 						type="number"
 						v-model="quiz.max_attempts"
-						:label="__('Maximun Attempts')"
+						:label="__('Максимальное количество попыток')"
 					/>
 					<FormControl
 						type="number"
 						v-model="quiz.duration"
-						:label="__('Duration (in minutes)')"
+						:label="__('Продолжительность (в минутах)')"
 					/>
 					<FormControl
 						v-model="quiz.total_marks"
-						:label="__('Total Marks')"
+						:label="__('Общее количество баллов')"
 						disabled
 					/>
 					<FormControl
 						v-model="quiz.passing_percentage"
-						:label="__('Passing Percentage')"
+						:label="__('Процент прохождения')"
 					/>
 				</div>
 
 				<!-- Settings -->
 				<div class="mb-8">
 					<div class="font-semibold mb-4">
-						{{ __('Settings') }}
+						{{ __('Настройки') }}
 					</div>
 					<div class="grid grid-cols-3 gap-5 my-4">
 						<FormControl
 							v-model="quiz.show_answers"
 							type="checkbox"
-							:label="__('Show Answers')"
+							:label="__('Показать ответы')"
 						/>
 						<FormControl
 							v-model="quiz.show_submission_history"
 							type="checkbox"
-							:label="__('Show Submission History')"
+							:label="__('Показать историю отправки')"
 						/>
 					</div>
 				</div>
 
 				<div class="mb-8">
 					<div class="font-semibold mb-4">
-						{{ __('Shuffle Settings') }}
+						{{ __('Настройки перетасовки') }}
 					</div>
 					<div class="grid grid-cols-3">
 						<FormControl
 							v-model="quiz.shuffle_questions"
 							type="checkbox"
-							:label="__('Shuffle Questions')"
+							:label="__('Перетасовать вопросы')"
 						/>
 						<FormControl
 							v-if="quiz.shuffle_questions"
 							v-model="quiz.limit_questions_to"
-							:label="__('Limit Questions To')"
+							:label="__('Ограничить количество вопросов')"
 						/>
 					</div>
 				</div>
@@ -114,7 +114,7 @@
 				<div>
 					<div class="flex items-center justify-between mb-4">
 						<div class="font-semibold">
-							{{ __('Questions') }}
+							{{ __('Вопросы') }}
 						</div>
 						<Button @click="openQuestionModal()">
 							<template #prefix>
@@ -336,14 +336,14 @@ const createQuiz = () => {
 		{},
 		{
 			onSuccess(data) {
-				showToast(__('Success'), __('Quiz created successfully'), 'check')
+				showToast(__(''), __('Викторина создана успешно'), 'check')
 				router.push({
 					name: 'QuizForm',
 					params: { quizID: data.name },
 				})
 			},
 			onError(err) {
-				showToast(__('Error'), __(err.messages?.[0] || err), 'x')
+				showToast(__(''), __(err.messages?.[0] || err), 'x')
 			},
 		}
 	)
@@ -355,10 +355,10 @@ const updateQuiz = () => {
 		{
 			onSuccess(data) {
 				quiz.total_marks = data.total_marks
-				showToast(__('Success'), __('Quiz updated successfully'), 'check')
+				showToast(__(''), __('Викторина успешно обновлена'), 'check')
 			},
 			onError(err) {
-				showToast(__('Error'), __(err.messages?.[0] || err), 'x')
+				showToast(__(''), __(err.messages?.[0] || err), 'x')
 			},
 		}
 	)
@@ -382,12 +382,12 @@ const questionColumns = computed(() => {
 			width: '10rem',
 		},
 		{
-			label: __('Question'),
+			label: __('Вопрос'),
 			key: __('question_detail'),
 			width: '40rem',
 		},
 		{
-			label: __('Marks'),
+			label: __('Баллы'),
 			key: 'marks',
 			width: '5rem',
 		},
