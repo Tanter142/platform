@@ -85,7 +85,7 @@
 					<div class="flex justify-between">
 						<div class="text-sm text-gray-600">
 							<span class="mr-2">
-								{{ __('Question {0}').format(activeQuestion) }}:
+								{{ __('Вопрос {0}').format(activeQuestion) }}:
 							</span>
 							<span>
 								{{ getInstructions(questionDetails.data) }}
@@ -93,7 +93,7 @@
 						</div>
 						<div class="text-gray-900 text-sm font-semibold item-left">
 							{{ question.marks }}
-							{{ question.marks == 1 ? __('Mark') : __('Marks') }}
+							{{ question.marks == 1 ? __('Балл') : __('Баллов') }}
 						</div>
 					</div>
 					<div
@@ -187,7 +187,7 @@
 					<div class="flex items-center justify-between mt-4">
 						<div class="text-sm text-gray-600">
 							{{
-								__('Question {0} of {1}').format(
+								__('Вопрос {0} из {1}').format(
 									activeQuestion,
 									questions.length
 								)
@@ -210,12 +210,12 @@
 							@click="nextQuetion()"
 						>
 							<span>
-								{{ __('Next') }}
+								{{ __('Следующий вопрос') }}
 							</span>
 						</Button>
 						<Button v-else @click="submitQuiz()">
 							<span>
-								{{ __('Submit') }}
+								{{ __('Отправить') }}
 							</span>
 						</Button>
 					</div>
@@ -229,7 +229,7 @@
 			<div v-if="quizSubmission.data.is_open_ended">
 				{{
 					__(
-						"Your submission has been successfully saved. The instructor will review and grade it shortly, and you'll be notified of your final result."
+						"Ваша работа успешно сохранена. В ближайшее время преподаватель просмотрит и оценит ее, и вы получите уведомление о своем окончательном результате."
 					)
 				}}
 			</div>
@@ -586,9 +586,9 @@ const resetQuiz = () => {
 
 const getInstructions = (question) => {
 	if (question.type == 'Choices')
-		if (question.multiple) return __('Choose all answers that apply')
-		else return __('Choose one answer')
-	else return __('Type your answer')
+		if (question.multiple) return __('Выберите все ответы, которые подходят')
+		else return __('Выберите один ответ')
+	else return __('Введите свой ответ')
 }
 
 const markLessonProgress = () => {

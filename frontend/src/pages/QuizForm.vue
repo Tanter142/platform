@@ -69,7 +69,7 @@
 					/>
 					<FormControl
 						v-model="quiz.passing_percentage"
-						:label="__('Процент прохождения')"
+						:label="__('Процент для прохождения')"
 					/>
 				</div>
 

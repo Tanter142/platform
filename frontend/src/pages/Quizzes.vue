@@ -113,18 +113,18 @@ const quizzes = createListResource({
 const quizColumns = computed(() => {
 	return [
 		{
-			label: __('Title'),
+			label: __('Название'),
 			key: 'title',
 			width: 2,
 		},
 		{
-			label: __('Total Marks'),
+			label: __('Баллы'),
 			key: 'total_marks',
 			width: 1,
 			align: 'center',
 		},
 		{
-			label: __('Passing Percentage'),
+			label: __('Процент для прохождения'),
 			key: 'passing_percentage',
 			width: 1,
 			align: 'center',
