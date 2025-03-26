@@ -39,14 +39,14 @@
 		<!-- Details -->
 		<div class="mb-8">
 			<div class="font-semibold mb-4">
-				{{ __('Details') }}
+				{{ __('Подробности') }}
 			</div>
 			<FormControl
 				v-model="quiz.title"
 				:label="
 					quizDetails.data?.name
 						? __('Title')
-						: __('Enter a title and save the quiz to proceed')
+						: __('Введите название и сохраните тест, чтобы продолжить')
 				"
 				:required="true"
 			/>
@@ -435,7 +435,7 @@ const deleteQuestions = (selections, unselectAll) => {
 const breadcrumbs = computed(() => {
 	let crumbs = [
 		{
-			label: __('Quizzes'),
+			label: __('Тесты'),
 			route: {
 				name: 'Quizzes',
 			},
@@ -447,7 +447,7 @@ const breadcrumbs = computed(() => {
 		})
 	} */
 	crumbs.push({
-		label: props.quizID == 'new' ? __('New Quiz') : quizDetails.data?.title,
+		label: props.quizID == 'new' ? __('Новый тест') : quizDetails.data?.title,
 		route: { name: 'QuizForm', params: { quizID: props.quizID } },
 	})
 	return crumbs
@@ -455,8 +455,8 @@ const breadcrumbs = computed(() => {
 
 const pageMeta = computed(() => {
 	return {
-		title: props.quizID == 'new' ? __('New Quiz') : quizDetails.data?.title,
-		description: __('Form to create and edit quizzes'),
+		title: props.quizID == 'new' ? __('Новый тест') : quizDetails.data?.title,
+		description: __('Форма для создания и редактирования тестов'),
 	}
 })
 
