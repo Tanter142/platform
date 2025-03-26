@@ -54,11 +54,11 @@
 						:label="__('Тип')"
 						v-model="question.type"
 						type="select"
-						:options="['Варианты ответа', 'Ввод ответа пользователем', 'Открытый вопрос']"
+						:options="[options]"
 						class="pb-2"
 						:required="true"
 					/>
-					<div v-if="question.type == 'Варианты ответа'" class="divide-y border-t">
+					<div v-if="question.type == 'Choices'" class="divide-y border-t">
 						<div v-for="n in 4" class="space-y-4 py-2">
 							<FormControl
 								:label="__('Вариант ответа') + ' ' + n"
@@ -77,12 +77,12 @@
 						</div>
 					</div>
 					<div
-						v-else-if="question.type == 'Ввод ответа пользователем'"
+						v-else-if="question.type == 'User Input'"
 						v-for="n in 4"
 						class="space-y-2"
 					>
 						<FormControl
-							:label="__('Possibility') + ' ' + n"
+							:label="__('Вариант ответа') + ' ' + n"
 							v-model="question[`possibility_${n}`]"
 							:required="n == 1 ? true : false"
 						/>
@@ -91,12 +91,12 @@
 				<div v-else-if="questionType == 'existing'" class="space-y-2">
 					<Link
 						v-model="existingQuestion.question"
-						:label="__('Select a question')"
+						:label="__('Выберите вопрос')"
 						doctype="LMS Question"
 					/>
 					<FormControl
 						v-model="existingQuestion.marks"
-						:label="__('Marks')"
+						:label="__('Баллы')"
 						type="number"
 					/>
 				</div>
@@ -114,6 +114,17 @@ const show = defineModel()
 const quiz = defineModel('quiz')
 const questionType = ref(null)
 const editMode = ref(false)
+
+const translations =  {
+	"Choices" : ('Варианты ответа'),
+	"User Input" : ('Ввод ответа пользователем'),
+	"Open" : ('Открытый вопрос')
+}
+
+const options = Object.entries(translations).map(([value, label]) => ({
+  value,
+  label
+}))
 
 const existingQuestion = reactive({
 	question: '',
