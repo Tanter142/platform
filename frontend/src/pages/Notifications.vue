@@ -147,8 +147,8 @@ const breadcrumbs = computed(() => {
 
 const pageMeta = computed(() => {
 	return {
-		title: 'Notifications',
-		description: 'All your notifications in one place.',
+		title: 'Уведомления',
+		description: 'Все ваши уведомления в одном месте.',
 	}
 })
 

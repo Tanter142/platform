@@ -15,7 +15,7 @@
 				<template #prefix>
 					<Plus class="w-4 h-4" />
 				</template>
-				{{ __('New Quiz') }}
+				{{ __('Новый тест') }}
 			</Button>
 		</router-link>
 	</header>
@@ -58,12 +58,12 @@
 	>
 		<BookOpen class="size-10 mx-auto stroke-1 text-gray-500" />
 		<div class="text-xl font-medium">
-			{{ __('No quizzes found') }}
+			{{ __('Тестов не найдено') }}
 		</div>
 		<div class="leading-5">
 			{{
 				__(
-					'You have not created any quizzes yet. To create a new quiz, click on the "New Quiz" button above.'
+					'Вы еще не создали ни одного теста.'
 				)
 			}}
 		</div>
@@ -135,7 +135,7 @@ const quizColumns = computed(() => {
 const breadcrumbs = computed(() => {
 	return [
 		{
-			label: __('Quizzes'),
+			label: __('Тесты'),
 			route: {
 				name: 'Quizzes',
 			},
@@ -145,8 +145,8 @@ const breadcrumbs = computed(() => {
 
 const pageMeta = computed(() => {
 	return {
-		title: __('Quizzes'),
-		description: __('List of quizzes'),
+		title: __('Тесты'),
+		description: __('Список тестов'),
 	}
 })
 
