@@ -115,10 +115,10 @@ const quiz = defineModel('quiz')
 const questionType = ref(null)
 const editMode = ref(false)
 
-const translations =  {
-	"Choices" : ('Варианты ответа'),
-	"User Input" : ('Ввод ответа пользователем'),
-	"Open" : ('Открытый вопрос')
+const translations = {
+  "Choices": "Варианты ответа",
+  "User Input": "Ввод ответа пользователем",
+  "Open": "Открытый вопрос"
 }
 
 const options = Object.entries(translations).map(([value, label]) => ({
