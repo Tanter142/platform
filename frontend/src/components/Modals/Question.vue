@@ -118,7 +118,7 @@ const editMode = ref(false)
 const translations = {
   "Choices": "Варианты ответа",
   "User Input": "Ввод ответа пользователем",
-  "Open": "Открытый вопрос"
+  "Open Ended": "Открытый вопрос"
 }
 
 const options = Object.entries(translations).map(([value, label]) => ({
