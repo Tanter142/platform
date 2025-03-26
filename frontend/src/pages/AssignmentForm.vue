@@ -14,7 +14,7 @@
 				}"
 			>
 				<Button>
-					{{ __('Submission List') }}
+					{{ __('Список материалов') }}
 				</Button>
 			</router-link>
 			<Button variant="solid" @click="saveAssignment()">

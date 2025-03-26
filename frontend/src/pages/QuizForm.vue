@@ -14,7 +14,7 @@
 				}"
 			>
 				<Button>
-					{{ __('Open') }}
+					{{ __('Открыть тест') }}
 				</Button>
 			</router-link>
 			<router-link
@@ -27,7 +27,7 @@
 				}"
 			>
 				<Button>
-					{{ __('Submission List') }}
+					{{ __('Список материалов') }}
 				</Button>
 			</router-link>
 			<Button variant="solid" @click="submitQuiz()">

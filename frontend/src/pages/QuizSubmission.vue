@@ -119,7 +119,7 @@ const submisisonDetails = createDocumentResource({
 const breadcrumbs = computed(() => {
 	return [
 		{
-			label: __('Quiz Submissions'),
+			label: __('Представление теста'),
 			route: {
 				name: 'QuizSubmissionList',
 				params: {
@@ -138,7 +138,7 @@ const saveSubmission = () => {
 		{},
 		{
 			onError(err) {
-				showToast(__('Error'), __(err.messages?.[0] || err), 'x')
+				showToast(__(''), __(err.messages?.[0] || err), 'x')
 			},
 		}
 	)

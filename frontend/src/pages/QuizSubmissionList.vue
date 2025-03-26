@@ -103,6 +103,6 @@ const quizColumns = computed(() => {
 })
 
 const breadcrumbs = computed(() => {
-	return [{ label: __('Quiz Submissions') }]
+	return [{ label: __('Представление теста') }]
 })
 </script>
