@@ -170,9 +170,11 @@ const assignmentColumns = computed(() => {
 
 const assignmentTypes = computed(() => {
 	let types = ['', 'Document', 'Image', 'PDF', 'URL', 'Text']
-	return types.map((type) => {
+	let typesTranslation = ['', 'Документ', 'Изображение', 'PDF', 'Ссылка', 'Текст']
+
+	return types.map((type, index) => {
 		return {
-			label: __(type),
+			label: __(typesTranslation[index]),
 			value: type,
 		}
 	})
