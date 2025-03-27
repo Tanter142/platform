@@ -807,7 +807,7 @@ def get_course_completion_data():
 	completed = frappe.db.count("LMS Enrollment", {"progress": ["like", "%100%"]})
 
 	return {
-		"labels": ["Completed", "In Progress"],
+		"labels": ["Завершено", "В процессе"],
 		"datasets": [
 			{
 				"name": "Course Completion",
