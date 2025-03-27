@@ -15,19 +15,19 @@
 				<template #prefix>
 					<Plus class="w-4 h-4" />
 				</template>
-				{{ __('New') }}
+				{{ __('Добавить') }}
 			</Button>
 		</router-link>
 	</header>
 
 	<div class="md:w-3/4 md:mx-auto py-5 mx-5">
 		<div class="grid grid-cols-3 gap-5 mb-5">
-			<FormControl v-model="titleFilter" :placeholder="__('Search by title')" />
+			<FormControl v-model="titleFilter" :placeholder="__('Искать по названию')" />
 			<FormControl
 				v-model="typeFilter"
 				type="select"
 				:options="assignmentTypes"
-				:placeholder="__('Type')"
+				:placeholder="__('Тип')"
 			/>
 		</div>
 		<ListView
@@ -53,12 +53,12 @@
 		>
 			<Pencil class="size-10 mx-auto stroke-1 text-gray-500" />
 			<div class="text-xl font-medium">
-				{{ __('No assignments found') }}
+				{{ __('Не найдено ни одного задания') }}
 			</div>
 			<div class="leading-5">
 				{{
 					__(
-						'You have not created any assignments yet. To create a new assignment, click on the "New" button above.'
+						'Вы еще не создали ни одного задания. Чтобы создать новое задание, нажмите на кнопку «Добавить» выше.'
 					)
 				}}
 			</div>
@@ -68,7 +68,7 @@
 			class="flex justify-center my-5"
 		>
 			<Button @click="assignments.next()">
-				{{ __('Load More') }}
+				{{ __('Подробнее') }}
 			</Button>
 		</div>
 	</div>
