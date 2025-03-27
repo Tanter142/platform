@@ -172,9 +172,9 @@ const assignmentTypes = computed(() => {
 	let types = ['', 'Document', 'Image', 'PDF', 'URL', 'Text']
 	let typesTranslation = ['', 'Документ', 'Изображение', 'PDF', 'Ссылка', 'Текст']
 
-	return types.map((type) => {
+	return types.map((type, index) => {
 		return {
-			label: __(type),
+			label: __(typesTranslation[index]),
 			value: type,
 		}
 	})
