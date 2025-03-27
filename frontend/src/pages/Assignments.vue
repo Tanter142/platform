@@ -149,18 +149,18 @@ const assignments = createListResource({
 const assignmentColumns = computed(() => {
 	return [
 		{
-			label: __('Title'),
+			label: __('Название'),
 			key: 'title',
 			width: 2,
 		},
 		{
-			label: __('Type'),
+			label: __('Тип'),
 			key: 'type',
 			width: 1,
 			align: 'left',
 		},
 		{
-			label: __('Created'),
+			label: __('Создано'),
 			key: 'creation',
 			width: 1,
 			align: 'center',

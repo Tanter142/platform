@@ -183,10 +183,10 @@ const breadcrumbs = computed(() => [
 const assignmentOptions = computed(() => {
 	return [
 		{ label: 'PDF', value: 'PDF' },
-		{ label: 'Image', value: 'Image' },
-		{ label: 'Document', value: 'Document' },
-		{ label: 'Text', value: 'Text' },
-		{ label: 'URL', value: 'URL' },
+		{ label: 'Изображение', value: 'Image' },
+		{ label: 'Документ', value: 'Document' },
+		{ label: 'Текст', value: 'Text' },
+		{ label: 'Ссылка', value: 'URL' },
 	]
 })
 </script>
