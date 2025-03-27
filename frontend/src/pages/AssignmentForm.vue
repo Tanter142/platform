@@ -152,7 +152,7 @@ const saveAssignment = () => {
 			},
 			{
 				onSuccess(data) {
-					showToast(__(''), __('Задание успешно сохранено'), 'check')
+					showToast(__('asd'), __('Задание успешно сохранено'), 'check')
 					assignment.reload()
 				},
 				onError(err) {
