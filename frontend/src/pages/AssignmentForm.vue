@@ -175,7 +175,7 @@ const breadcrumbs = computed(() => [
 		route: { name: 'Assignments' },
 	},
 	{
-		label: assignment.doc ? assignment.doc.title : __('New Assignment'),
+		label: assignment.doc ? assignment.doc.title : __('Новое задание'),
 	},
 ])
 
