@@ -16,7 +16,7 @@
 							{{ formatNumber(chartDetails.data.courses) }}
 						</div>
 						<div class="text-gray-700">
-							{{ __('Courses') }}
+							{{ __('Курсы') }}
 						</div>
 					</div>
 				</div>
@@ -29,7 +29,7 @@
 							{{ formatNumber(chartDetails.data.users) }}
 						</div>
 						<div class="text-gray-700">
-							{{ __('Signups') }}
+							{{ __('Пользователи') }}
 						</div>
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 							{{ formatNumber(chartDetails.data.enrollments) }}
 						</div>
 						<div class="text-gray-700">
-							{{ __('Enrollments') }}
+							{{ __('Записались на курс') }}
 						</div>
 					</div>
 				</div>
@@ -55,7 +55,7 @@
 							{{ formatNumber(chartDetails.data.completions) }}
 						</div>
 						<div class="text-gray-700">
-							{{ __('Completions') }}
+							{{ __('Завершеные') }}
 						</div>
 					</div>
 				</div>
@@ -68,7 +68,7 @@
 							{{ formatNumber(chartDetails.data.lesson_completions) }}
 						</div>
 						<div class="text-gray-700">
-							{{ __('Milestones') }}
+							{{ __('Этапы') }}
 						</div>
 					</div>
 				</div>

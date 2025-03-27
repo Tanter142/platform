@@ -9,14 +9,14 @@
 			<Link
 				doctype="LMS Assignment"
 				v-model="assignmentID"
-				:placeholder="__('Assignment')"
+				:placeholder="__('Задание')"
 			/>
-			<Link doctype="User" v-model="member" :placeholder="__('Member')" />
+			<Link doctype="User" v-model="member" :placeholder="__('Пользователь')" />
 			<FormControl
 				v-model="status"
 				type="select"
 				:options="statusOptions"
-				:placeholder="__('Status')"
+				:placeholder="__('Статус')"
 			/>
 		</div>
 		<ListView
@@ -64,10 +64,10 @@
 		>
 			<Pencil class="size-8 mx-auto stroke-1 text-gray-500" />
 			<div class="text-xl font-medium">
-				{{ __('No submissions') }}
+				{{ __('Нет представлений') }}
 			</div>
 			<div class="leading-5">
-				{{ __('There are no submissions for this assignment.') }}
+				{{ __('Это задание не представлено.') }}
 			</div>
 		</div>
 	</div>
@@ -164,23 +164,23 @@ const reloadSubmissions = () => {
 const submissionColumns = computed(() => {
 	return [
 		{
-			label: 'Member',
+			label: 'Пользователь',
 			key: 'member_name',
 			width: 1,
 		},
 		{
-			label: 'Assignment',
+			label: 'Задание',
 			key: 'assignment_title',
 			width: 2,
 		},
 		{
-			label: 'Submitted',
+			label: 'Отправлено',
 			key: 'creation',
 			width: 1,
 			align: 'left',
 		},
 		{
-			label: 'Status',
+			label: 'Статус',
 			key: 'status',
 			width: 1,
 			align: 'center',
@@ -191,9 +191,9 @@ const submissionColumns = computed(() => {
 const statusOptions = computed(() => {
 	return [
 		{ label: '', value: '' },
-		{ label: 'Pass', value: 'Pass' },
-		{ label: 'Fail', value: 'Fail' },
-		{ label: 'Not Graded', value: 'Not Graded' },
+		{ label: 'Пройдено', value: 'Pass' },
+		{ label: 'Провал', value: 'Fail' },
+		{ label: 'Не оценено', value: 'Not Graded' },
 	]
 })
 
@@ -210,7 +210,7 @@ const getStatusTheme = (status) => {
 const breadcrumbs = computed(() => {
 	return [
 		{
-			label: 'Assignment Submissions',
+			label: 'Представление заданий',
 		},
 	]
 })

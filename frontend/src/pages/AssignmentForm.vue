@@ -18,13 +18,13 @@
 				</Button>
 			</router-link>
 			<Button variant="solid" @click="saveAssignment()">
-				{{ __('Save') }}
+				{{ __('Cохранить') }}
 			</Button>
 		</div>
 	</header>
 	<div class="w-3/4 mx-auto py-5">
 		<div class="font-semibold mb-4">
-			{{ __('Details') }}
+			{{ __('Добавить задание') }}
 		</div>
 		<div class="grid grid-cols-2 gap-5 mt-4 mb-8">
 			<FormControl
