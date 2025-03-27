@@ -134,6 +134,7 @@ const newAssignment = createResource({
 	},
 	onSuccess(data) {
 		router.push({ name: 'AssignmentForm', params: { assignmentID: data.name } })
+		showToast(__(''), __('Задание успешно создано'), 'check')
 	},
 	onError(err) {
 		showToast(__(''), __(err.messages?.[0] || err), 'x')
@@ -152,7 +153,7 @@ const saveAssignment = () => {
 			},
 			{
 				onSuccess(data) {
-					showToast(__('asd'), __('Задание успешно сохранено'), 'check')
+					showToast(__(''), __('Задание успешно сохранено'), 'check')
 					assignment.reload()
 				},
 				onError(err) {
