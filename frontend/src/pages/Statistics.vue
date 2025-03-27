@@ -55,7 +55,7 @@
 							{{ formatNumber(chartDetails.data.completions) }}
 						</div>
 						<div class="text-gray-700">
-							{{ __('Завершеные') }}
+							{{ __('Завершили курс') }}
 						</div>
 					</div>
 				</div>
@@ -198,7 +198,7 @@ const courseCompletion = createResource({
 
 const signupChartOptions = () => {
 	let options = chartOptions(false)
-	options.plugins.title.text = 'Signups'
+	options.plugins.title.text = 'Пользователи'
 	options.borderColor = '#4563f0'
 	options.backgroundColor = (ctx) => {
 		const canvas = ctx.chart.ctx
@@ -214,7 +214,7 @@ const signupChartOptions = () => {
 
 const enrollmentChartOptions = () => {
 	let options = chartOptions(false)
-	options.plugins.title.text = 'Enrollments'
+	options.plugins.title.text = 'Записались на курс'
 	options.borderColor = '#4563f0'
 	options.backgroundColor = (ctx) => {
 		const canvas = ctx.chart.ctx
@@ -230,7 +230,7 @@ const enrollmentChartOptions = () => {
 
 const lessonChartOptions = () => {
 	let options = chartOptions(false)
-	options.plugins.title.text = 'Milestones'
+	options.plugins.title.text = 'Этапы'
 	options.borderColor = '#4563f0'
 	options.backgroundColor = (ctx) => {
 		const canvas = ctx.chart.ctx
@@ -246,7 +246,7 @@ const lessonChartOptions = () => {
 
 const courseChartOptions = () => {
 	let options = chartOptions(true)
-	options.plugins.title.text = 'Completions'
+	options.plugins.title.text = 'Завершили курс'
 	options.backgroundColor = ['#4563f0', '#f683ae']
 	return options
 }
@@ -309,7 +309,7 @@ const chartOptions = (isPie) => {
 
 const pageMeta = computed(() => {
 	return {
-		title: 'Statistics',
+		title: 'Статистика',
 		description: 'Statistics of the platform',
 	}
 })
