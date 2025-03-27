@@ -17,7 +17,7 @@
 					<div>
 						<FormControl
 							v-model="job.job_title"
-							:label="__('Заголовок')"
+							:label="__('Название')"
 							class="mb-4"
 							:required="true"
 						/>

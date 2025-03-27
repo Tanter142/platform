@@ -18,7 +18,7 @@
 					<div class="w-5/6 mx-auto">
 						<FormControl
 							v-model="lesson.title"
-							label="Заголовок"
+							label="Название"
 							class="mb-4"
 							:required="true"
 						/>

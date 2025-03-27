@@ -29,20 +29,20 @@
 		<div class="grid grid-cols-2 gap-5 mt-4 mb-8">
 			<FormControl
 				v-model="model.title"
-				:label="__('Title')"
+				:label="__('Название задания')"
 				:required="true"
 			/>
 			<FormControl
 				v-model="model.type"
 				type="select"
 				:options="assignmentOptions"
-				:label="__('Type')"
+				:label="__('Тип задания')"
 				:required="true"
 			/>
 		</div>
 		<div>
 			<div class="text-xs text-gray-600 mb-2">
-				{{ __('Question') }}
+				{{ __('Вопрос') }}
 				<span class="text-ink-red-3">*</span>
 			</div>
 			<TextEditor
@@ -136,7 +136,7 @@ const newAssignment = createResource({
 		router.push({ name: 'AssignmentForm', params: { assignmentID: data.name } })
 	},
 	onError(err) {
-		showToast(__('Error'), __(err.messages?.[0] || err), 'x')
+		showToast(__(''), __(err.messages?.[0] || err), 'x')
 	},
 })
 
@@ -152,11 +152,11 @@ const saveAssignment = () => {
 			},
 			{
 				onSuccess(data) {
-					showToast(__('Success'), __('Assignment saved successfully'), 'check')
+					showToast(__(''), __('Задание успешно сохранено'), 'check')
 					assignment.reload()
 				},
 				onError(err) {
-					showToast(__('Error'), __(err.messages?.[0] || err), 'x')
+					showToast(__(''), __(err.messages?.[0] || err), 'x')
 				},
 			}
 		)
@@ -171,7 +171,7 @@ watch(assignment, () => {
 
 const breadcrumbs = computed(() => [
 	{
-		label: __('Assignments'),
+		label: __('Задания'),
 		route: { name: 'Assignments' },
 	},
 	{

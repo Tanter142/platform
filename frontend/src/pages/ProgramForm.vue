@@ -8,7 +8,7 @@
 		</Button>
 	</header>
 	<div v-if="program.doc" class="pt-5 px-5 w-3/4 mx-auto space-y-10">
-		<FormControl v-model="program.doc.title" :label="__('Заголовок')" />
+		<FormControl v-model="program.doc.title" :label="__('Название')" />
 
 		<!-- Courses -->
 		<div>
@@ -319,7 +319,7 @@ const saveProgram = () => {
 const courseColumns = computed(() => {
 	return [
 		{
-			label: 'Заголовок',
+			label: 'Название',
 			key: 'course_title',
 			width: 3,
 		},

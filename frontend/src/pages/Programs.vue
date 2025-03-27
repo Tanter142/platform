@@ -113,7 +113,7 @@
 		}"
 	>
 		<template #body-content>
-			<FormControl :label="__('Заголовок')" v-model="title" />
+			<FormControl :label="__('Название')" v-model="title" />
 		</template>
 	</Dialog>
 </template>
