@@ -38,7 +38,7 @@
 						},
 					}"
 				>
-					<Button variant="solid">
+					<Button variant="solid" class="bg-blue-500 hover:bg-blue-600">
 						<template #prefix>
 							<Plus class="h-4 w-4" />
 						</template>
