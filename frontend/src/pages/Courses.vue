@@ -38,12 +38,12 @@
 						},
 					}"
 				>
-					<Button variant="solid">
-						<template #prefix>
-							<Plus class="h-4 w-4" />
-						</template>
-						{{ __('Новый курс') }}
-					</Button>
+				<Button variant="solid" class="bg-blue-500 text-white hover:bg-blue-700">
+    <template #prefix>
+        <Plus class="h-4 w-4" />
+    </template>
+    {{ __('Новый курс') }}
+</Button>
 				</router-link>
 			</div>
 		</header>
