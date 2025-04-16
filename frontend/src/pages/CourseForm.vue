@@ -30,9 +30,8 @@
 						<FormControl
 							v-model="course.title"
 							:label="__('Название')"
-							class="mb-4"
+							class="input"
 							:required="true"
-							class:input="input"
 						/>
 						<FormControl
 							v-model="course.short_introduction"
