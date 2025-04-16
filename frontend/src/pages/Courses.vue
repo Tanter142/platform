@@ -314,7 +314,7 @@ updateDocumentTitle(pageMeta)
 </script>
 <style>
 .header-button {
-	color: #5a5cff !important;
+	background-color: #5a5cff !important;
 }
 
 </style> 
