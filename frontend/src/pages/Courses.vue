@@ -337,10 +337,10 @@ updateDocumentTitle(pageMeta)
 .create-course__title{
 	color: black !important;
 	font-size: 24px;
-	
+
 }
 .header-select{
-	background-color: rgba(128, 128, 128, 0.4) !important;
+	background-color: #e1e5e8 !important;
 	border: solid 1px #5a5cff  !important;
 	border-radius: 10px;
 }
