@@ -30,7 +30,7 @@
 						<FormControl
 							v-model="course.title"
 							:label="__('Название')"
-							class="mb-4"
+							class="input-title mb-4"
 							:required="true"
 						/>
 						<FormControl
@@ -583,5 +583,8 @@ updateDocumentTitle(pageMeta)
 }
 .header-save:hover {
 	background-color: #3f3fff !important;
+}
+.input-title {
+	
 }
 </style>
