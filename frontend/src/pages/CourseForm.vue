@@ -27,13 +27,17 @@
 						<div class="text-lg font-semibold mb-4">
 							{{ __('Детали') }}
 						</div>
-						<FormControl
-							v-model="course.title"
-							:label="__('Название')"
-							class="input mb-4"
-							:required="true"
-							input-class="no-border-input"
-						/>
+						<div class="mb-4">
+							<label class="block text-gray-600 text-sm mb-1">
+								{{ __('Название') }}
+								<span class="text-red-500">*</span>
+							</label>
+							<FormControl
+								v-model="course.title"
+								class="input"
+								:required="true"
+							/>
+						</div>
 						<FormControl
 							v-model="course.short_introduction"
 							:label="__('Краткое описание')"
@@ -590,8 +594,5 @@ updateDocumentTitle(pageMeta)
 	border-width: 1px !important;
 	border-radius: 10px !important;
 }
-.no-border-input{
-	border: none;
-	outline: none;
-}
+
 </style>
