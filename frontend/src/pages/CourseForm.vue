@@ -15,7 +15,7 @@
 								{{ __('Удалить') }}
 							</span>
 						</Button>
-						<Button variant="solid" @click="submitCourse()" class="ml-2 header-save">
+						<Button variant="solid" @click="submitCourse()" class="header-save">
 							<span>
 								{{ __('Сохранить') }}
 							</span>
