@@ -30,7 +30,7 @@
 						<FormControl
 							v-model="course.title"
 							:label="__('Название')"
-							class="input"
+							class="input mb-4"
 							:required="true"
 						/>
 						<FormControl
@@ -586,6 +586,7 @@ updateDocumentTitle(pageMeta)
 }
 .input{
 	border-color: #5a5cff !important;
-	border-width: 2px !important;
+	border-width: 1px !important;
+	border-radius: 10px !important;
 }
 </style>
