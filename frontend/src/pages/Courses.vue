@@ -38,7 +38,7 @@
 						},
 					}"
 				>
-					<Button variant="solid" class="bg-blue-700 hover:bg-blue-800">
+					<Button variant="solid" class="header-button">
 						<template #prefix>
 							<Plus class="h-4 w-4" />
 						</template>
@@ -312,3 +312,9 @@ const pageMeta = computed(() => {
 
 updateDocumentTitle(pageMeta)
 </script>
+<style>
+.header-button {
+	color: #5a5cff !important;
+}
+
+</style> 
