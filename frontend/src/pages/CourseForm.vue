@@ -32,7 +32,7 @@
 							:label="__('Название')"
 							class="mb-4"
 							:required="true"
-							input-class="input"
+							class:input="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-primary-200 focus:border-primary-300"
 						/>
 						<FormControl
 							v-model="course.short_introduction"
