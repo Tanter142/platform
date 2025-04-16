@@ -46,7 +46,7 @@
 									'Отображается в карточке курса'
 								)
 							"
-							class="mb-4"
+							class="mb-4 input"
 							:required="true"
 						/>
 						<div class="mb-4">
@@ -593,7 +593,6 @@ updateDocumentTitle(pageMeta)
 	border-color: #5a5cff !important;
 	border-width: 1px !important;
 	border-radius: 10px !important;
-	background-color: #f9fafb !important;
 }
 
 </style>
