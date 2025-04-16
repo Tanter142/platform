@@ -325,14 +325,13 @@ updateDocumentTitle(pageMeta)
 	background-color: #e1e5e8 !important;
 	color: white !important;
 	border-radius: 5px !important;
-	border: solid 1px rgba(114, 113, 113, 0.2) !important;
 	width: 100% !important;
 	font-size: 20px !important;
 	padding-top: 53px !important;
 	padding-bottom: 53px !important;
 }
 .create-course:hover{
-	background-color: rgba(128, 128, 128, 0.6) !important;
+	background-color: #cccfd3  !important;
 
 }
 .header-select{
