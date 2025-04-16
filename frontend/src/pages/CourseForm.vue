@@ -585,6 +585,6 @@ updateDocumentTitle(pageMeta)
 	background-color: #3f3fff !important;
 }
 .input-title {
-	
+	color: #5a5cff !important;
 }
 </style>
