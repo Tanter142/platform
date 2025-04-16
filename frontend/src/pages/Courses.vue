@@ -130,7 +130,7 @@
 							<Plus
 								class="size-10 stroke-1 text-gray-800 p-1 rounded-full border bg-white"
 							/>
-							<div class="font-medium">
+							<div class="create-course__title">
 								{{ __('Создать курс') }}
 							</div>
 							<span class="text-gray-700 text-sm leading-4">
@@ -333,6 +333,11 @@ updateDocumentTitle(pageMeta)
 .create-course:hover{
 	background-color: #cccfd3  !important;
 
+}
+.create-course__title{
+	color: black !important;
+	font-size: 24px;
+	
 }
 .header-select{
 	background-color: rgba(128, 128, 128, 0.4) !important;
