@@ -316,5 +316,8 @@ updateDocumentTitle(pageMeta)
 .header-button {
 	background-color: #5a5cff !important;
 }
+.header-button:hover {
+	background-color: #3f3fff !important;
+}
 
 </style> 
