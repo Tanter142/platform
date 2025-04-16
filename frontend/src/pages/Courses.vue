@@ -123,8 +123,8 @@
 						},
 					}"
 				>
-					<div class="bg-gray-50 py-32 px-5 rounded-md">
-						<div class="create-course">
+					<div class="create-course">
+						<div class="flex flex-col items-center text-center space-y-2">
 							<Plus
 								class="size-10 stroke-1 text-gray-800 p-1 rounded-full border bg-white"
 							/>
@@ -323,9 +323,8 @@ updateDocumentTitle(pageMeta)
 	background-color: #5a5cff !important;
 	color: white !important;
 	border-radius: 5px !important;
-	width: 100px !important;
-	height: 40px !important;
-	font-weight: 500 !important;
+	width: 100% !important;
+	font-size: 20px !important;
 }
 
 </style> 
