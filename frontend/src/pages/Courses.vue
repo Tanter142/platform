@@ -24,6 +24,7 @@
 						placeholder="Поиск"
 						v-model="searchQuery"
 						@input="courses.reload()"
+						class="header-select"
 					>
 						<template #prefix>
 							<Search class="w-4 h-4 stroke-1.5 text-gray-600" name="search" />
