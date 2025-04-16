@@ -325,8 +325,7 @@ updateDocumentTitle(pageMeta)
 	border-radius: 5px !important;
 	width: 100% !important;
 	font-size: 20px !important;
-	height: 100px !important;
-
+	padding: 0 auto !important;
 
 }
 
