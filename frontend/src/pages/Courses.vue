@@ -340,7 +340,6 @@ updateDocumentTitle(pageMeta)
 
 }
 .header-select{
-	background-color: #e1e5e8 !important;
 	border: solid 1px #5a5cff  !important;
 	border-radius: 10px;
 }
