@@ -32,7 +32,7 @@
 							:label="__('Название')"
 							class="mb-4"
 							:required="true"
-							class:input="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-primary-200 focus:border-primary-300"
+							class:input="input"
 						/>
 						<FormControl
 							v-model="course.short_introduction"
@@ -586,6 +586,7 @@ updateDocumentTitle(pageMeta)
 	background-color: #3f3fff !important;
 }
 .input{
-	color: #5a5cff !important;
+	border-color: #5a5cff !important;
+	border-width: 2px !important;
 }
 </style>
