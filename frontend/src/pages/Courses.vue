@@ -337,7 +337,7 @@ updateDocumentTitle(pageMeta)
 .header-select{
 	background-color: rgba(128, 128, 128, 0.4) !important;
 	border: solid 1px #5a5cff  !important;
-	border-radius: 5px;
+	border-radius: 10px;
 }
 
 </style> 
