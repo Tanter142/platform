@@ -320,7 +320,7 @@ updateDocumentTitle(pageMeta)
 	background-color: #3f3fff !important;
 }
 .create-course{
-	background-color: gray 80% !important;
+	background-color: gray !important;
 	color: white !important;
 	border-radius: 5px !important;
 	width: 100% !important;
