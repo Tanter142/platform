@@ -32,6 +32,7 @@
 							:label="__('Название')"
 							class="input mb-4"
 							:required="true"
+							input-class="no-border-input"
 						/>
 						<FormControl
 							v-model="course.short_introduction"
@@ -588,5 +589,9 @@ updateDocumentTitle(pageMeta)
 	border-color: #5a5cff !important;
 	border-width: 1px !important;
 	border-radius: 10px !important;
+}
+.no-border-input{
+	border: none;
+	outline: none;
 }
 </style>
