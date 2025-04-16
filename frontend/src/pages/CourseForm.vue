@@ -576,3 +576,12 @@ const pageMeta = computed(() => {
 
 updateDocumentTitle(pageMeta)
 </script>
+<style scoped>
+.header-save {
+	background-color: #5a5cff !important;
+	color: white !important;
+}
+.header-save:hover {
+	background-color: #3f3fff !important;
+}
+</style>
