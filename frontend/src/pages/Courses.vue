@@ -328,10 +328,11 @@ updateDocumentTitle(pageMeta)
 	font-size: 20px !important;
 	padding-top: 53px !important;
 	padding-bottom: 53px !important;
+	height: 350px !important;
 }
 .create-course:hover{
 	background-color: rgba(128, 128, 128, 0.6) !important;
-	
+
 }
 
 </style> 
