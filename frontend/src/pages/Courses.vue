@@ -15,6 +15,7 @@
 						v-model="currentCategory"
 						:options="categories.data"
 						:placeholder="__('Категории')"
+						class="header-select"
 					/>
 				</div>
 				<div class="w-28 md:w-36">
@@ -332,6 +333,10 @@ updateDocumentTitle(pageMeta)
 .create-course:hover{
 	background-color: rgba(128, 128, 128, 0.6) !important;
 
+}
+.header-select{
+	background-color: rgba(128, 128, 128, 0.4) !important;
+	border: solid 1px #5a5cff  !important;
 }
 
 </style> 
