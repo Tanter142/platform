@@ -38,18 +38,17 @@
 								:required="true"
 							/>
 						</div>
-						<div class="mb-4">
-							<label class="block text-gray-600 text-sm mb-1">
-								{{ __('Краткое описание') }}
-								<span class="text-red-500">*</span>
-							</label>
-							<FormControl
-								v-model="course.short_introduction"
-								placeholder="Отображается в карточке курса"
-								class="input"
-								:required="true"
-							/>
-						</div>
+						<FormControl
+							v-model="course.short_introduction"
+							:label="__('Краткое описание')"
+							:placeholder="
+								__(
+									'Отображается в карточке курса'
+								)
+							"
+							class="mb-4 input"
+							:required="true"
+						/>
 						<div class="mb-4">
 							<div class="mb-1.5 text-sm text-gray-600">
 								{{ __('Описание курса') }}
@@ -60,7 +59,7 @@
 								@change="(val) => (course.description = val)"
 								:editable="true"
 								:fixedMenu="true"
-								editorClass="prose-sm max-w-none bg-gray-100 rounded-b-md py-1 px-2 min-h-[7rem]"
+								editorClass="prose-sm max-w-none border-b border-x bg-gray-100 rounded-b-md py-1 px-2 min-h-[7rem]"
 							/>
 						</div>
 						<div class="mb-4">
@@ -82,7 +81,7 @@
 											<Image class="size-5 stroke-1 text-gray-700" />
 										</div>
 										<div class="ml-4">
-											<Button @click="openFileSelector" class="btn btn-primary header-save">
+											<Button @click="openFileSelector">
 												{{ __('Загрузить') }}
 											</Button>
 											<div class="mt-2 text-gray-600 text-sm">
@@ -111,16 +110,16 @@
 								</div>
 							</div>
 						</div>
-						<div class="mb-4">
-							<label class="block text-gray-600 text-sm mb-1">
-								{{ __('Обложка видео') }}
-							</label>
-							<FormControl
-								v-model="course.video_link"
-								:placeholder="__('Вставьте ссылку на видео youtube, представляющее курс')"
-								class="input"
-							/>
-						</div>
+						<FormControl
+							v-model="course.video_link"
+							:label="__('Обложка видео')"
+							:placeholder="
+								__(
+									'Вставьте ссылку на видео youtube, представляющее курс'
+								)
+							"
+							class="mb-4"
+						/>
 						<div class="mb-4">
 							<div class="mb-1.5 text-xs text-gray-600">
 								{{ __('Теги') }}
@@ -140,36 +139,27 @@
 								<FormControl
 									v-model="newTag"
 									:placeholder="__('Добавьте ключевое слово')"
-									class="w-72 input"
+									class="w-72"
 									@keyup.enter="updateTags()"
 									id="tags"
 								/>
 							</div>
 						</div>
 						<div class="w-1/2 mb-4">
-							<label :class="inputLabelClass">
-								{{ __('Категория') }}
-							</label>
 							<Link
 								doctype="LMS Category"
 								v-model="course.category"
+								:label="__('Категория')"
 								:onCreate="(value, close) => openSettings(close)"
-								class="input"
 							/>
 						</div>
-						<div class="mb-4">
-							<label class="block text-gray-600 text-sm mb-1">
-								{{ __('Инструкторы') }}
-								<span class="text-red-500">*</span>
-							</label>
-							<MultiSelect
-								v-model="instructors"
-								doctype="User"
-								:filters="{ ignore_user_type: 1 }"
-								:required="true"
-								class="input"
-							/>
-						</div>
+						<MultiSelect
+							v-model="instructors"
+							doctype="User"
+							:label="__('Инструкторы')"
+							:filters="{ ignore_user_type: 1 }"
+							:required="true"
+						/>
 					</div>
 					<div class="container border-t">
 						<div class="text-lg font-semibold mt-5 mb-4">
@@ -185,13 +175,11 @@
 									v-model="course.published"
 									:label="__('Опубликованный')"
 								/>
-								<label class="block text-gray-600 text-sm mb-4">
-									{{ __('Опубликовано') }}
-								</label>
 								<FormControl
 									v-model="course.published_on"
+									:label="__('Опубликовано')"
 									type="date"
-									class="input mb-5"
+									class="mb-5"
 								/>
 							</div>
 							<div class="flex flex-col space-y-3">
@@ -231,23 +219,16 @@
 								:label="__('Платный курс')"
 							/>
 						</div>
-						<label class="block text-gray-600 text-sm mb-1">
-							{{ __('Стоимость курса') }}
-						</label>
 						<FormControl
 							v-model="course.course_price"
-							class="input mb-4"
+							:label="__('Стоимость курса')"
+							class="mb-4"
 						/>
-						<div class="mb-1">
-							<label class="block text-gray-600 text-sm">
-								{{ __('Валюта') }}
-							</label>
-						</div>
 						<Link
 							doctype="Currency"
 							v-model="course.currency"
 							:filters="{ enabled: 1 }"
-							class="input mb-4"
+							:label="__('Валюта')"
 						/>
 					</div>
 				</div>
@@ -615,4 +596,3 @@ updateDocumentTitle(pageMeta)
 }
 
 </style>
-
