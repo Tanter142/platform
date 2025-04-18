@@ -576,6 +576,7 @@ const breadcrumbs = computed(() => {
 		{
 			label: 'Курсы',
 			route: { name: 'Courses' },
+			class: 'courses-label',
 		},
 	]
 	if (courseResource.data) {
@@ -612,5 +613,11 @@ updateDocumentTitle(pageMeta)
 	border-color: #5a5cff !important;
 	border-width: 1px !important;
 	border-radius: 10px !important;
+}
+.courses-label{
+	color: #5a5cff !important;
+}
+.courses-label:hover{
+	color: #3f3fff !important;
 }
 </style>
