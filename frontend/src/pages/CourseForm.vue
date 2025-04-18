@@ -165,9 +165,12 @@
 							<MultiSelect
 								v-model="instructors"
 								doctype="User"
-								:filters="{ ignore_user_type: 3 }"
+								:filters="{ ignore_user_type: 1 }"
 								:required="true"
 								class="input"
+								:multiple="true"
+								:placeholder="__('Выберите до трех преподавателей')"
+								:maxSelections="3"
 							/>
 						</div>
 					</div>
