@@ -60,7 +60,7 @@
 								@change="(val) => (course.description = val)"
 								:editable="true"
 								:fixedMenu="true"
-								editorClass="prose-sm max-w-none bg-gray-100 rounded-b-md py-1 px-2 min-h-[7rem] input"
+								editorClass="prose-sm max-w-none bg-gray-100 rounded-b-md py-1 px-2 min-h-[7rem]"
 							/>
 						</div>
 						<div class="mb-4">
@@ -111,16 +111,16 @@
 								</div>
 							</div>
 						</div>
-						<FormControl
-							v-model="course.video_link"
-							:label="__('Обложка видео')"
-							:placeholder="
-								__(
-									'Вставьте ссылку на видео youtube, представляющее курс'
-								)
-							"
-							class="input mb-4"
-						/>
+						<div class="mb-4">
+							<label class="block text-gray-600 text-sm mb-1">
+								{{ __('Обложка видео') }}
+							</label>
+							<FormControl
+								v-model="course.video_link"
+								:placeholder="__('Вставьте ссылку на видео youtube, представляющее курс')"
+								class="input"
+							/>
+						</div>
 						<div class="mb-4">
 							<div class="mb-1.5 text-xs text-gray-600">
 								{{ __('Теги') }}
