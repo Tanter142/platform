@@ -46,7 +46,7 @@
 									'Отображается в карточке курса'
 								)
 							"
-							class="mb-4 input"
+							class="input mb-4"
 							:required="true"
 						/>
 						<div class="mb-4">
@@ -59,7 +59,7 @@
 								@change="(val) => (course.description = val)"
 								:editable="true"
 								:fixedMenu="true"
-								editorClass="prose-sm max-w-none border-b border-x bg-gray-100 rounded-b-md py-1 px-2 min-h-[7rem]"
+								editorClass="prose-sm max-w-none border-b border-x bg-gray-100 rounded-b-md py-1 px-2 min-h-[7rem] input"
 							/>
 						</div>
 						<div class="mb-4">
@@ -118,7 +118,7 @@
 									'Вставьте ссылку на видео youtube, представляющее курс'
 								)
 							"
-							class="mb-4"
+							class="input mb-4"
 						/>
 						<div class="mb-4">
 							<div class="mb-1.5 text-xs text-gray-600">
@@ -139,7 +139,7 @@
 								<FormControl
 									v-model="newTag"
 									:placeholder="__('Добавьте ключевое слово')"
-									class="w-72"
+									class="w-72 input"
 									@keyup.enter="updateTags()"
 									id="tags"
 								/>
@@ -222,7 +222,7 @@
 						<FormControl
 							v-model="course.course_price"
 							:label="__('Стоимость курса')"
-							class="mb-4"
+							class="input mb-4"
 						/>
 						<Link
 							doctype="Currency"
