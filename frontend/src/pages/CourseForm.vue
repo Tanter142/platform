@@ -615,7 +615,7 @@ updateDocumentTitle(pageMeta)
 	border-radius: 10px !important;
 }
 .checkbox-color{
-	background-color: #5a5cff !important;
+	
 }
 
 </style>
