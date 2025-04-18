@@ -165,7 +165,7 @@
 							<MultiSelect
 								v-model="instructors"
 								doctype="User"
-								:filters="{ ignore_user_type: 1 }"
+								:filters="{ ignore_user_type: 3 }"
 								:required="true"
 								class="input"
 							/>
