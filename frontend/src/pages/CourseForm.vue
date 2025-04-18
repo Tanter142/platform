@@ -162,7 +162,7 @@
 								{{ __('Инструкторы') }}
 								<span class="text-red-500">*</span>
 							</label>
-							<MultiSelect
+							<SingleSelect
 								v-model="instructors"
 								doctype="User"
 								:filters="{ ignore_user_type: 1 }"
