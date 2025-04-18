@@ -38,17 +38,18 @@
 								:required="true"
 							/>
 						</div>
-						<FormControl
-							v-model="course.short_introduction"
-							:label="__('Краткое описание')"
-							:placeholder="
-								__(
-									'Отображается в карточке курса'
-								)
-							"
-							class="input mb-4"
-							:required="true"
-						/>
+						<div class="mb-4">
+							<label class="block text-gray-600 text-sm mb-1">
+								{{ __('Краткое описание') }}
+								<span class="text-red-500">*</span>
+							</label>
+							<FormControl
+								v-model="course.short_introduction"
+								placeholder="Отображается в карточке курса"
+								class="input"
+								:required="true"
+							/>
+						</div>
 						<div class="mb-4">
 							<div class="mb-1.5 text-sm text-gray-600">
 								{{ __('Описание курса') }}
