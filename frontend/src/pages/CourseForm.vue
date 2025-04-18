@@ -204,6 +204,7 @@
 									type="checkbox"
 									v-model="course.featured"
 									:label="__('Рекомендуемый')"
+									class="form-control-primary"
 								/>
 							</div>
 							<div class="flex flex-col space-y-3">
