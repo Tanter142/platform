@@ -152,6 +152,7 @@
 								v-model="course.category"
 								:label="__('Категория')"
 								:onCreate="(value, close) => openSettings(close)"
+								class="input"
 							/>
 						</div>
 						<MultiSelect
@@ -160,6 +161,7 @@
 							:label="__('Инструкторы')"
 							:filters="{ ignore_user_type: 1 }"
 							:required="true"
+							class="input"
 						/>
 					</div>
 					<div class="container border-t">
