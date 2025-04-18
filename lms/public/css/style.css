@@ -258,6 +258,7 @@ input[type=checkbox] {
 	border-radius: 4px;
 	-webkit-appearance: none;
 	-webkit-print-color-adjust: exact;
+	background-color: #5a5cff !important;
 }
 
 .course-image {

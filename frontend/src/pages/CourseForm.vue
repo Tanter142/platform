@@ -184,7 +184,6 @@
 									type="checkbox"
 									v-model="course.published"
 									:label="__('Опубликованный')"
-									class="checkbox-color"
 								/>
 								<label class="block text-gray-600 text-sm mb-4">
 									{{ __('Опубликовано') }}
