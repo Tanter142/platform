@@ -147,22 +147,29 @@
 							</div>
 						</div>
 						<div class="w-1/2 mb-4">
+							<label :class="inputLabelClass">
+								{{ __('Категория') }}
+							</label>
 							<Link
 								doctype="LMS Category"
 								v-model="course.category"
-								:label="__('Категория')"
 								:onCreate="(value, close) => openSettings(close)"
 								class="input"
 							/>
 						</div>
-						<MultiSelect
-							v-model="instructors"
-							doctype="User"
-							:label="__('Инструкторы')"
-							:filters="{ ignore_user_type: 1 }"
-							:required="true"
-							class="input"
-						/>
+						<div class="mb-4">
+							<label class="block text-gray-600 text-sm mb-1">
+								{{ __('Инструкторы') }}
+								<span class="text-red-500">*</span>
+							</label>
+							<MultiSelect
+								v-model="instructors"
+								doctype="User"
+								:filters="{ ignore_user_type: 1 }"
+								:required="true"
+								class="input"
+							/>
+						</div>
 					</div>
 					<div class="container border-t">
 						<div class="text-lg font-semibold mt-5 mb-4">
@@ -180,9 +187,9 @@
 								/>
 								<FormControl
 									v-model="course.published_on"
-									:label="__('Опубликовано')"
+									label="Опубликовано"
 									type="date"
-									class="mb-5"
+									class="input mb-5"
 								/>
 							</div>
 							<div class="flex flex-col space-y-3">
@@ -225,7 +232,7 @@
 						<FormControl
 							v-model="course.course_price"
 							:label="__('Стоимость курса')"
-							class="input mb-4"
+							class="input mb-4 separate-input"
 						/>
 						<Link
 							doctype="Currency"
