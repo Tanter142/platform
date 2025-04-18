@@ -81,8 +81,8 @@
 										<div class="border rounded-md w-fit py-5 px-20">
 											<Image class="size-5 stroke-1 text-gray-700" />
 										</div>
-										<div class="ml-4 header-save">
-											<Button @click="openFileSelector">
+										<div class="ml-4">
+											<Button @click="openFileSelector" сlass="header-save">
 												{{ __('Загрузить') }}
 											</Button>
 											<div class="mt-2 text-gray-600 text-sm">
