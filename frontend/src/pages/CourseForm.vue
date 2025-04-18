@@ -593,6 +593,7 @@ updateDocumentTitle(pageMeta)
 	border-color: #5a5cff !important;
 	border-width: 1px !important;
 	border-radius: 10px !important;
+	color: #5a5cff !important;
 }
 
 </style>
