@@ -184,6 +184,7 @@
 									type="checkbox"
 									v-model="course.published"
 									:label="__('Опубликованный')"
+									class="checkbox-color"
 								/>
 								<label class="block text-gray-600 text-sm mb-4">
 									{{ __('Опубликовано') }}
@@ -204,7 +205,6 @@
 									type="checkbox"
 									v-model="course.featured"
 									:label="__('Рекомендуемый')"
-									class="form-control-primary"
 								/>
 							</div>
 							<div class="flex flex-col space-y-3">
@@ -613,6 +613,9 @@ updateDocumentTitle(pageMeta)
 	border-color: #5a5cff !important;
 	border-width: 1px !important;
 	border-radius: 10px !important;
+}
+.checkbox-color{
+	color: #5a5cff !important;
 }
 
 </style>
