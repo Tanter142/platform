@@ -185,7 +185,7 @@
 									v-model="course.published"
 									:label="__('Опубликованный')"
 								/>
-								<label class="block text-gray-600 text-sm mb-1">
+								<label class="block text-gray-600 text-sm mb-4">
 									{{ __('Опубликовано') }}
 								</label>
 								<FormControl
