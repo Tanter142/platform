@@ -168,8 +168,6 @@
 								:filters="{ ignore_user_type: 1 }"
 								:required="true"
 								class="input"
-								:rounded="false"
-								:border="instructors.length > 0"
 							/>
 						</div>
 					</div>
