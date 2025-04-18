@@ -185,9 +185,11 @@
 									v-model="course.published"
 									:label="__('Опубликованный')"
 								/>
+								<label class="block text-gray-600 text-sm mb-1">
+									{{ __('Опубликовано') }}
+								</label>
 								<FormControl
 									v-model="course.published_on"
-									label="Опубликовано"
 									type="date"
 									class="input mb-5"
 								/>
@@ -229,16 +231,23 @@
 								:label="__('Платный курс')"
 							/>
 						</div>
+						<label class="block text-gray-600 text-sm mb-1">
+							{{ __('Стоимость курса') }}
+						</label>
 						<FormControl
 							v-model="course.course_price"
-							:label="__('Стоимость курса')"
-							class="input mb-4 separate-input"
+							class="input mb-4"
 						/>
+						<div class="mb-1">
+							<label class="block text-gray-600 text-sm">
+								{{ __('Валюта') }}
+							</label>
+						</div>
 						<Link
 							doctype="Currency"
 							v-model="course.currency"
 							:filters="{ enabled: 1 }"
-							:label="__('Валюта')"
+							class="input mb-4"
 						/>
 					</div>
 				</div>
