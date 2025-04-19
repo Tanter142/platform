@@ -109,7 +109,7 @@
 					label: __('Создать'),
 					variant: 'solid',
 					onClick: () => createProgram(close),
-					class: 'save-button bg-blue-500 hover:bg-green-600',
+					class: 'save-button bg-blue-600 hover:bg-blue-700',
 				},
 			],
 		}"
