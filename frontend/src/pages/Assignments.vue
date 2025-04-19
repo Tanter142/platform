@@ -1,6 +1,6 @@
 <template>
 	<header
-		class="sticky top-0 z-10 flex items-center justify-between border-b bg-lavender-100 px-3 py-2.5 sm:px-5"
+		class="sticky top-0 z-10 flex items-center justify-between border-b px-3 py-2.5 sm:px-5"
 	>
 		<Breadcrumbs :items="breadcrumbs" />
 		<router-link
@@ -11,7 +11,7 @@
 				},
 			}"
 		>
-			<Button variant="solid">
+			<Button variant="solid" class="save-button">
 				<template #prefix>
 					<Plus class="w-4 h-4" />
 				</template>
@@ -187,3 +187,12 @@ const breadcrumbs = computed(() => [
 	},
 ])
 </script>
+<style scoped>
+.save-button {
+	background-color: #5a5cff !important;
+	color: white !important;
+}
+.save-button:hover {
+	background-color: #3f3fff !important;
+}
+</style>
