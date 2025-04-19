@@ -76,7 +76,7 @@
 											<Image class="size-5 stroke-1 text-gray-700" />
 										</div>
 										<div class="ml-4">
-											<Button @click="openFileSelector">
+											<Button @click="openFileSelector" class="save-button">
 												{{ __('Загрузить') }}
 											</Button>
 											<div class="mt-2 text-gray-600 text-sm">
