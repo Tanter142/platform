@@ -573,7 +573,6 @@ const pageMeta = computed(() => {
 		description: 'Создайте или отредактируйте курс для своей системы обучения.',
 	}
 })
-
 updateDocumentTitle(pageMeta)
 </script>
 <style>

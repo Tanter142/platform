@@ -15,7 +15,6 @@
 						v-model="currentCategory"
 						:options="categories.data"
 						:placeholder="__('Категории')"
-						class="header-select"
 					/>
 				</div>
 				<div class="w-28 md:w-36">
@@ -24,7 +23,6 @@
 						placeholder="Поиск"
 						v-model="searchQuery"
 						@input="courses.reload()"
-						class="header-select"
 					>
 						<template #prefix>
 							<Search class="w-4 h-4 stroke-1.5 text-gray-600" name="search" />
