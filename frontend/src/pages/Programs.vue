@@ -109,6 +109,7 @@
 					label: __('Создать'),
 					variant: 'solid',
 					onClick: () => createProgram(close),
+					class: 'save-button',
 				},
 			],
 		}"
