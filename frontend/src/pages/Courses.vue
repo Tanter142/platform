@@ -125,12 +125,12 @@
 						},
 					}"
 				>
-					<div class="create-course">
+					<div class="bg-gray-50 py-32 px-5 rounded-md">
 						<div class="flex flex-col items-center text-center space-y-2">
 							<Plus
 								class="size-10 stroke-1 text-gray-800 p-1 rounded-full border bg-white"
 							/>
-							<div class="create-course__title">
+							<div class="font-medium">
 								{{ __('Создать курс') }}
 							</div>
 							<span class="text-gray-700 text-sm leading-4">
