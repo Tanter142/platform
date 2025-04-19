@@ -36,7 +36,7 @@
 							/>
 						</span>
 						<span class="ml-2">
-							{{ __('More') }}
+							{{ __('Дополнительные страницы') }}
 						</span>
 					</div>
 					<Button v-if="isModerator" variant="ghost" @click="openPageModal()">
