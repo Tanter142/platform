@@ -24,7 +24,7 @@
 						}
 					"
 				>
-					<template #prefix>
+					<template #prefix class="save-button">
 						<Plus class="w-4 h-4" />
 					</template>
 					{{ __('Добавить') }}
@@ -86,7 +86,7 @@
 						}
 					"
 				>
-					<template #prefix>
+					<template #prefix class="save-button">
 						<Plus class="w-4 h-4" />
 					</template>
 					{{ __('Добавить') }}
@@ -136,7 +136,6 @@
 				{
 					label: __('Добавить'),
 					variant: 'solid',
-					class: 'save-button bg-blue-600 hover:bg-blue-700',
 					onClick: () =>
 						currentForm == 'course'
 							? addProgramCourse(close)
