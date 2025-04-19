@@ -17,6 +17,7 @@
 					{{ __('Курсы по программе') }}
 				</div>
 				<Button
+				class="save-button"
 					@click="
 						() => {
 							currentForm = 'course'
@@ -24,7 +25,7 @@
 						}
 					"
 				>
-					<template #prefix class="save-button">
+					<template #prefix>
 						<Plus class="w-4 h-4" />
 					</template>
 					{{ __('Добавить') }}
@@ -79,6 +80,7 @@
 					{{ __('Участники программы') }}
 				</div>
 				<Button
+				class="save-button"
 					@click="
 						() => {
 							currentForm = 'member'
@@ -86,7 +88,7 @@
 						}
 					"
 				>
-					<template #prefix class="save-button">
+					<template #prefix>
 						<Plus class="w-4 h-4" />
 					</template>
 					{{ __('Добавить') }}
