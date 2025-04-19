@@ -138,6 +138,7 @@
 				{
 					label: __('Добавить'),
 					variant: 'solid',
+					class: 'save-button',
 					onClick: () =>
 						currentForm == 'course'
 							? addProgramCourse(close)
