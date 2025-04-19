@@ -455,7 +455,7 @@ const validateFile = (file) => {
 const breadcrumbs = computed(() => {
 	let crumbs = [
 		{
-			label: 'Batches',
+			label: 'Группы',
 			route: {
 				name: 'Batches',
 			},
@@ -473,7 +473,7 @@ const breadcrumbs = computed(() => {
 		})
 	}
 	crumbs.push({
-		label: props.batchName == 'new' ? 'New Batch' : 'Edit Batch',
+		label: props.batchName == 'new' ? 'Новая группа' : 'Редактировать группу',
 		route: { name: 'BatchForm', params: { batchName: props.batchName } },
 	})
 	return crumbs
