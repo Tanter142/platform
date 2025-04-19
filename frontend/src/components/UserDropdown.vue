@@ -117,7 +117,7 @@ const userDropdownOptions = [
 	},
 	{
 		icon: Settings,
-		label: 'Settings',
+		label: 'Настройки',
 		onClick: () => {
 			settingsStore.isSettingsOpen = true
 		},

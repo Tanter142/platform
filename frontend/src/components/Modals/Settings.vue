@@ -4,7 +4,7 @@
 			<div class="flex h-[calc(100vh_-_8rem)]">
 				<div class="flex w-52 shrink-0 flex-col bg-gray-50 p-2">
 					<h1 class="mb-3 px-2 pt-2 text-lg font-semibold">
-						{{ __('Settings') }}
+						{{ __('Натсройки') }}
 					</h1>
 					<div v-for="tab in tabs" :key="tab.label">
 						<div
@@ -35,25 +35,25 @@
 					class="flex flex-1 flex-col px-10 py-8"
 				>
 					<Members
-						v-if="activeTab.label === 'Members'"
+						v-if="activeTab.label === 'Участники'"
 						:label="activeTab.label"
 						:description="activeTab.description"
 						v-model:show="show"
 					/>
 					<Categories
-						v-else-if="activeTab.label === 'Categories'"
+						v-else-if="activeTab.label === 'Категории'"
 						:label="activeTab.label"
 						:description="activeTab.description"
 					/>
 					<PaymentSettings
-						v-else-if="activeTab.label === 'Payment Gateway'"
+						v-else-if="activeTab.label === 'Оплата'"
 						:label="activeTab.label"
 						:description="activeTab.description"
 						:data="data"
 						:fields="activeTab.fields"
 					/>
 					<BrandSettings
-						v-else-if="activeTab.label === 'Branding'"
+						v-else-if="activeTab.label === 'Настройки бренда'"
 						:label="activeTab.label"
 						:description="activeTab.description"
 						:fields="activeTab.fields"
@@ -104,39 +104,39 @@ const branding = createResource({
 const tabsStructure = computed(() => {
 	return [
 		{
-			label: 'Settings',
+			label: 'Настройки',
 			hideLabel: true,
 			items: [
 				{
-					label: 'General',
+					label: 'Основные',
 					icon: 'Wrench',
 					fields: [
 						{
-							label: 'Enable Learning Paths',
+							label: 'Включить учебные пути',
 							name: 'enable_learning_paths',
 							description:
-								'This will enforce students to go through programs assigned to them in the correct order.',
+								'Это заставит учащихся проходить назначенные им программы в правильном порядке.',
 							type: 'checkbox',
 						},
 						{
-							label: 'Allow Guest Access',
+							label: 'Разрешить доступ для гостей',
 							name: 'allow_guest_access',
 							description:
-								'If enabled, users can access the course and batch lists without logging in.',
+								'Если этот параметр включен, пользователи могут получать доступ к спискам курсов без входа в систему.',
 							type: 'checkbox',
 						},
 						{
-							label: 'Send calendar invite for evaluations',
+							label: 'Отправить приглашение в календарь на оценку',
 							name: 'send_calendar_invite_for_evaluations',
 							description:
-								'If enabled, it sends google calendar invite to the student for evaluations.',
+								'Если функция включена, она отправляет учащемуся приглашение в Google calendar для прохождения оценки.',
 							type: 'checkbox',
 						},
 						{
-							label: 'Unsplash Access Key',
+							label: 'Разблокировать ключ доступа',
 							name: 'unsplash_access_key',
 							description:
-								'Optional. If this is set, students can pick a cover image from the unsplash library for their profile page. https://unsplash.com/documentation#getting-started.',
+								'Необязательный. Если этот параметр установлен, учащиеся могут выбрать изображение обложки из библиотеки unsplash для страницы своего профиля. https://unsplash.com/documentation#getting-started.',
 							type: 'text',
 						},
 					],
@@ -144,23 +144,23 @@ const tabsStructure = computed(() => {
 			],
 		},
 		{
-			label: 'Settings',
+			label: 'Настройки оплаты',
 			hideLabel: true,
 			items: [
 				{
-					label: 'Payment Gateway',
+					label: 'Оплата',
 					icon: 'DollarSign',
 					description:
-						'Configure the payment gateway and other payment related settings',
+						'Настройки оплаты. Позволяют установить способ оплаты, валюту и другие настройки.',
 					fields: [
 						{
-							label: 'Payment Gateway',
+							label: 'Опллата',
 							name: 'payment_gateway',
 							type: 'Link',
 							doctype: 'Payment Gateway',
 						},
 						{
-							label: 'Default Currency',
+							label: 'Валюта',
 							name: 'default_currency',
 							type: 'Link',
 							doctype: 'Currency',
@@ -185,36 +185,36 @@ const tabsStructure = computed(() => {
 			],
 		},
 		{
-			label: 'Lists',
+			label: 'Списки',
 			hideLabel: false,
 			items: [
 				{
-					label: 'Members',
-					description: 'Manage the members of your learning system',
+					label: 'Участники',
+					description: 'Управляйте участниками вашей системы обучения',
 					icon: 'UserRoundPlus',
 				},
 				{
-					label: 'Categories',
-					description: 'Manage the members of your learning system',
+					label: 'Категории',
+					description: 'Управляйте категориями вашей системы обучения',
 					icon: 'Network',
 				},
 			],
 		},
 		{
-			label: 'Customise',
+			label: 'Кастомизация',
 			hideLabel: false,
 			items: [
 				{
-					label: 'Branding',
+					label: 'Настройки бренда',
 					icon: 'Blocks',
 					fields: [
 						{
-							label: 'Brand Name',
+							label: 'Название',
 							name: 'app_name',
 							type: 'text',
 						},
 						{
-							label: 'Logo',
+							label: 'Логотип',
 							name: 'banner_image',
 							type: 'Upload',
 						},
@@ -229,7 +229,7 @@ const tabsStructure = computed(() => {
 							type: 'Upload',
 						},
 						{
-							label: 'Address',
+							label: 'Адрес',
 							name: 'address',
 							type: 'textarea',
 							rows: 2,
@@ -248,22 +248,22 @@ const tabsStructure = computed(() => {
 					],
 				},
 				{
-					label: 'Sidebar',
+					label: 'Боковая панель',
 					icon: 'PanelLeftIcon',
-					description: 'Choose the items you want to show in the sidebar',
+					description: 'Настройки боковой панели',
 					fields: [
 						{
-							label: 'Courses',
+							label: 'Курсы',
 							name: 'courses',
 							type: 'checkbox',
 						},
 						{
-							label: 'Batches',
+							label: 'Группы',
 							name: 'batches',
 							type: 'checkbox',
 						},
 						{
-							label: 'Certified Participants',
+							label: 'Сертифицированные участники',
 							name: 'certified_participants',
 							type: 'checkbox',
 						},
@@ -276,35 +276,35 @@ const tabsStructure = computed(() => {
 							type: 'checkbox',
 						},
 						{
-							label: 'Statistics',
+							label: 'Статистика',
 							name: 'statistics',
 							type: 'checkbox',
 						},
 						{
-							label: 'Notifications',
+							label: 'Уведомления',
 							name: 'notifications',
 							type: 'checkbox',
 						},
 					],
 				},
 				{
-					label: 'Email Templates',
+					label: 'Шаблоны электронной почты',
 					icon: 'MailPlus',
 					fields: [
 						{
-							label: 'Batch Confirmation Template',
+							label: 'Шаблон подтверждения группы',
 							name: 'batch_confirmation_template',
 							doctype: 'Email Template',
 							type: 'Link',
 						},
 						{
-							label: 'Certification Template',
+							label: 'Шаблон сертификации',
 							name: 'certification_template',
 							doctype: 'Email Template',
 							type: 'Link',
 						},
 						{
-							label: 'Assignment Submission Template',
+							label: 'Шаблон для отправки задания',
 							name: 'assignment_submission_template',
 							doctype: 'Email Template',
 							type: 'Link',
@@ -312,22 +312,22 @@ const tabsStructure = computed(() => {
 					],
 				},
 				{
-					label: 'Signup',
+					label: 'Настройки для входа',
 					icon: 'LogIn',
 					fields: [
 						{
-							label: 'Custom Content',
+							label: 'Пользовательский контент',
 							name: 'custom_signup_content',
 							type: 'Code',
 							mode: 'htmlmixed',
 							rows: 10,
 						},
 						{
-							label: 'Ask for Occupation',
+							label: 'Род занятий',
 							name: 'user_category',
 							type: 'checkbox',
 							description:
-								'Enable this option to ask users to select their occupation during the signup process.',
+								'Включите эту опцию, чтобы попросить пользователей выбрать род занятий в процессе регистрации.',
 						},
 					],
 				},
