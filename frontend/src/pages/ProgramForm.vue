@@ -138,7 +138,7 @@
 				{
 					label: __('Добавить'),
 					variant: 'solid',
-					class: 'save-button',
+					class: 'save-button bg-blue-600 hover:bg-blue-700',
 					onClick: () =>
 						currentForm == 'course'
 							? addProgramCourse(close)
