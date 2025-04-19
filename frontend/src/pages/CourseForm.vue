@@ -579,6 +579,7 @@ updateDocumentTitle(pageMeta)
 <style scoped>
 .save-button {
 	background-color: #5a5cff !important;
+	color: white !important;
 }
 .save-button:hover {
 	background-color: #3f3fff !important;
