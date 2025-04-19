@@ -3,7 +3,7 @@
 		<div class="grid md:grid-cols-[70%,30%] h-full">
 			<div>
 				<header
-					class="sticky top-0 z-10 flex flex-col md:flex-row md:items-center justify-between border-b bg-white px-3 py-2.5 sm:px-5"
+					class="sticky top-0 z-10 flex flex-col md:flex-row md:items-center justify-between border-b bg-black px-3 py-2.5 sm:px-5"
 				>
 					<Breadcrumbs class="h-7" :items="breadcrumbs" />
 					<div class="flex items-center mt-3 md:mt-0">
@@ -15,7 +15,7 @@
 								{{ __('Удалить') }}
 							</span>
 						</Button>
-						<Button variant="solid" @click="submitCourse()" class="ml-2 btn-save">
+						<Button variant="solid" @click="submitCourse()" class="ml-2">
 							<span>
 								{{ __('Сохранить') }}
 							</span>
@@ -573,15 +573,6 @@ const pageMeta = computed(() => {
 		description: 'Создайте или отредактируйте курс для своей системы обучения.',
 	}
 })
+
 updateDocumentTitle(pageMeta)
 </script>
-<style>
-.btn-save{
-	background-color: #3b82f6 !important;
-	color: #fff !important;
-}
-.btn-save:hover{
-	background-color: #2563eb !important;
-	color: #fff !important;
-}
-</style>

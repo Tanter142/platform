@@ -38,7 +38,7 @@
 						},
 					}"
 				>
-					<Button variant="solid" class="header-button">
+					<Button variant="solid">
 						<template #prefix>
 							<Plus class="h-4 w-4" />
 						</template>
@@ -312,34 +312,3 @@ const pageMeta = computed(() => {
 
 updateDocumentTitle(pageMeta)
 </script>
-<style>
-.header-button {
-	background-color: #5a5cff !important;
-}
-.header-button:hover {
-	background-color: #3f3fff !important;
-}
-.create-course{
-	background-color: #e1e5e8 !important;
-	color: white !important;
-	border-radius: 5px !important;
-	width: 100% !important;
-	font-size: 20px !important;
-	padding-top: 53px !important;
-	padding-bottom: 53px !important;
-}
-.create-course:hover{
-	background-color: #cccfd3  !important;
-
-}
-.create-course__title{
-	color: black !important;
-	font-size: 24px;
-
-}
-.header-select{
-	border: solid 1px #5a5cff  !important;
-	border-radius: 10px;
-}
-
-</style> 
