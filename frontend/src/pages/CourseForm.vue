@@ -15,7 +15,7 @@
 								{{ __('Удалить') }}
 							</span>
 						</Button>
-						<Button variant="solid" @click="submitCourse()" class="ml-2">
+						<Button variant="solid" @click="submitCourse()" class="ml-2 save-button">
 							<span>
 								{{ __('Сохранить') }}
 							</span>
@@ -576,3 +576,11 @@ const pageMeta = computed(() => {
 
 updateDocumentTitle(pageMeta)
 </script>
+<style scoped>
+.save-button {
+	background-color: #5a5cff !important;
+}
+.save-button:hover {
+	background-color: #3f3fff !important;
+}
+</style>
