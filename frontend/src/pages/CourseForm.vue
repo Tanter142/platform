@@ -3,7 +3,7 @@
 		<div class="grid md:grid-cols-[70%,30%] h-full">
 			<div>
 				<header
-					class="sticky top-0 z-10 flex flex-col md:flex-row md:items-center justify-between border-b bg-white px-3 py-2.5 sm:px-5"
+					class="sticky top-0 z-10 flex flex-col md:flex-row md:items-center justify-between border-b bg-black px-3 py-2.5 sm:px-5"
 				>
 					<Breadcrumbs class="h-7" :items="breadcrumbs" />
 					<div class="flex items-center mt-3 md:mt-0">
@@ -15,7 +15,7 @@
 								{{ __('Удалить') }}
 							</span>
 						</Button>
-						<Button variant="solid" @click="submitCourse()" class="header-save">
+						<Button variant="solid" @click="submitCourse()" class="ml-2">
 							<span>
 								{{ __('Сохранить') }}
 							</span>
@@ -27,17 +27,12 @@
 						<div class="text-lg font-semibold mb-4">
 							{{ __('Детали') }}
 						</div>
-						<div class="mb-4">
-							<label class="block text-gray-600 text-sm mb-1">
-								{{ __('Название') }}
-								<span class="text-red-500">*</span>
-							</label>
-							<FormControl
-								v-model="course.title"
-								class="input"
-								:required="true"
-							/>
-						</div>
+						<FormControl
+							v-model="course.title"
+							:label="__('Название')"
+							class="mb-4"
+							:required="true"
+						/>
 						<FormControl
 							v-model="course.short_introduction"
 							:label="__('Краткое описание')"
@@ -46,7 +41,7 @@
 									'Отображается в карточке курса'
 								)
 							"
-							class="mb-4 input"
+							class="mb-4"
 							:required="true"
 						/>
 						<div class="mb-4">
@@ -581,19 +576,3 @@ const pageMeta = computed(() => {
 
 updateDocumentTitle(pageMeta)
 </script>
-<style scoped>
-.header-save {
-	background-color: #5a5cff !important;
-	color: white !important;
-}
-.header-save:hover {
-	background-color: #3f3fff !important;
-}
-.input{
-	border-color: #5a5cff !important;
-	border-width: 1px !important;
-	border-radius: 10px !important;
-	color: #5a5cff !important;
-}
-
-</style>
