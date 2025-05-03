@@ -7,6 +7,7 @@
 			v-if="user.data?.is_moderator || user.data?.is_instructor"
 			@click="showDialog = true"
 			variant="solid"
+			class="save-button"
 		>
 			<template #prefix>
 				<Plus class="h-4 w-4 stroke-1.5" />
@@ -108,6 +109,7 @@
 					label: __('Создать'),
 					variant: 'solid',
 					onClick: () => createProgram(close),
+					class: 'save-button bg-blue-600 hover:bg-blue-700',
 				},
 			],
 		}"
@@ -211,3 +213,12 @@ const breadbrumbs = computed(() => [
 	},
 ])
 </script>
+<style scoped>
+.save-button {
+	background-color: #5a5cff !important;
+	color: white !important;
+}
+.save-button:hover {
+	background-color: #3f3fff !important;
+}
+</style>

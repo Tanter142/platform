@@ -3,7 +3,7 @@
 		<div class="grid md:grid-cols-[70%,30%] h-full">
 			<div>
 				<header
-					class="sticky top-0 z-10 flex flex-col md:flex-row md:items-center justify-between border-b bg-black px-3 py-2.5 sm:px-5"
+					class="sticky top-0 z-10 flex flex-col md:flex-row md:items-center justify-between border-b bg-white px-3 py-2.5 sm:px-5"
 				>
 					<Breadcrumbs class="h-7" :items="breadcrumbs" />
 					<div class="flex items-center mt-3 md:mt-0">
@@ -15,7 +15,7 @@
 								{{ __('Удалить') }}
 							</span>
 						</Button>
-						<Button variant="solid" @click="submitCourse()" class="ml-2">
+						<Button variant="solid" @click="submitCourse()" class="ml-2 save-button">
 							<span>
 								{{ __('Сохранить') }}
 							</span>
@@ -76,7 +76,7 @@
 											<Image class="size-5 stroke-1 text-gray-700" />
 										</div>
 										<div class="ml-4">
-											<Button @click="openFileSelector">
+											<Button @click="openFileSelector" class="save-button">
 												{{ __('Загрузить') }}
 											</Button>
 											<div class="mt-2 text-gray-600 text-sm">
@@ -576,3 +576,12 @@ const pageMeta = computed(() => {
 
 updateDocumentTitle(pageMeta)
 </script>
+<style scoped>
+.save-button {
+	background-color: #5a5cff !important;
+	color: white !important;
+}
+.save-button:hover {
+	background-color: #3f3fff !important;
+}
+</style>

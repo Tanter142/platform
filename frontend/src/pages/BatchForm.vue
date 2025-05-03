@@ -5,19 +5,19 @@
 		>
 			<Breadcrumbs class="h-7" :items="breadcrumbs" />
 			<Button variant="solid" @click="saveBatch()">
-				{{ __('Save') }}
+				{{ __('Сохранить') }}
 			</Button>
 		</header>
 		<div class="w-1/2 mx-auto py-5">
 			<div class="">
 				<div class="text-lg font-semibold mb-4">
-					{{ __('Details') }}
+					{{ __('Детали') }}
 				</div>
 				<div class="grid grid-cols-2 gap-10 mb-4 space-y-2">
 					<div>
 						<FormControl
 							v-model="batch.title"
-							:label="__('Title')"
+							:label="__('Название')"
 							:required="true"
 						/>
 					</div>
@@ -25,19 +25,19 @@
 						<FormControl
 							v-model="batch.published"
 							type="checkbox"
-							:label="__('Published')"
+							:label="__('Публичная')"
 						/>
 						<FormControl
 							v-model="batch.allow_self_enrollment"
 							type="checkbox"
-							:label="__('Allow self enrollment')"
+							:label="__('Разрешить самостоятельную регистрацию')"
 						/>
 					</div>
 				</div>
 			</div>
 			<div class="mb-4">
 				<div class="text-xs text-gray-600 mb-2">
-					{{ __('Meta Image') }}
+					{{ __('Обложка') }}
 				</div>
 				<FileUploader
 					v-if="!batch.image"
@@ -52,12 +52,12 @@
 							</div>
 							<div class="ml-4">
 								<Button @click="openFileSelector">
-									{{ __('Upload') }}
+									{{ __('Загрузить') }}
 								</Button>
 								<div class="mt-2 text-gray-600 text-sm">
 									{{
 										__(
-											'Appears when the batch URL is shared on any online platform'
+											'Появляется, когда URL-адрес пакета публикуется на любой онлайн-платформе'
 										)
 									}}
 								</div>
@@ -70,12 +70,12 @@
 						<img :src="batch.image.file_url" class="border rounded-md w-40" />
 						<div class="ml-4">
 							<Button @click="removeImage()">
-								{{ __('Remove') }}
+								{{ __('Удалить') }}
 							</Button>
 							<div class="mt-2 text-gray-600 text-sm">
 								{{
 									__(
-										'Appears when the batch URL is shared on any online platform'
+										'Появляется, когда URL-адрес пакета публикуется на любой онлайн-платформе'
 									)
 								}}
 							</div>
@@ -86,22 +86,22 @@
 			<MultiSelect
 				v-model="instructors"
 				doctype="User"
-				:label="__('Instructors')"
+				:label="__('Инструкторы')"
 				:required="true"
 				:filters="{ ignore_user_type: 1 }"
 			/>
 			<div class="mb-4">
 				<FormControl
 					v-model="batch.description"
-					:label="__('Description')"
+					:label="__('Описание')"
 					type="textarea"
 					class="my-4"
-					:placeholder="__('Short description of the batch')"
+					:placeholder="__('Короткое описание группы')"
 					:required="true"
 				/>
 				<div>
 					<label class="block text-sm text-gray-600 mb-1">
-						{{ __('Batch Details') }}
+						{{ __('Подробное описание') }}
 						<span class="text-red-500">*</span>
 					</label>
 					<TextEditor
@@ -115,20 +115,20 @@
 			</div>
 			<div class="mb-4">
 				<div class="text-lg font-semibold mb-4">
-					{{ __('Date and Time') }}
+					{{ __('Дата и время') }}
 				</div>
 				<div class="grid grid-cols-2 gap-10">
 					<div>
 						<FormControl
 							v-model="batch.start_date"
-							:label="__('Start Date')"
+							:label="__('Дата начала')"
 							type="date"
 							class="mb-4"
 							:required="true"
 						/>
 						<FormControl
 							v-model="batch.end_date"
-							:label="__('End Date')"
+							:label="__('Дата окончания')"
 							type="date"
 							class="mb-4"
 							:required="true"
@@ -137,23 +137,23 @@
 					<div>
 						<FormControl
 							v-model="batch.start_time"
-							:label="__('Start Time')"
+							:label="__('Время начала')"
 							type="time"
 							class="mb-4"
 							:required="true"
 						/>
 						<FormControl
 							v-model="batch.end_time"
-							:label="__('End Time')"
+							:label="__('Время окончания')"
 							type="time"
 							class="mb-4"
 							:required="true"
 						/>
 						<FormControl
 							v-model="batch.timezone"
-							:label="__('Timezone')"
+							:label="__('Часовой пояс')"
 							type="text"
-							:placeholder="__('Example: IST (+5:30)')"
+							:placeholder="__('Пример: UTC+05:00')"
 							class="mb-4"
 							:required="true"
 						/>
@@ -162,20 +162,20 @@
 			</div>
 			<div class="mb-4">
 				<div class="text-lg font-semibold mb-4">
-					{{ __('Settings') }}
+					{{ __('Настройки') }}
 				</div>
 				<div class="grid grid-cols-2 gap-10">
 					<div>
 						<FormControl
 							v-model="batch.seat_count"
-							:label="__('Seat Count')"
+							:label="__('Количество мест')"
 							type="number"
 							class="mb-4"
-							:placeholder="__('Number of seats available')"
+							:placeholder="__('Количество мест в группе')"
 						/>
 						<FormControl
 							v-model="batch.evaluation_end_date"
-							:label="__('Evaluation End Date')"
+							:label="__('Дата окончания оценок')"
 							type="date"
 							class="mb-4"
 						/>
@@ -199,7 +199,7 @@
 						/>
 						<Link
 							doctype="LMS Category"
-							:label="__('Category')"
+							:label="__('Категория')"
 							v-model="batch.category"
 						/>
 					</div>
@@ -208,17 +208,17 @@
 
 			<div class="">
 				<div class="text-lg font-semibold mb-4">
-					{{ __('Payment') }}
+					{{ __('Оплата') }}
 				</div>
 				<div>
 					<FormControl
 						v-model="batch.paid_batch"
 						type="checkbox"
-						:label="__('Paid Batch')"
+						:label="__('Платная группа')"
 					/>
 					<FormControl
 						v-model="batch.amount"
-						:label="__('Amount')"
+						:label="__('Стоимость')"
 						type="number"
 						class="my-4"
 					/>
@@ -226,7 +226,7 @@
 						doctype="Currency"
 						v-model="batch.currency"
 						:filters="{ enabled: 1 }"
-						:label="__('Currency')"
+						:label="__('Валюта')"
 					/>
 				</div>
 			</div>
@@ -455,7 +455,7 @@ const validateFile = (file) => {
 const breadcrumbs = computed(() => {
 	let crumbs = [
 		{
-			label: 'Batches',
+			label: 'Группы',
 			route: {
 				name: 'Batches',
 			},
@@ -473,7 +473,7 @@ const breadcrumbs = computed(() => {
 		})
 	}
 	crumbs.push({
-		label: props.batchName == 'new' ? 'New Batch' : 'Edit Batch',
+		label: props.batchName == 'new' ? 'Новая группа' : 'Редактировать группу',
 		route: { name: 'BatchForm', params: { batchName: props.batchName } },
 	})
 	return crumbs

@@ -3,7 +3,7 @@
 		class="sticky top-0 z-10 flex flex-col md:flex-row md:items-center justify-between border-b bg-white px-3 py-2.5 sm:px-5"
 	>
 		<Breadcrumbs :items="breadbrumbs" />
-		<Button variant="solid" @click="saveProgram()">
+		<Button variant="solid" @click="saveProgram()" class="save-button">
 			{{ __('Сохранить') }}
 		</Button>
 	</header>
@@ -17,6 +17,7 @@
 					{{ __('Курсы по программе') }}
 				</div>
 				<Button
+				class="save-button"
 					@click="
 						() => {
 							currentForm = 'course'
@@ -79,6 +80,7 @@
 					{{ __('Участники программы') }}
 				</div>
 				<Button
+				class="save-button"
 					@click="
 						() => {
 							currentForm = 'member'
@@ -136,6 +138,7 @@
 				{
 					label: __('Добавить'),
 					variant: 'solid',
+					class: 'save-button bg-blue-600 hover:bg-blue-700',
 					onClick: () =>
 						currentForm == 'course'
 							? addProgramCourse(close)
@@ -366,3 +369,12 @@ const breadbrumbs = computed(() => {
 	]
 })
 </script>
+<style scoped>
+.save-button {
+	background-color: #5a5cff !important;
+	color: white !important;
+}
+.save-button:hover {
+	background-color: #3f3fff !important;
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
 	<div v-if="courses.data">
 		<header
-			class="sticky top-0 z-10 flex items-center justify-between border-b bg-#5858f6 px-3 py-2.5 sm:px-5"
+			class="sticky top-0 z-10 flex items-center justify-between border-b bg-white px-3 py-2.5 sm:px-5 "
 		>
 			<Breadcrumbs
 				class="h-7"
@@ -38,7 +38,7 @@
 						},
 					}"
 				>
-					<Button variant="solid" class="bg-blue-600 hover:bg-blue-700">
+					<Button variant="solid" class="header-button">
 						<template #prefix>
 							<Plus class="h-4 w-4" />
 						</template>
@@ -312,3 +312,11 @@ const pageMeta = computed(() => {
 
 updateDocumentTitle(pageMeta)
 </script>
+<style scoped>
+.header-button {
+	background-color: #5a5cff !important;
+}
+.header-button:hover {
+	background-color: #3f3fff !important;
+}
+</style>
