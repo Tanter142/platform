@@ -98,7 +98,7 @@ watch(
 const userDropdownOptions = [
 	{
 		icon: User,
-		label: 'Мой профиль',
+		label: 'profile',
 		onClick: () => {
 			router.push(`/user/${userResource.data?.username}`)
 		},
